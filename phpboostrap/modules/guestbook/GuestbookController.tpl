@@ -1,0 +1,67 @@
+<section id="module-guestbook">
+	<header>
+		<h1>{@module_title}</h1>
+	</header>
+	<div class="content">
+		# INCLUDE MSG #
+		# INCLUDE FORM #
+
+		# IF C_PAGINATION #
+			<div class="text-center"># INCLUDE PAGINATION #</div>
+			<div class="clearfix"></div>
+		# ENDIF #
+		# IF C_NO_MESSAGE #
+			<div class="well well-lg text-center">${LangLoader::get_message('no_item_now', 'common')}</div>
+		# ENDIF #
+		# START messages #
+			<article id="article-guestbook-{messages.ID}">
+
+				<div id="m{messages.ID}" class="row mb15">
+
+					<div class="col-sm-3 text-center">
+						<div class="message-pseudo">
+							# IF messages.C_AUTHOR_EXIST #
+							<a href="{messages.U_AUTHOR_PROFILE}" class="{messages.USER_LEVEL_CLASS}" # IF messages.C_USER_GROUP_COLOR # style="color:{messages.USER_GROUP_COLOR}" # ENDIF #>{messages.PSEUDO}</a>
+							# ELSE #
+							{messages.PSEUDO}
+							# ENDIF #
+						</div>
+						# IF messages.C_AVATAR #<img src="{messages.U_AVATAR}" alt="${LangLoader::get_message('avatar', 'user-common')}" class="message-avatar" /># ENDIF #
+						# IF messages.C_USER_GROUPS #
+							<div class="clearfix"></div>
+							# START messages.user_groups #
+								# IF messages.user_groups.C_GROUP_PICTURE #
+								<img src="{PATH_TO_ROOT}/images/group/{messages.user_groups.GROUP_PICTURE}" alt="{messages.user_groups.GROUP_NAME}" title="{messages.user_groups.GROUP_NAME}" class="message-user-group"/>
+								# ELSE #
+								${LangLoader::get_message('group', 'main')}: {messages.user_groups.GROUP_NAME}
+								# ENDIF #
+							# END user_groups #
+						# ENDIF #
+					</div>
+
+					<div class="col-sm-9">
+						<div class="well well-sm">
+							<span class="pull-right">
+								# IF messages.C_EDIT #
+								<a href="{messages.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+								# ENDIF #
+								# IF messages.C_DELETE #
+								<a href="{messages.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
+								# ENDIF #
+							</span>
+							<a href="{messages.U_ANCHOR}"><i class="fa fa-hand-o-right"></i></a> ${LangLoader::get_message('the', 'common')} {messages.DATE}
+						</div>
+						<div class="message-message">
+							<div class="message-content">{messages.CONTENTS}</div>
+						</div>
+					</div>
+
+
+
+				</div>
+				<footer></footer>
+			</article>
+		# END messages #
+	</div>
+	<footer># IF C_PAGINATION #<div class="text-center"># INCLUDE PAGINATION #</div># ENDIF #</footer>
+</section>
