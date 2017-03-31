@@ -49,8 +49,10 @@ jQuery(document).ready(function(){
 		# ENDIF #
 	</div>
 	# ENDIF #
+	<div class="col-sm-12">
+		# INCLUDE COMMENTS_LIST #
+	</div>
 
-	# INCLUDE COMMENTS_LIST #
 	<footer></footer>
 </section>
 

@@ -326,11 +326,9 @@ select,
     border-left: none;
 }
 
-/*supprimer border-top textarea quand bbcode*/
-#bbcode-expanded + textarea .form-control {
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-}
+
+
+.panel-heading * { margin: 0; }
 
 .text-status-constraint {
     padding: 2px;

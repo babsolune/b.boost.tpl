@@ -49,10 +49,11 @@
 
 		<form action="pm{convers.U_USER_ACTION_PM}" method="post" onsubmit="javascript:return Confirm_pm();">
 			<section id="module-user-convers" class="row">
-				<header>
-					<h1>{convers.U_PM_BOX}</h1>
-				</header>
 				<div class="col-sm-12">
+					<header>
+						<h1>{convers.U_PM_BOX}</h1>
+					</header>
+
 					<nav class="navbar navbar-default">
 						<div class="container-fluid">
 							<div class="navbar-header">
@@ -166,21 +167,21 @@
 
 		# START pm #
 		<section id="module-user-pm" class="row">
-			<header>
-				<h1>
-					<small>{pm.U_PM_BOX} :</small> <p>{pm.U_TITLE_CONVERS}</p>
-				</h1>
-			</header>
-
 			<div class="col-sm-12">
+				<header>
+					<h1>
+						<small>{pm.U_PM_BOX} :</small> <p>{pm.U_TITLE_CONVERS}</p>
+					</h1>
+				</header>
+
+
 				# IF pm.C_PAGINATION #<div class="pull-right"># INCLUDE pm.PAGINATION #</div># ENDIF #
 
-			# START pm.msg #
-				<article id="article-pm-{pm.msg.ID}" class="row">
-					<div id="m{pm.msg.ID}" class="message-container">
-
-						<div class="col-sm-3 text-center">
-							<div class="message-pseudo">
+				# START pm.msg #
+				<div class="panel panel-default" id="article-pm-{pm.msg.ID}" class="row">
+					<div id="m{pm.msg.ID}" class="panel-heading">
+						<div class="row">
+							<div class="col-sm-4">
 								# IF pm.msg.C_VISITOR #
 									<span>{pm.msg.PSEUDO}</span>
 								# ELSE #
@@ -189,29 +190,41 @@
 									</a>
 								# ENDIF #
 							</div>
-							<div class="message-level">{pm.msg.L_LEVEL}</div>
-							# IF pm.msg.C_AVATAR #<img src="{pm.msg.USER_AVATAR}" title="{pm.msg.USER_PSEUDO}" alt="{pm.msg.USER_PSEUDO}" class="message-avatar" /># ENDIF #
-						</div>
-
-						<div class="col-sm-9">
-							<div class="well well-sm">
-								<small class="pull-right">
-									<a href="#article-pm-{pm.msg.ID}">\#{pm.msg.ID}</a>
-									# IF pm.msg.C_MODERATION_TOOLS #
-									<a href="pm.php?edit={pm.msg.ID}" title="{L_EDIT}" class="fa fa-edit"></a>
-									<a href="pm.php?del={pm.msg.ID}&amp;token={TOKEN}" title="{L_DELETE}" class="fa fa-delete" data-confirmation="delete-element"></a>
-									# ENDIF #
-								</small>
-								<span>${LangLoader::get_message('on', 'main')} {pm.msg.DATE_FULL}</span>
-							</div>
-							<div class="message-message">
-								<div class="message-content">{pm.msg.CONTENTS}</div>
+							<div class="col-sm-8">
+								<div class="pull-right">
+									<div class="btn-group btn-group-xs">
+										<a class="btn btn-info" href="#article-pm-{pm.msg.ID}">\#{pm.msg.ID}</a>
+										# IF pm.msg.C_MODERATION_TOOLS #
+										<a href="pm.php?edit={pm.msg.ID}" title="{L_EDIT}" class="btn btn-info">
+											<i class="fa fa-edit"></i>
+										</a>
+										<a href="pm.php?del={pm.msg.ID}&amp;token={TOKEN}" title="{L_DELETE}" class="btn btn-danger" data-confirmation="delete-element">
+											<i class="fa fa-delete"></i>
+										</a>
+										# ENDIF #
+									</div>
+								</div>
+								<span class="btn btn-default btn-xs">${LangLoader::get_message('on', 'main')} {pm.msg.DATE_FULL}</span>
 							</div>
 						</div>
-						<div class="clearfix mb15"></div>
 					</div>
-				</article>
-			# END pm.msg #
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-4">
+								<p class="text-center">{pm.msg.L_LEVEL}</p>
+								# IF pm.msg.C_AVATAR #
+								<p class="text-center">
+									<img src="{pm.msg.USER_AVATAR}" title="{pm.msg.USER_PSEUDO}" alt="{pm.msg.USER_PSEUDO}" class="message-avatar" />
+								</p>
+								# ENDIF #
+							</div>
+							<div class="col-sm-8">
+								{pm.msg.CONTENTS}
+							</div>
+						</div>
+					</div>
+				</div>
+				# END pm.msg #
 			</div>
 			<footer>
 				# IF pm.C_PAGINATION #<div class="pull-right"># INCLUDE pm.PAGINATION #</div># ENDIF #

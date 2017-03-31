@@ -2,25 +2,24 @@
 <header id="header">
 	<div id="top-header" class="container-fluid">
 		<div class="container">
-			# IF C_COMPTEUR #
-			<div id="compteur" class="hidden-small-screens pull-right">
-				<div class="compteur-total">
-					<span class="text-strong">{L_VISIT} : </span>
-					{COMPTEUR_TOTAL}
-				</div>
-				<div class="compteur-today">
-					<span class="text-strong">{L_TODAY} : </span>
-					{COMPTEUR_DAY}
-				</div>
-			</div>
-			# ENDIF #
-
 			<div id="site-infos" class="row">
-				<div id="site-logo" class="pull-left" # IF C_HEADER_LOGO #style="background-image: url('{HEADER_LOGO}');"# ENDIF #></div>
-				<div id="site-name-container" class="col-md-9">
+				<div id="site-logo" class="col-sm-3" # IF C_HEADER_LOGO #style="background-image: url('{HEADER_LOGO}');"# ENDIF #></div>
+				<div id="site-name-container" class="# IF C_COMPTEUR #col-sm-7# ELSE #col-sm-9# ENDIF #">
 					<a id="site-name" href="{PATH_TO_ROOT}/">{SITE_NAME}</a>
 					<p id="site-slogan">{SITE_SLOGAN}</p>
 				</div>
+				# IF C_COMPTEUR #
+				<div id="compteur" class="hidden-xs col-sm-2">
+					<div class="compteur-total">
+						<span class="text-strong">{L_VISIT} : </span>
+						{COMPTEUR_TOTAL}
+					</div>
+					<div class="compteur-today">
+						<span class="text-strong">{L_TODAY} : </span>
+						{COMPTEUR_DAY}
+					</div>
+				</div>
+				# ENDIF #
 			</div>
 
 			<div id="top-header-content" class="row">
