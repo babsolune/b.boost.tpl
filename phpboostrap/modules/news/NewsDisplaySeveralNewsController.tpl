@@ -1,9 +1,16 @@
 <section id="module-news">
 	<header>
-		<small class="pull-right">
-			# IF C_CATEGORY ## IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF ## ENDIF #
-			<a href="${relative_url(SyndicationUrlBuilder::rss('news', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
+		<div class="pull-right">
+			<div class="btn-group btn-group-xs">
+				# IF C_CATEGORY #
+					# IF IS_ADMIN #
+					<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a>
+					# ENDIF #
+				# ENDIF #
+				<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('news', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+			</div>
+
+		</div>
 		<h1>
 			# IF C_PENDING_NEWS #
 				{@news.pending}
@@ -13,31 +20,32 @@
 			# ENDIF #
 		</h1>
 	</header>
-	<div class="row">
+	<div class="row grid-columns">
 	# IF C_NEWS_NO_AVAILABLE #
 		<div class="text-center">
 			${LangLoader::get_message('no_item_now', 'common')}
 		</div>
 	# ELSE #
 		# IF C_DISPLAY_BLOCK_TYPE #
+
 		# START news #
-		<div class="grid-columns">
 			<article id="article-news-{news.ID}" class="col-sm-4# IF news.C_TOP_LIST # top-list# ENDIF ## IF news.C_NEW_CONTENT # new-content# ENDIF #" # IF C_SEVERAL_COLUMNS # style="width:calc(98% / {NUMBER_COLUMNS})" # ENDIF # itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 				# IF news.C_PICTURE #
 					<a href="{news.U_LINK}" title="{news.NAME}">
 						<img itemprop="thumbnailUrl" src="{news.U_PICTURE}" alt="{news.NAME}" />
 					</a>
-
 				# ENDIF #
 				<header>
-					<small class="pull-right">
-						# IF news.C_EDIT #
-							<a href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-						# ENDIF #
-						# IF news.C_DELETE #
-							<a href="{news.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
-						# ENDIF #
-					</small>
+					<div class="pull-right">
+						<div class="btn-group btn-group-xs">
+							# IF news.C_EDIT #
+								<a class="btn btn-info" href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+							# ENDIF #
+							# IF news.C_DELETE #
+								<a class="btn btn-danger" href="{news.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
+							# ENDIF #
+						</div>
+					</div>
 					<h2>
 						<a href="{news.U_LINK}"><span itemprop="name">{news.NAME}</span></a>
 					</h2>
@@ -85,20 +93,21 @@
 
 				<footer></footer>
 			</article>
-		</div>
 		# END news #
 		# ELSE #
 		# START news #
-			<article id="article-news-{news.ID}" class="col-sm-12# IF news.C_TOP_LIST # top-list# ENDIF ## IF news.C_NEW_CONTENT # new-content# ENDIF #" # IF C_SEVERAL_COLUMNS # style="width:calc(98% / {NUMBER_COLUMNS})" # ENDIF # itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+			<article id="article-news-{news.ID}" class="col-sm-12 mb15# IF news.C_TOP_LIST # top-list# ENDIF ## IF news.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 				<header>
-					<small class="pull-right">
-						# IF news.C_EDIT #
-							<a href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-						# ENDIF #
-						# IF news.C_DELETE #
-							<a href="{news.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
-						# ENDIF #
-					</small>
+					<div class="pull-right">
+						<div class="btn-group btn-group-xs">
+							# IF news.C_EDIT #
+								<a class="btn btn-info" href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+							# ENDIF #
+							# IF news.C_DELETE #
+								<a class="btn btn-danger" href="{news.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
+							# ENDIF #
+						</div>
+					</div>
 					<h2>
 						<a href="{news.U_LINK}"><span itemprop="name">{news.NAME}</span></a>
 					</h2>
@@ -127,7 +136,7 @@
 
 				</header>
 
-				<div class="content">
+
 					# IF news.C_PICTURE #
 					<div class="col-sm-4 pull-right">
 						<a href="{news.U_LINK}" class="news-picture"><img itemprop="thumbnailUrl" src="{news.U_PICTURE}" alt="{news.NAME}" title="{news.NAME}" /> </a>
@@ -144,7 +153,7 @@
 							{news.CONTENTS}
 						# ENDIF #
 					</div>
-				</div>
+				
 
 				# IF news.C_SOURCES #
 				<div class="spacer"></div>

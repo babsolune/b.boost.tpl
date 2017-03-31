@@ -156,10 +156,20 @@ jQuery(document).ready(function() {
 # INCLUDE MSG #
 <section id="module-faq">
 	<header>
-		<small class="pull-right">
-			 # IF C_CATEGORY ## IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF ## ENDIF #
-			<a href="${relative_url(SyndicationUrlBuilder::rss('faq', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
+		<div class="pull-right">
+			<div class="btn-group btn-group-xs">
+				# IF C_CATEGORY #
+				# IF IS_ADMIN #
+				<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}">
+					<i class="fa fa-edit smaller"></i>
+				</a>
+				# ENDIF #
+				# ENDIF #
+   				<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('faq', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}">
+					<i class="fa fa-syndication"></i>
+				</a>
+			</div>
+		</div>
 		<h1>
 			# IF C_PENDING #
 				{@faq.pending}
@@ -242,12 +252,15 @@ jQuery(document).ready(function() {
 								# ENDIF #
 							</h3>
 							<div class="sortable-actions">
-								# IF C_MORE_THAN_ONE_QUESTION #
-								<a href="" title="${LangLoader::get_message('position.move_up', 'common')}" id="move-up-{questions.ID}" onclick="return false;"><i class="fa fa-arrow-up"></i></a>
-								<a href="" title="${LangLoader::get_message('position.move_down', 'common')}" id="move-down-{questions.ID}" onclick="return false;"><i class="fa fa-arrow-down"></i></a>
-								# ENDIF #
-								<a href="{questions.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-								<a href="" onclick="return false;" title="${LangLoader::get_message('delete', 'common')}" id="delete-{questions.ID}"><i class="fa fa-delete"></i></a>
+								<div class="btn-group btn-group-xs">
+									# IF C_MORE_THAN_ONE_QUESTION #
+									<a class="btn btn-primary" href="" title="${LangLoader::get_message('position.move_up', 'common')}" id="move-up-{questions.ID}" onclick="return false;"><i class="fa fa-arrow-up"></i></a>
+									<a class="btn btn-primary" href="" title="${LangLoader::get_message('position.move_down', 'common')}" id="move-down-{questions.ID}" onclick="return false;"><i class="fa fa-arrow-down"></i></a>
+									# ENDIF #
+									<a class="btn btn-info" href="{questions.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+									<a class="btn btn-danger" href="" onclick="return false;" title="${LangLoader::get_message('delete', 'common')}" id="delete-{questions.ID}"><i class="fa fa-delete"></i></a>
+								</div>
+
 							</div>
 							<div id="answer{questions.ID}" class="faq-answer-container"# IF C_DISPLAY_TYPE_ANSWERS_HIDDEN # style="display: none;"# ENDIF #>
 								<div itemprop="text">{questions.ANSWER}</div>
@@ -295,15 +308,18 @@ jQuery(document).ready(function() {
 			<div class="row">
 				<article id="article-faq-{questions.ID}" itemscope="itemscope" itemtype="http://schema.org/CreativeWork" class="col-sm-12# IF questions.C_NEW_CONTENT # new-content# ENDIF #">
 					<header>
-						<small class="pull-right">
-							<a href="{questions.U_LINK}" title="{questions.L_LINK_QUESTION}"><i class="fa fa-flag"></i></a>
-							# IF questions.C_EDIT #
-							<a href="{questions.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-							# ENDIF #
-							# IF questions.C_DELETE #
-							<a href="" onclick="delete_question({questions.ID});return false;" title="${LangLoader::get_message('delete', 'common')}"><i class="fa fa-delete"></i></a>
-							# ENDIF #
-						</small>
+						<div class="pull-right">
+							<div class="btn-group btn-group-xs">
+								<a class="btn btn-primary" href="{questions.U_LINK}" title="{questions.L_LINK_QUESTION}"><i class="fa fa-flag"></i></a>
+								# IF questions.C_EDIT #
+								<a class="btn btn-info" href="{questions.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+								# ENDIF #
+								# IF questions.C_DELETE #
+								<a class="btn btn-danger" href="" onclick="delete_question({questions.ID});return false;" title="${LangLoader::get_message('delete', 'common')}"><i class="fa fa-delete"></i></a>
+								# ENDIF #
+							</div>
+
+						</div>
 
 						<h3 class="question-title">
 							# IF C_DISPLAY_TYPE_ANSWERS_HIDDEN #

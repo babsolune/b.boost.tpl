@@ -326,8 +326,6 @@ select,
     border-left: none;
 }
 
-
-
 .panel-heading * { margin: 0; }
 
 .text-status-constraint {
@@ -338,6 +336,15 @@ select,
     .breadcrumb {
         margin-right: 35px;
     }
+}
+
+/* --- Menus --- */
+.nav-tabs.nav-justified {
+    margin-bottom: 15px;
+}
+
+.nav-tabs.nav-justified > li {
+    vertical-align: bottom;
 }
 
 /* --- CookieBar

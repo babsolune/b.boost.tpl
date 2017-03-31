@@ -1,13 +1,15 @@
 <section id="module-download">
 	<header>
-		<small class="pull-right">
-			# IF C_CATEGORY #
-				# IF IS_ADMIN #
-					<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+		<div class="pull-right">
+			<div class="btn-group btn-group-xs">
+				# IF C_CATEGORY #
+					# IF IS_ADMIN #
+						<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+					# ENDIF #
 				# ENDIF #
-			# ENDIF #
-			<a href="${relative_url(SyndicationUrlBuilder::rss('download', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
+				<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('download', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+			</div>
+		</div>
 		<h1>
 			# IF C_PENDING #
 				{@download.pending}
@@ -60,7 +62,7 @@
 			<div class="clearfix"></div>
 		# ENDIF #
 		# IF C_CATEGORY_DISPLAYED_TABLE #
-			<div class="table-responsive col-md-12">
+			<div class="table-responsive">
 				<table class="table">
 					<thead>
 						<tr>
@@ -128,12 +130,15 @@
 		# ELSE #
 			# START downloadfiles #
 			<div class="row">
-				<article id="article-download-{downloadfiles.ID}" class="col-md-12# IF C_CATEGORY_DISPLAYED_SUMMARY # block# ENDIF ## IF downloadfiles.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+				<article id="article-download-{downloadfiles.ID}" class="col-md-12 mb15# IF C_CATEGORY_DISPLAYED_SUMMARY # block# ENDIF ## IF downloadfiles.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 					<header>
-						<small class="pull-right">
-							# IF downloadfiles.C_EDIT #<a href="{downloadfiles.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
-							# IF downloadfiles.C_DELETE #<a href="{downloadfiles.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a># ENDIF #
-						</small>
+						<div class="pull-right">
+							<div class="btn-group btn-group-xs">
+								# IF downloadfiles.C_EDIT #<a class="btn btn-info" href="{downloadfiles.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
+								# IF downloadfiles.C_DELETE #<a class="btn btn-danger" href="{downloadfiles.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a># ENDIF #
+							</div>
+
+						</div>
 						<h2>
 							<a href="{downloadfiles.U_LINK}" itemprop="name">{downloadfiles.NAME}</a>
 						</h2>

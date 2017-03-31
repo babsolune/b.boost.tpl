@@ -1,5 +1,5 @@
 			<section id="module-calendar-events" class="row">
-				<header>
+				<header class="col-sm-12">
 					<h2 class="center"># IF C_PENDING_PAGE #{@calendar.pending}# ELSE #{@calendar.titles.events_of} {DATE}# ENDIF #</h2>
 				</header>
 
@@ -7,16 +7,19 @@
 					# START event #
 					<article itemscope="itemscope" itemtype="http://schema.org/Event" id="article-calendar-{event.ID}" class="col-sm-12 article-several# IF event.C_NEW_CONTENT # new-content# ENDIF #">
 						<header>
-							<small class="pull-right">
-								# IF C_COMMENTS_ENABLED #<a href="{event.U_COMMENTS}"><i class="fa fa-comments-o"></i> {event.L_COMMENTS}</a># ENDIF #
-								# IF event.C_EDIT #
-									<a href="{event.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-								# ENDIF #
-								# IF event.C_DELETE #
-									<a href="{event.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}"# IF NOT event.C_BELONGS_TO_A_SERIE # data-confirmation="delete-element"# ENDIF #><i class="fa fa-delete"></i></a>
-								# ENDIF #
-								<a href="{event.U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-							</small>
+							<div class="pull-right">
+								<div class="btn-group btn-group-xs">
+									# IF C_COMMENTS_ENABLED #<a class="btn btn-info" href="{event.U_COMMENTS}"><i class="fa fa-comments-o"></i> {event.L_COMMENTS}</a># ENDIF #
+									# IF event.C_EDIT #
+										<a class="btn btn-info" href="{event.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+									# ENDIF #
+									# IF event.C_DELETE #
+										<a class="btn btn-danger" href="{event.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}"# IF NOT event.C_BELONGS_TO_A_SERIE # data-confirmation="delete-element"# ENDIF #><i class="fa fa-delete"></i></a>
+									# ENDIF #
+									<a class="btn btn-warning" href="{event.U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+								</div>
+
+							</div>
 							<h3>
 								<a href="{event.U_LINK}"><span itemprop="name">{event.TITLE}</span></a>
 							</h3>
@@ -29,7 +32,7 @@
 							<meta itemprop="discussionUrl" content="{event.U_COMMENTS}">
 							<meta itemprop="interactionCount" content="{event.NUMBER_COMMENTS} UserComments">
 							# ENDIF #
-							<div class="event-dates">
+							<div class="event-dates col-sm-12">
 								<div class="col-sm-6 text-center bg-success">
 									{@calendar.labels.start_date} : <strong><time datetime="{event.START_DATE_ISO8601}" itemprop="startDate">{event.START_DATE}</time></strong>
 								</div>
@@ -41,11 +44,9 @@
 							<div class="col-sm-8">
 								<ul class="list-group">
 								# IF event.C_LOCATION #
-									<li class="list-group-item" itemscope="itemscope" itemtype="http://schema.org/Place">
-										<p itemprop="location">
-											<strong>{@calendar.labels.location}</strong> :
-											<span itemprop="name">{event.LOCATION}</span>
-										</p>
+									<li class="list-group-item" itemscope="itemscope" itemprop="location" itemtype="http://schema.org/Place">
+										<strong>{@calendar.labels.location}</strong> :
+										<span itemprop="name">{event.LOCATION}</span>
 									</li>
 								# ENDIF #
 								# IF event.C_PARTICIPATION_ENABLED #

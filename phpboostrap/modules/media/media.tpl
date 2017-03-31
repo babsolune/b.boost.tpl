@@ -1,10 +1,13 @@
 		# IF C_CATEGORIES #
 			<section id="module-media">
 				<header>
-					<small class="pull-right">
-						# IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
-						<a href="${relative_url(SyndicationUrlBuilder::rss('media', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-					</small>
+					<div class="pull-right">
+						<div class="btn-group btn-group-xs">
+							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+							<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('media', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+						</div>
+
+					</div>
 					<h1>
 						${LangLoader::get_message('module_title', 'common', 'media')}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #
 					</h1>
@@ -43,7 +46,7 @@
 					<div class="spacer"></div>
 				# ENDIF #
 
-				<div class="content">
+				<div class="row">
 					# IF C_FILES #
 						<div class="items-filters" id="form">
 							<script>
@@ -73,17 +76,23 @@
 						<div class="clearfix"></div>
 
 						# START file #
-							<article id="article-media-{file.ID}" class="article-media article-several block# IF file.C_NEW_CONTENT # new-content# ENDIF #">
+							<article id="article-media-{file.ID}" class="col-sm-12# IF file.C_NEW_CONTENT # new-content# ENDIF #">
 								<header>
-									<small class="pull-right">
+									<div class="pull-right">
 										# IF C_MODO #
-										<span class="actions">
-											<a href="{file.U_ADMIN_UNVISIBLE_MEDIA}" class="fa fa-eye-slash" title="{L_UNAPROBED}"></a>
-											<a href="{file.U_ADMIN_EDIT_MEDIA}" title="${LangLoader::get_message('edit', 'common')}" class="fa fa-edit"></a>
-											<a href="{file.U_ADMIN_DELETE_MEDIA}" title="${LangLoader::get_message('delete', 'common')}" class="fa fa-delete" data-confirmation="delete-element"></a>
-										</span>
+										<div class="btn-group btn-group-xs">
+											<a href="{file.U_ADMIN_UNVISIBLE_MEDIA}" class="btn btn-info" title="{L_UNAPROBED}">
+												<i class="fa fa-eye-slash"></i>
+											</a>
+											<a href="{file.U_ADMIN_EDIT_MEDIA}" title="${LangLoader::get_message('edit', 'common')}" class="btn btn-info">
+												<i class="fa fa-edit"></i>
+											</a>
+											<a href="{file.U_ADMIN_DELETE_MEDIA}" title="${LangLoader::get_message('delete', 'common')}" class="btn btn-danger" data-confirmation="delete-element">
+												<i class="fa fa-delete"></i>
+											</a>
+										</div>
 										# ENDIF #
-									</small>
+									</div>
 									<h2>
 										<a href="{file.U_MEDIA_LINK}">{file.NAME}</a>
 
@@ -140,9 +149,9 @@
 		# IF C_DISPLAY_MEDIA #
 		<section id="module-media">
 			<header>
-				<small class="pull-right">
-					# IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
-				</small>
+				<div class="pull-right">
+					# IF IS_ADMIN #<a class="btn btn-info btn-xs" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+				</div>
 				<h1>
 					${LangLoader::get_message('module_title', 'common', 'media')}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #
 				</h1>
@@ -150,16 +159,26 @@
 			<div class="content">
 				<article id="article-media-{ID}" class="article-media# IF C_NEW_CONTENT # new-content# ENDIF #">
 					<header>
-						<small class="pull-right">
-							# IF C_DISPLAY_COMMENTS #
-								<a href="{U_COM}"><i class="fa fa-comments-o"></i> {L_COM}</a>
-							# ENDIF #
-							# IF C_MODO #
-								<a href="{U_UNVISIBLE_MEDIA}" class="fa fa-eye-slash" title="{L_UNAPROBED}"></a>
-								<a href="{U_EDIT_MEDIA}" title="${LangLoader::get_message('edit', 'common')}" class="fa fa-edit"></a>
-								<a href="{U_DELETE_MEDIA}" title="${LangLoader::get_message('delete', 'common')}" class="fa fa-delete" data-confirmation="delete-element"></a>
-							# ENDIF #
-						</small>
+						<div class="pull-right">
+							<div class="btn-group btn-group-xs">
+								# IF C_DISPLAY_COMMENTS #
+									<a class="btn btn-info" href="{U_COM}">
+										<i class="fa fa-comments-o"></i> {L_COM}
+									</a>
+								# ENDIF #
+								# IF C_MODO #
+									<a href="{U_UNVISIBLE_MEDIA}" class="btn btn-info" title="{L_UNAPROBED}">
+										<i class="fa fa-eye-slash"></i>
+									</a>
+									<a href="{U_EDIT_MEDIA}" title="${LangLoader::get_message('edit', 'common')}" class="btn btn-info">
+										<i class="fa fa-edit"></i>
+									</a>
+									<a href="{U_DELETE_MEDIA}" title="${LangLoader::get_message('delete', 'common')}" class="btn btn-danger" data-confirmation="delete-element">
+										<i class="fa fa-delete"></i>
+									</a>
+								# ENDIF #
+							</div>
+						</div>
 						<h2>
 							{NAME}
 						</h2>

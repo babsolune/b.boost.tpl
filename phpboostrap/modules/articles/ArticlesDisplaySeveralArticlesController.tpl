@@ -1,14 +1,16 @@
 <section id="module-articles">
 	<header class="page-header">
 		# IF C_CATEGORY #
-			<small class="pull-right">
-				# IF IS_ADMIN #
-				<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}">
-					<i class="fa fa-edit"></i>
-				</a>
-				# ENDIF #
-				<a href="${relative_url(SyndicationUrlBuilder::rss('articles', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i> </a>
-			</small>
+			<div class="pull-right">
+				<div class="btn-group btn-group-xs">
+					# IF IS_ADMIN #
+					<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}">
+						<i class="fa fa-edit"></i>
+					</a>
+					# ENDIF #
+					<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('articles', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i> </a>
+				</div>
+			</div>
 		# ENDIF #
 		<h1>
 			# IF C_PENDING #
@@ -85,14 +87,18 @@
 						</a>
 						# ENDIF #
 						<div class="caption">
-							<small class="pull-right ">
-								# IF articles.C_EDIT #
-									<a href="{articles.U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-								# ENDIF #
-								# IF articles.C_DELETE #
-									<a href="{articles.U_DELETE_ARTICLE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
-								# ENDIF #
-							</small>
+
+							<div class="pull-right ">
+								<div class="btn-group btn-group-xs">
+									# IF articles.C_EDIT #
+										<a class="btn btn-info" href="{articles.U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+									# ENDIF #
+									# IF articles.C_DELETE #
+										<a class="btn btn-danger" href="{articles.U_DELETE_ARTICLE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
+									# ENDIF #
+								</div>
+
+							</div>
 							<h2>
 								<a itemprop="url" href="{articles.U_ARTICLE}"><span itemprop="name">{articles.TITLE}</span></a>
 							</h2>

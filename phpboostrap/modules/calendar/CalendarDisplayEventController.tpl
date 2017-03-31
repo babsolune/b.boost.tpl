@@ -1,9 +1,12 @@
 <section id="module-calendar" class="row">
 	<header class="col-md-12">
-		<small class="pull-right">
-			# IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
-			<a href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
+		<div class="pull-right">
+			<div class="btn-group btn-group-xs">
+				# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+				<a class="btn btn-warning" href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+			</div>
+
+		</div>
 		<h1>
 			{@module_title}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #
 		</h1>
@@ -14,14 +17,17 @@
 		# ENDIF #
 		<article itemscope="itemscope" itemtype="http://schema.org/Event" id="article-calendar-{ID}" class="# IF C_NEW_CONTENT # new-content# ENDIF #">
 			<header>
-				<span class="pull-right">
-					# IF C_EDIT #
-						<a href="{U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-					# ENDIF #
-					# IF C_DELETE #
-						<a href="{U_DELETE}" title="${LangLoader::get_message('delete', 'common')}"# IF NOT C_BELONGS_TO_A_SERIE # data-confirmation="delete-element"# ENDIF #><i class="fa fa-delete"></i></a>
-					# ENDIF #
-				</span>
+				<div class="pull-right">
+					<div class="btn-group btn-group-xs">
+						# IF C_EDIT #
+							<a class="btn btn-info" href="{U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+						# ENDIF #
+						# IF C_DELETE #
+							<a class="btn btn-danger" href="{U_DELETE}" title="${LangLoader::get_message('delete', 'common')}"# IF NOT C_BELONGS_TO_A_SERIE # data-confirmation="delete-element"# ENDIF #><i class="fa fa-delete"></i></a>
+						# ENDIF #
+					</div>
+
+				</div>
 				<h2>
 					<span itemprop="name">{TITLE}</span>
 				</h2>

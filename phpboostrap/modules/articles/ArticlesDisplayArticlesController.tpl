@@ -1,9 +1,12 @@
 <section id="module-articles">
 	<header class="page-header">
-		<small class="pull-right">
-			# IF IS_ADMIN #<a href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit small"></i></a># ENDIF #
-			<a href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
+		<div class="pull-right">
+			<div class="btn-group btn-group-xs">
+				# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit small"></i></a># ENDIF #
+				<a class="btn btn-warning" href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+			</div>
+
+		</div>
 		<h1>
 			{@articles}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #
 		</h1>
@@ -12,15 +15,18 @@
 		# INCLUDE NOT_VISIBLE_MESSAGE #
 		<article itemscope="itemscope" itemtype="http://schema.org/Article" id="article-articles-{ID}" class="col-xs-12 col-md-12# IF C_NEW_CONTENT # new-content# ENDIF #">
 			<header class="page-header">
-				<small class="pull-right">
-					# IF C_EDIT #
-						<a href="{U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-					# ENDIF #
-					# IF C_DELETE #
-						<a href="{U_DELETE_ARTICLE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
-					# ENDIF #
-						<a href="{U_PRINT_ARTICLE}" title="${LangLoader::get_message('printable_version', 'main')}" target="blank"><i class="fa fa-print"></i></a>
-				</small>
+				<div class="pull-right">
+					<div class="btn-group btn-group-xs">
+						# IF C_EDIT #
+							<a class="btn btn-info" href="{U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+						# ENDIF #
+						# IF C_DELETE #
+							<a class="btn btn-danger" href="{U_DELETE_ARTICLE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a>
+						# ENDIF #
+							<a class="btn btn-primary" href="{U_PRINT_ARTICLE}" title="${LangLoader::get_message('printable_version', 'main')}" target="blank"><i class="fa fa-print"></i></a>
+					</div>
+
+				</div>
 				<h2>
 					<span itemprop="name">{TITLE}</span>
 				</h2>
@@ -45,7 +51,7 @@
 						# END keywords #
 					# ENDIF #
 				</div>
-				
+
 				<meta itemprop="url" content="{U_ARTICLE}">
 				<meta itemprop="description" content="${escape(DESCRIPTION)}">
 				<meta itemprop="datePublished" content="# IF NOT C_DIFFERED #{DATE_ISO8601}# ELSE #{PUBLISHING_START_DATE_ISO8601}# ENDIF #">

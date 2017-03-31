@@ -54,7 +54,6 @@
 							</p>
 							# ENDIF #
 							# IF messages.C_USER_GROUPS #
-
 								# START messages.user_groups #
 									# IF messages.user_groups.C_GROUP_PICTURE #
 									<p class="text-center">
@@ -63,7 +62,7 @@
 									# ELSE #
 									<p class="text-center">
 										${LangLoader::get_message('group', 'main')}: {messages.user_groups.GROUP_NAME}
-									</p>									
+									</p>
 									# ENDIF #
 								# END user_groups #
 							# ENDIF #

@@ -2,10 +2,10 @@
 
 <section id="module-calendar" class="row">
 	<header>
-		<small class="pull-right">
-			<a href="${relative_url(SyndicationUrlBuilder::rss('calendar'))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
-		</small>
-		<h1>			
+		<div class="pull-right">
+			<a class="btn btn-warning btn-xs" href="${relative_url(SyndicationUrlBuilder::rss('calendar'))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
+		</div>
+		<h1>
 			{@module_title}
 		</h1>
 	</header>
