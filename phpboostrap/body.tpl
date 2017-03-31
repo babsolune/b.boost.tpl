@@ -3,8 +3,9 @@
 	<div id="top-header" class="container-fluid">
 		<div class="container">
 			<div id="site-infos" class="row">
-				<div id="site-logo" class="col-sm-3" # IF C_HEADER_LOGO #style="background-image: url('{HEADER_LOGO}');"# ENDIF #></div>
-				<div id="site-name-container" class="# IF C_COMPTEUR #col-sm-7# ELSE #col-sm-9# ENDIF #">
+
+				<div id="site-name-container" class="# IF C_COMPTEUR #col-sm-10# ELSE #col-sm-12# ENDIF #">
+					<div id="site-logo" # IF C_HEADER_LOGO #style="background-image: url('{HEADER_LOGO}');"# ENDIF #></div>
 					<a id="site-name" href="{PATH_TO_ROOT}/">{SITE_NAME}</a>
 					<p id="site-slogan">{SITE_SLOGAN}</p>
 				</div>
@@ -23,11 +24,13 @@
 			</div>
 
 			<div id="top-header-content" class="row">
-				# IF C_MENUS_HEADER_CONTENT #
-				# START menus_header #
-				{menus_header.MENU}
-				# END menus_header #
-				# ENDIF #
+				<div class="col-sm-12">
+					# IF C_MENUS_HEADER_CONTENT #
+					# START menus_header #
+					{menus_header.MENU}
+					# END menus_header #
+					# ENDIF #
+				</div>				
 			</div>
 		</div>
 	</div>

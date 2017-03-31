@@ -1,6 +1,6 @@
 /* --- User Login
 ============================================================================= */
-#site-logo {
+.global-maintain #site-logo {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -8,10 +8,11 @@
     margin: 0 auto 15px;
     width: 60px;
     height: 60px;
+	float: none;
 }
 
 @media (min-width: 769px) {
-    #site-logo {
+    .global-maintain #site-logo {
         width: 90px;
         height: 90px;
     }
