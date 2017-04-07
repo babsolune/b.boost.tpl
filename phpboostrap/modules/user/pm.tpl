@@ -118,7 +118,7 @@
 									<td class="convers-announce">
 										<i class="fa fa-envelope {convers.list.ANNOUNCE}"></i>
 									</td>
-									<td class="convers-title no-separator">
+									<td class="convers-title">
 										{convers.list.ANCRE} <a href="pm{convers.list.U_CONVERS}">{convers.list.TITLE}</a> <br /><small>{convers.list.U_AUTHOR}</small>
 									</td>
 									<td>
@@ -150,10 +150,10 @@
 								<td>
 									<i class="fa fa-envelope message-announce"></i> {L_READ}
 								</td>
-								<td class="no-separator">
+								<td>
 									<i class="fa fa-envelope message-announce-track"></i> {L_TRACK}
 								</td>
-								<td class="no-separator">
+								<td>
 									<i class="fa fa-envelope message-announce-new"></i> {L_NOT_READ}
 								</td>
 							</tr>

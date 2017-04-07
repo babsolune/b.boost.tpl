@@ -2,15 +2,15 @@
 
 # IF C_DISPLAY #
 <nav class="dropdown actionslinks">
-        <button class="btn btn-pbt dropdown-toggle" type="button" id="actionslinks-level-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <small class="visible-xs">${LangLoader::get_message('content.menus.actions', 'admin-links-common')} {MODULE_NAME}</small>
-            <i class="fa fa-bars"></i>
-        </button>
-		<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="actionslinks-level-1">
-            # START element #
-				# INCLUDE element.ELEMENT #
-			# END element #
-		</ul>
+    <button id="module-actionslinks" class="btn btn-pbt dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <small class="visible-xs">${LangLoader::get_message('content.menus.actions', 'admin-links-common')} {MODULE_NAME}</small>
+        <i class="fa fa-bars"></i>
+    </button>
+	<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="module-actionslinks">
+        # START element #
+			# INCLUDE element.ELEMENT #
+		# END element #
+	</ul>
 </nav>
 # ENDIF #
 

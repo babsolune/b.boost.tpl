@@ -22,7 +22,7 @@
 	</div>
 </div>
 <div id="${escape(HTML_ID)}_preview"# IF C_PREVIEW_HIDDEN # style="display:none;"# ENDIF # class="row# IF C_HAS_FIELD_CLASS # {FIELD_CLASS}# ENDIF #">
-	<label class="col-sm-4 control-label" for="${escape(HTML_ID)}_preview">
+	<label class="col-sm-4" for="${escape(HTML_ID)}_preview">
 		${LangLoader::get_message('form.picture.preview', 'common')}
 	</label>
 

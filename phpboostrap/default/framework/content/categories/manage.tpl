@@ -52,7 +52,7 @@ function change_reposition_pictures()
 -->
 </script>
 # INCLUDE MSG #
-<form action="{REWRITED_SCRIPT}" method="post" onsubmit="serialize_sortable();">
+<form class="form-group" action="{REWRITED_SCRIPT}" method="post" onsubmit="serialize_sortable();">
 	<fieldset>
 		<legend>{FIELDSET_TITLE}</legend>
 			<div class="fieldset-inset">
@@ -68,10 +68,10 @@ function change_reposition_pictures()
 			</div>
 	</fieldset>
 	# IF C_MORE_THAN_ONE_CATEGORY #
-	<fieldset class="text-center">
+	<p class="text-center">
 		<button type="submit" class="btn btn-primary" name="submit" value="true">${LangLoader::get_message('position.update', 'common')}</button>
 		<input type="hidden" name="token" value="{TOKEN}">
 		<input type="hidden" name="tree" id="tree" value="">
-	</fieldset>
+	</p>
 	# ENDIF #
 </form>

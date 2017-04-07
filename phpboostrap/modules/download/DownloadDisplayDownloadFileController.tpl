@@ -126,9 +126,9 @@
 					<img src="{U_PICTURE}" alt="{NAME}" itemprop="image" />
 				</div>
 				# ENDIF #
-				<div itemprop="text">{CONTENTS}</div>
+				<div itemprop="text" class="mb15">{CONTENTS}</div>
 
-			<aside class="row">
+			<aside>
 				# INCLUDE COMMENTS #
 			</aside>
 			<footer></footer>

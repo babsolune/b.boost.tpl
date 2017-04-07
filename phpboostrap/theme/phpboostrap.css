@@ -254,6 +254,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
 }
 
+@media (max-width: 767px) {
+    .pull-right,
+    .pull-left {
+        float: none !important;
+    }
+}
+
+
 /* --- Filtres --- */
 .items-filters { padding: 15px; }
 .items-filters .form-horizontal .form-group::before {display: inline;}
@@ -357,7 +365,7 @@ select,
     background-color: rgba(86, 61, 124, 0.9);
     color: #ffffff;
 	z-index: 10;
-    top: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
     opacity: 1;
@@ -368,6 +376,7 @@ select,
     #cookiebar-container {
         border-radius: 4px;
         top: 10px;
+        bottom: auto;
         right: 10px;
         width: 40%;
     }
@@ -588,6 +597,12 @@ h6.formatter-title { margin-left: 4rem; }
 .m5    { margin: 5px; }
 .m15   { margin: 15px; }
 
+@media (min-width: 767px) {
+    .mr-btn {
+        margin-right: 50px;
+    }
+}
+
 /* --- Positions --- */
 .pos-rel {
     position: relative;
@@ -616,6 +631,9 @@ img {max-width: 100%}
 
 /* --- Menus
 ============================================================================= */
+
+/* --- pbt
+======= */
 
 .fa-has-sub {
 	position: absolute;
@@ -737,6 +755,105 @@ img {max-width: 100%}
     .dropdown-horizontal .navbar-nav li li .fa-has-sub:before {
 	    content: "\f0da"
     }
+}
+
+/* --- Accordion
+============= */
+
+.metismenu .arrow {
+    float: right;
+    line-height: 1.42857;
+}
+
+*[dir="rtl"] .metismenu .arrow {
+    float: left;
+}
+
+.metismenu .fa.arrow:before {
+    content: "\f104";
+}
+
+.metismenu .active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+.metismenu .plus-times {
+    float: right;
+}
+
+*[dir="rtl"] .metismenu .plus-times {
+    float: left;
+}
+
+.metismenu .fa.plus-times:before {
+    content: "\f067";
+}
+
+.metismenu .active > a > .fa.plus-times {
+    transform: rotate(45deg);
+}
+
+.metismenu .plus-minus {
+    float: right;
+}
+
+*[dir="rtl"] .metismenu .plus-minus {
+    float: left;
+}
+
+.metismenu .fa.plus-minus:before {
+    content: "\f067";
+}
+
+.metismenu .active > a > .fa.plus-minus:before {
+    content: "\f068";
+}
+
+.metismenu .collapse {
+    display: none;
+}
+
+.metismenu .collapse.in {
+    display: block;
+}
+
+.metismenu .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height, visibility;
+}
+
+.metismenu .has-arrow {
+    position: relative;
+}
+
+.metismenu .has-arrow::after {
+    position: absolute;
+    content: '';
+    width: .5em;
+    height: .5em;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: initial;
+    right: 1em;
+    transform: rotate(-45deg) translate(0, -50%);
+    transform-origin: top;
+    top: 50%;
+    transition: all .3s ease-out;
+}
+
+*[dir="rtl"] .metismenu .has-arrow::after {
+    right: auto;
+    left: 1em;
+    transform: rotate(135deg) translate(0, -50%);
+}
+
+.metismenu .active > .has-arrow::after,
+.metismenu .has-arrow[aria-expanded="true"]::after {
+    transform: rotate(-135deg) translate(0, -50%);
 }
 
 /* --- Progress Bar
