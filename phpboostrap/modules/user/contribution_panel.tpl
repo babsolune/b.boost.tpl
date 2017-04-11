@@ -169,10 +169,17 @@
 	<section id="module-user-consult-contribution" classs="row">
 		<header>
 			# IF C_WRITE_AUTH #
-			<small class="pull-right">
-				<a href="{U_UPDATE}" title="{L_UPDATE}" class="fa fa-edit"></a>
-				<a href="{U_DELETE}" title="{L_DELETE}" class="fa fa-delete" data-confirmation="delete-element"></a>
-			</small>
+			<div class="pull-right text-right">
+				<div class="btn-group btn-group-xs">
+					<a href="{U_UPDATE}" title="{L_UPDATE}" class="btn btn-info">
+						<i class="fa fa-edit"></i>
+					</a>
+				<a href="{U_DELETE}" title="{L_DELETE}" class="btn btn-danger" data-confirmation="delete-element">
+					<i class="fa fa-delete"></i>
+				</a>
+				</div>
+
+			</div>
 			# ENDIF #
 			<h1>
 			{ENTITLED}

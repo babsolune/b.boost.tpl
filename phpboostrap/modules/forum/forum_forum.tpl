@@ -74,7 +74,7 @@
 
 		<article itemscope="itemscope" itemtype="http://schema.org/Creativework" id="article-forum-forum">
 			<header>
-					<div class="pull-right">
+					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
 							<span class="btn btn-warning">
 								<a href="${relative_url(SyndicationUrlBuilder::rss('forum',IDCAT))}" class="fa fa-syndication" title="${LangLoader::get_message('syndication', 'common')}"></a>

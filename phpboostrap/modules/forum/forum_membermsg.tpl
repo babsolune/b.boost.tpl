@@ -23,7 +23,7 @@
 							{list.USER_ONLINE} # IF NOT list.C_GUEST #<a class="forum-link-pseudo {list.LEVEL_CLASS}" # IF list.C_GROUP_COLOR # style="color:{list.GROUP_COLOR}" # ENDIF # href="{list.U_USER_PROFILE}" title="{list.USER_PSEUDO}">{list.USER_PSEUDO}</a># ELSE # {list.USER_PSEUDO} # ENDIF #
 						</div>
 						<div class="col-sm-8">
-							<div class="pull-right">
+							<div class="pull-right text-right">
 								<div class="btn-group btn-group-xs">
 									<a class="btn btn-primary" href="#go-top" title="go top"><i class="fa fa-arrow-up"></i></a>
 									<a class="btn btn-primary" href="#go-bottom" title="go bottom"><i class="fa fa-arrow-down"></i></a>

@@ -1,6 +1,6 @@
 <section id="module-calendar" class="row">
 	<header class="col-md-12">
-		<div class="pull-right">
+		<div class="pull-right text-right">
 			<div class="btn-group btn-group-xs">
 				# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
 				<a class="btn btn-warning" href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
@@ -17,7 +17,7 @@
 		# ENDIF #
 		<article itemscope="itemscope" itemtype="http://schema.org/Event" id="article-calendar-{ID}" class="# IF C_NEW_CONTENT # new-content# ENDIF #">
 			<header>
-				<div class="pull-right">
+				<div class="pull-right text-right">
 					<div class="btn-group btn-group-xs">
 						# IF C_EDIT #
 							<a class="btn btn-info" href="{U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>

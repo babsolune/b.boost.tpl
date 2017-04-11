@@ -7,7 +7,7 @@
 					# START event #
 					<article itemscope="itemscope" itemtype="http://schema.org/Event" id="article-calendar-{event.ID}" class="col-sm-12 article-several# IF event.C_NEW_CONTENT # new-content# ENDIF #">
 						<header>
-							<div class="pull-right">
+							<div class="pull-right text-right">
 								<div class="btn-group btn-group-xs">
 									# IF C_COMMENTS_ENABLED #<a class="btn btn-info" href="{event.U_COMMENTS}"><i class="fa fa-comments-o"></i> {event.L_COMMENTS}</a># ENDIF #
 									# IF event.C_EDIT #

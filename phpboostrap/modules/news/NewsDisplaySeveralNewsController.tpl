@@ -1,6 +1,6 @@
 <section id="module-news">
 	<header>
-		<div class="pull-right">
+		<div class="pull-right text-right">
 			<div class="btn-group btn-group-xs">
 				# IF C_CATEGORY #
 					# IF IS_ADMIN #
@@ -36,7 +36,7 @@
 					</a>
 				# ENDIF #
 				<header>
-					<div class="pull-right">
+					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
 							# IF news.C_EDIT #
 								<a class="btn btn-info" href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
@@ -98,7 +98,7 @@
 		# START news #
 			<article id="article-news-{news.ID}" class="col-sm-12 mb15# IF news.C_TOP_LIST # top-list# ENDIF ## IF news.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 				<header>
-					<div class="pull-right">
+					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
 							# IF news.C_EDIT #
 								<a class="btn btn-info" href="{news.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
@@ -153,7 +153,7 @@
 							{news.CONTENTS}
 						# ENDIF #
 					</div>
-				
+
 
 				# IF news.C_SOURCES #
 				<div class="spacer"></div>

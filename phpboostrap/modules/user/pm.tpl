@@ -191,7 +191,7 @@
 								# ENDIF #
 							</div>
 							<div class="col-sm-8">
-								<div class="pull-right">
+								<div class="pull-right text-right">
 									<div class="btn-group btn-group-xs">
 										<a class="btn btn-info" href="#article-pm-{pm.msg.ID}">\#{pm.msg.ID}</a>
 										# IF pm.msg.C_MODERATION_TOOLS #

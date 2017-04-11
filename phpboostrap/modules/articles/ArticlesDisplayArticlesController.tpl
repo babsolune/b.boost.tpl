@@ -1,6 +1,6 @@
 <section id="module-articles">
 	<header class="page-header">
-		<div class="pull-right">
+		<div class="pull-right text-right">
 			<div class="btn-group btn-group-xs">
 				# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit small"></i></a># ENDIF #
 				<a class="btn btn-warning" href="{U_SYNDICATION}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
@@ -15,7 +15,7 @@
 		# INCLUDE NOT_VISIBLE_MESSAGE #
 		<article itemscope="itemscope" itemtype="http://schema.org/Article" id="article-articles-{ID}" class="col-xs-12 col-md-12# IF C_NEW_CONTENT # new-content# ENDIF #">
 			<header class="page-header">
-				<div class="pull-right">
+				<div class="pull-right text-right">
 					<div class="btn-group btn-group-xs">
 						# IF C_EDIT #
 							<a class="btn btn-info" href="{U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>

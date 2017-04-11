@@ -20,7 +20,7 @@
 						</div>
 					</div> -->
 					# IF comments.C_MODERATOR #
-					<div class="pull-right">
+					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
 							<a href="{comments.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}" class="btn btn-info">
 								<i class="fa fa-fw fa-edit"></i>

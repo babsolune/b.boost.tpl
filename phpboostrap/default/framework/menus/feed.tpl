@@ -1,5 +1,5 @@
 
-<div class="panel panel-info# IF C_HIDDEN_WITH_SMALL_SCREENS # hidden-small-screens# ENDIF #">
+<div class="panel panel-info# IF C_HIDDEN_WITH_SMALL_SCREENS # hidden-xs# ENDIF #">
 	<div class="panel-heading">
 		<div class="panel-title">
 			<a href="{U_LINK}" class="fa fa-syndication"></a>

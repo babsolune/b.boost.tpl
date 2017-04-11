@@ -1,5 +1,5 @@
 
-<footer class="well well-lg">	
+<footer class="well well-lg">
 	<nav class="navbar navbar-default" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -117,7 +117,7 @@
 		<span class="pull-left">
 			{L_TOTAL_POST}: <strong>{NBR_MSG}</strong> {L_MESSAGE} {L_DISTRIBUTED} <strong>{NBR_TOPIC}</strong> {L_TOPIC}
 		</span>
-		<span class="pull-right">
+		<span class="pull-right text-right">
 			<a href="{PATH_TO_ROOT}/forum/stats.php" title="{L_STATS}"><i class="fa fa-bar-chart-o"></i> {L_STATS}</a>
 		</span>
 		<div class="clearfix"></div>

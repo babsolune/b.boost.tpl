@@ -123,7 +123,7 @@
 
 		<article itemscope="itemscope" itemtype="http://schema.org/Creativework" id="article-forum-{ID}">
 			<header>
-				<div class="pull-right">
+				<div class="pull-right text-right">
 					# IF C_PAGINATION # # INCLUDE PAGINATION # # ENDIF #
 					<div class="btn-group btn-group-xs">
 						<span class="btn btn-warning">
@@ -228,7 +228,7 @@
 									# ENDIF #
 									</div>
 									<div class="col-sm-8">
-										<div class="pull-right">
+										<div class="pull-right text-right">
 											<div class="btn-group btn-group-xs">
 												# IF C_AUTH_POST #
 													<a class="btn btn-info" href="topic{msg.U_VARS_QUOTE}#go-bottom" title="{L_QUOTE}">
@@ -340,7 +340,7 @@
 									</div>
 								</div>
 								# IF msg.C_FORUM_MODERATOR #
-								<div class="pull-right">
+								<div class="pull-right text-right">
 									<div class="btn-group btn-group-xs">
 										<span class="btn btn-default">{msg.USER_WARNING}%</span>
 										<a href="moderation_forum{msg.U_FORUM_WARNING}" title="{L_WARNING_MANAGEMENT}" class="btn btn-warning">
@@ -360,7 +360,7 @@
 		# END msg #
 			</div>
 			<footer class="well well-sm">
-				<div class="pull-right">
+				<div class="pull-right text-right">
 					# IF C_PAGINATION # # INCLUDE PAGINATION # # ENDIF #
 					<div class="btn-group btn-group-xs">
 						<a href="${relative_url(SyndicationUrlBuilder::rss('forum',ID))}" class="btn btn-warning" title="${LangLoader::get_message('syndication', 'common')}">

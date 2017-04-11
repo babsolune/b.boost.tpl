@@ -156,7 +156,7 @@ jQuery(document).ready(function() {
 # INCLUDE MSG #
 <section id="module-faq">
 	<header>
-		<div class="pull-right">
+		<div class="pull-right text-right">
 			<div class="btn-group btn-group-xs">
 				# IF C_CATEGORY #
 				# IF IS_ADMIN #
@@ -308,7 +308,7 @@ jQuery(document).ready(function() {
 			<div class="row">
 				<article id="article-faq-{questions.ID}" itemscope="itemscope" itemtype="http://schema.org/CreativeWork" class="col-sm-12# IF questions.C_NEW_CONTENT # new-content# ENDIF #">
 					<header>
-						<div class="pull-right">
+						<div class="pull-right text-right">
 							<div class="btn-group btn-group-xs">
 								<a class="btn btn-primary" href="{questions.U_LINK}" title="{questions.L_LINK_QUESTION}"><i class="fa fa-flag"></i></a>
 								# IF questions.C_EDIT #

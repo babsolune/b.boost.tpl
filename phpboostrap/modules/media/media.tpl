@@ -1,7 +1,7 @@
 		# IF C_CATEGORIES #
 			<section id="module-media">
 				<header>
-					<div class="pull-right">
+					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
 							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
 							<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('media', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
@@ -78,7 +78,7 @@
 						# START file #
 							<article id="article-media-{file.ID}" class="col-sm-12# IF file.C_NEW_CONTENT # new-content# ENDIF #">
 								<header>
-									<div class="pull-right">
+									<div class="pull-right text-right">
 										# IF C_MODO #
 										<div class="btn-group btn-group-xs">
 											<a href="{file.U_ADMIN_UNVISIBLE_MEDIA}" class="btn btn-info" title="{L_UNAPROBED}">
@@ -149,7 +149,7 @@
 		# IF C_DISPLAY_MEDIA #
 		<section id="module-media">
 			<header>
-				<div class="pull-right">
+				<div class="pull-right text-right">
 					# IF IS_ADMIN #<a class="btn btn-info btn-xs" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
 				</div>
 				<h1>
@@ -159,7 +159,7 @@
 			<div class="content">
 				<article id="article-media-{ID}" class="article-media# IF C_NEW_CONTENT # new-content# ENDIF #">
 					<header>
-						<div class="pull-right">
+						<div class="pull-right text-right">
 							<div class="btn-group btn-group-xs">
 								# IF C_DISPLAY_COMMENTS #
 									<a class="btn btn-info" href="{U_COM}">

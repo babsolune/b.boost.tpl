@@ -26,7 +26,7 @@
 							# ENDIF #
 						</div>
 						<div class="col-sm-8">
-							<div class="pull-right">
+							<div class="pull-right text-right">
 								<div class="btn-group btn-group-xs">
 									# IF messages.C_EDIT #
 									<a class="btn btn-info" href="{messages.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
