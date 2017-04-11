@@ -18,12 +18,21 @@
 	# START guestbook_items #
 		<div class="panel panel-default" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 			<div class="panel-heading">
-				${LangLoader::get_message('by', 'common')}
-				# IF guestbook_items.C_AUTHOR_EXIST #
-				<a href="{guestbook_items.U_AUTHOR_PROFILE}" class="{guestbook_items.USER_LEVEL_CLASS}" # IF guestbook_items.C_USER_GROUP_COLOR # style="color:{guestbook_items.USER_GROUP_COLOR}" # ENDIF #>{guestbook_items.PSEUDO}</a>
-				# ELSE #
-				{guestbook_items.PSEUDO}
-				# ENDIF #
+				<div class="row">
+					<div class="col-sm-4">
+						${LangLoader::get_message('by', 'common')}
+						# IF guestbook_items.C_AUTHOR_EXIST #
+						<a href="{guestbook_items.U_AUTHOR_PROFILE}" class="{guestbook_items.USER_LEVEL_CLASS}" # IF guestbook_items.C_USER_GROUP_COLOR # style="color:{guestbook_items.USER_GROUP_COLOR}" # ENDIF #>{guestbook_items.PSEUDO}</a>
+						# ELSE #
+						{guestbook_items.PSEUDO}
+						# ENDIF #
+					</div>
+					<div class="col-sm-8">
+						<div class="btn btn-default btn-xs">
+							{guestbook_items.DATE}
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -31,12 +40,7 @@
 						<img class="avatar" src="{guestbook_items.U_AVATAR}" alt="{guestbook_items.PSEUDO}" />
 					</div>
 					<div class="col-sm-8">
-						<div class="btn btn-default btn-xs">
-							{guestbook_items.DATE}
-						</div>
-						<p>
-							{guestbook_items.CONTENTS}# IF guestbook_items.C_READ_MORE #...# ENDIF #
-						</p>
+						{guestbook_items.CONTENTS}# IF guestbook_items.C_READ_MORE #...# ENDIF #
 					</div>
 				</div>
 			</div>

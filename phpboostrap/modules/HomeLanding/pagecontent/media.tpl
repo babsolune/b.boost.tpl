@@ -68,7 +68,7 @@
 
 		# START media_mp3 #
 			<div class="col-sm-6 col-md-4" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
-				<h3><a href="{media_mp3.U_MEDIA_LINK}">{media_mp3.TITLE}</a></h3>
+				<h4><a href="{media_mp3.U_MEDIA_LINK}">{media_mp3.TITLE}</a></h4>
 				<div class="well well-sm">
 					${LangLoader::get_message('by', 'common')} <span class="color-topic">{media_mp3.PSEUDO}</span> ${Langloader::get_message('the', 'common')} {media_mp3.DATE}
 				</div>

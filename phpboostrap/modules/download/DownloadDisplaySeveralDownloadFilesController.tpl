@@ -1,6 +1,6 @@
 <section id="module-download">
 	<header>
-		<div class="pull-right">
+		<div class="pull-right text-right">
 			<div class="btn-group btn-group-xs">
 				# IF C_CATEGORY #
 					# IF IS_ADMIN #
@@ -29,9 +29,9 @@
 	</header>
 
 	# IF C_SUB_CATEGORIES #
-		<div class="row grid-columns">
+		<div class="row grid-columns mb15">
 			# START sub_categories_list #
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-6 col-md-4 text-center">
 				# IF sub_categories_list.C_CATEGORY_IMAGE #
 				<a itemprop="about" href="{sub_categories_list.U_CATEGORY}">
 					<img itemprop="thumbnailUrl" src="{sub_categories_list.CATEGORY_IMAGE}" alt="{sub_categories_list.CATEGORY_NAME}" />
@@ -132,7 +132,7 @@
 			<div class="row">
 				<article id="article-download-{downloadfiles.ID}" class="col-md-12 mb15# IF C_CATEGORY_DISPLAYED_SUMMARY # block# ENDIF ## IF downloadfiles.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 					<header>
-						<div class="pull-right">
+						<div class="pull-right text-right">
 							<div class="btn-group btn-group-xs">
 								# IF downloadfiles.C_EDIT #<a class="btn btn-info" href="{downloadfiles.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
 								# IF downloadfiles.C_DELETE #<a class="btn btn-danger" href="{downloadfiles.U_DELETE}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="delete-element"><i class="fa fa-delete"></i></a># ENDIF #

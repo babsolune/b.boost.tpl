@@ -10,10 +10,6 @@
     -webkit-flex-direction: column;
 }
 
-.media-left {
-    width: 20%;
-}
-
 .well {
     margin: 0;
 }
@@ -24,7 +20,7 @@
 }
 
 /* --- messages --- */
-.panel-body .btn a {
+.panel-heading .btn a {
     color: #ffffff;
 }
 

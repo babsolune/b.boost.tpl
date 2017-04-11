@@ -13,7 +13,17 @@
 	# START forum_items #
 		<div class="panel panel-default" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 			<div class="panel-heading">
-				<i class="fa fa-user"></i> {forum_items.PSEUDO}
+				<div class="row">
+					<div class="col-sm-4">
+						<i class="fa fa-user"></i> {forum_items.PSEUDO}
+					</div>
+					<div class="col-sm-8">
+						<div class="btn-group btn-group-xs">
+							<span class="btn btn-default"><i class="fa fa-clock-o"></i> {forum_items.DATE}</span>
+							<span class="btn btn-info"><i class="fa fa-file-o"></i> <a href="{forum_items.U_MESSAGE}">{forum_items.MESSAGE}</a></span>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -21,13 +31,7 @@
 						<img src="{forum_items.U_AVATAR}" alt="{forum_items.PSEUDO}" />
 					</div>
 					<div class="col-sm-8">
-						<div class="btn-group btn-group-xs">
-							<span class="btn btn-default"><i class="fa fa-clock-o"></i> {forum_items.DATE}</span>
-							<span class="btn btn-info"><i class="fa fa-file-o"></i> <a href="{forum_items.U_MESSAGE}">{forum_items.MESSAGE}</a></span>
-						</div>
-						<p>
-							{forum_items.CONTENTS} ... <a href="{forum_items.U_LINK}">[${LangLoader::get_message('read-more', 'common')}]</i></a>
-						</p>
+						{forum_items.CONTENTS} ... <a href="{forum_items.U_LINK}">[${LangLoader::get_message('read-more', 'common')}]</i></a>
 					</div>
 				</div>
 			</div>

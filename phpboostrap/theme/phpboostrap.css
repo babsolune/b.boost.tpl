@@ -164,7 +164,9 @@ a.admin    { color: #b59cd9; }
 a.modo     { color: #66512c; }
 a.member   {}
 
-
+.new-content {
+    background-color: #c6abed;
+}
 
 /* --- Grid-columns
 ============================================================================= */
@@ -261,6 +263,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 }
 
+.media-left {
+    width: 30%;
+}
+
+.media .well {
+    margin-bottom: 10px;
+    padding: 4px 9px;
+}
 
 /* --- Filtres --- */
 .items-filters { padding: 15px; }
@@ -381,6 +391,7 @@ select,
         width: 40%;
     }
 }
+
 /* --- BBCode styles
 ============================================================================= */
 .bbcode a.fa {

@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 		<h3>${LangLoader::get_message('comments', 'comments-common')}</h3>
 	</header>
 	# IF C_DISPLAY_FORM #
-	<div class="col-sm-12" id="comment-form">
+	<div class="col-sm-12 mb15" id="comment-form">
 		# INCLUDE COMMENT_FORM #
 	</div>
 	# ENDIF #
@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
 			<a href="{U_UNLOCK}"><i class="fa fa-unlock text-success"></i> {@unlock}</a>
 		</div>
 		# ELSE #
-		<div class="alert alert-info">
+		<div class="alert alert-success">
 			<a href="{U_LOCK}"><i class="fa fa-lock text-danger"></i> {@lock}</a>
 		</div>
 		# ENDIF #

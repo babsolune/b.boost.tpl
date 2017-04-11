@@ -5,14 +5,14 @@
 		# IF C_MENU_CONTAINER # <!-- Open mini-module-container -->
 		<div class="panel panel-pbt# IF C_HIDDEN_WITH_SMALL_SCREENS # hidden-xs# ENDIF #">
 			<div class="panel-heading hidden-xs">
-				<h5 class="menu-vertical-{DEPTH} text-center">
+				<div class="panel-title menu-vertical-{DEPTH} text-center">
 					# IF RELATIVE_URL #
 						<a href="{REL_URL}" title="{TITLE}">
 						# IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /># ENDIF #{TITLE}</a>
 					# ELSE #
 						# IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /># ENDIF #{TITLE}
 					# ENDIF #
-				</h5>
+				</div>
 			</div>
 			<div class="panel-body">
 		# ENDIF #
