@@ -2,4 +2,4 @@
 	    # IF C_DESCRIPTION #<div class="col-sm-12">${escape(DESCRIPTION)}</div># ENDIF #
 	    # START elements #<div class="col-sm-6"># INCLUDE elements.ELEMENT #</div># END elements #
     </div>
-	<div class="clearix"></div>
+	<div class="clearfix"></div>

@@ -7,7 +7,7 @@
 <div class="table-responsive">
     <table
     	# IF C_ID # id="{ID}"# ENDIF #
-    	class="table# IF C_CSS_CLASSES # {CSS_CLASSES}# ENDIF #"
+    	class="table table-hover# IF C_CSS_CLASSES # {CSS_CLASSES}# ENDIF #"
     	# IF C_CSS_STYLE # style="{CSS_STYLE}"# ENDIF #>
     	# IF C_CAPTION #
     	<caption>

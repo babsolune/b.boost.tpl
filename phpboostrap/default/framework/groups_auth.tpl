@@ -28,10 +28,10 @@
 		</optgroup>
 	</select>
 </div>
-
+<div class="clearfix"></div>
 <div id="advanced_auth{IDSELECT}" class="advanced-auth-input">
 	<strong>{L_ADD_USER}</strong>
-	<br />
+	<div class="clearfix"></div>
 	<div class="input-group">
 		<input class="form-control" type="text" size="14" value="" id="login{IDSELECT}" name="login{IDSELECT}">
 		<span class="input-group-btn">
@@ -59,6 +59,7 @@
 	</span>
 	# ENDIF #
 </a>
+<div class="clearfix"></div>
 <div class="btn-group btn-group-xs">
 	<a class="btn btn-default" href="javascript:check_select_multiple('{IDSELECT}', true);">{L_SELECT_ALL}</a>
 	<a class="btn btn-default" href="javascript:check_select_multiple('{IDSELECT}', false);">{L_SELECT_NONE}</a>

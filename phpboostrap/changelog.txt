@@ -1,6 +1,6 @@
 
 Installation
-    Vous devez actualiser le cache tpl (/admin/cache/data) après avoir installé le thème de façon à prendre en compte les éléments du dossier default.
+    Vous devez actualiser le cache tpl (/administration/outils/cache) après avoir installé le thème de façon à prendre en compte les éléments du dossier default.
 
 Specifications
     Navigation

@@ -4,44 +4,12 @@
 .wiki-paragraph-4 {}
 .wiki-paragraph-5 {}
 
-[id$="-v"],
-[href$="-v"] {
-    position: relative;
-    margin-right: 40px;
-    overflow: visible;
-}
-[id$="-v"]:after,
-[href$="-v"]:after {
-    position: absolute;
-    content: url("images/tag_51.svg");
-    top: -80%;
-    left: calc(100% - 4px);
-}
-[id$="-v"]:after {
-    top: -35%;
-    left: 100%;
+.bbcode .btn-group-xs > .btn-wiki {
+    padding: 0 5px;
 }
 
-[id$="-x"],
-[href$="-x"] {
-    position: relative;
-    margin-right: 40px;
-    overflow: visible;
-}
-[id$="-x"]:after,
-[href$="-x"]:after {
-    position: absolute;
-    content: "5.1";
-	background-color: #366493;
-	border-radius: 100%;
-	color: #FFFFFF;
-	padding: 6px 4px;
-	font-size: 0.8em;
-    top: -25%;
-    left: calc(100% + 4px);
-}
-[href$="-x"]:after {
-	padding: 6px;
+.wiki-bbcode .btn-toolbar .btn-group {
+    float: none;
 }
 
 .wiki-list {
@@ -72,12 +40,19 @@
 	cursor: pointer;
 }
 
-ul.no-list {
+ul.wiki-cats,
+ul.wiki-cats ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.wiki-cats ul {
 	margin: 0 0 0 20px;
 }
 
-ul.no-list a i.fa {
+ul.wiki-cats a i.fa {
 	width: 18px;
+    margin-right: 5px;
 }
 
 #module-wiki .content .options {

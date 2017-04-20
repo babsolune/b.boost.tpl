@@ -25,14 +25,19 @@
 
 					# START file #
 						<div class="col-sm-4">
-							# IF file.C_DISPLAY_REAL_IMG #
-								<img src="{PATH_TO_ROOT}/upload/{file.FILE_ICON}" alt="{file.NAME}"/>
-							# ELSE #
-								<i class="fa {file.FILE_ICON}"></i>
-							# ENDIF #
-							 {file.NAME}<br />
-							<span class="smaller">{file.FILETYPE}</span><br />
-							<span class="smaller">{file.SIZE}</span><br />
+
+							<ul class="list-group">
+								<li class="list-group-item text-center">
+									# IF file.C_DISPLAY_REAL_IMG #
+										<img src="{PATH_TO_ROOT}/upload/{file.FILE_ICON}" alt="{file.NAME}"/>
+									# ELSE #
+										<i class="fa {file.FILE_ICON}"></i>
+									# ENDIF #
+								</li>
+								<li class="list-group-item">{file.NAME}</li>
+								<li class="list-group-item">{file.FILETYPE}</li>
+								<li class="list-group-item">{file.SIZE}</li>
+							</ul>
 						</div>
 					# END file #
 
@@ -55,11 +60,11 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<fieldset class="fieldset-submit">
+				<p class="text-center">
 					<input type="hidden" name="new_cat" id="id_cat" value="{SELECTED_CAT}">
 					<input type="hidden" name="token" value="{TOKEN}">
 					<button type="submit" value="true" name="valid" class="btn btn-primary">{L_SUBMIT}</button>
-				</fieldset>
+				</p>
 			</form>
 		</div>
 		<footer></footer>

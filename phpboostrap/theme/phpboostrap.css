@@ -64,11 +64,7 @@ a:hover#site-name {
 }
 
 #sub-header {
-    background-color: #EAE4F1;
-}
-
-#global {
-    padding: 15px;
+    background-color: #BCA2E2;
 }
 
 div#main-content {
@@ -93,6 +89,10 @@ div#bottom-content {
     float: none;
     margin: auto;
     display: table;
+}
+
+#global {
+    padding: 15px;
 }
 
 /* --- Flexbox ---
@@ -188,10 +188,15 @@ table td {
 
 table caption {
     width: 100%;
+    padding: 8px;
 }
 
 table select {
     margin: 0;
+}
+
+.picture-table {
+    max-width: 180px;
 }
 
 @media (min-width: 970px){
@@ -214,8 +219,12 @@ tbody td.calendar-event 	{ background-color: #DBE5EE; }
 tbody td.calendar-weekend 	{ background-color: #FFE3B6; }
 
 /* --- DatePicker --- */
-.input-hours,
-.input-minutes { width: 60px !important;}
+.date-control {
+    width: 100px !important;
+}
+
+.hours-control,
+.minutes-control { width: 50% !important;}
 
 .calendar-picker {
     margin-top: 8px;
@@ -272,6 +281,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 4px 9px;
 }
 
+code {display: block;}
+
 /* --- Filtres --- */
 .items-filters { padding: 15px; }
 .items-filters .form-horizontal .form-group::before {display: inline;}
@@ -321,7 +332,7 @@ fieldset.fieldset-submit {
 }
 
 textarea {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 select,
@@ -345,6 +356,21 @@ select,
 .input-group-separator + .form-control {
     border-left: none;
 }
+
+@media (min-width: 767px) {
+    .filter-control {
+        width: 50% !important;
+    }
+
+    .menu-control {
+        width: calc(100% / 3) !important;
+    }
+}
+
+.panel .btn a, .panel a.btn {
+    color: #ffffff;
+}
+
 
 .panel-heading * { margin: 0; }
 
@@ -638,6 +664,7 @@ img {max-width: 100%}
 .advanced-auth-select,
 .advanced-auth-input {
     display: inline-block;
+    vertical-align: top;
 }
 
 /* --- Menus
@@ -955,11 +982,6 @@ img {max-width: 100%}
 	background-image: linear-gradient(to bottom, #FFFFFF 25%, #F2F5F8 100%);
 }
 
-.sortable-block .sortable-title > span {
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
 .sortable-block .sortable-title span.cat-desc {
 	font-size: 0.8em;
 	font-weight: normal;
@@ -987,7 +1009,7 @@ img {max-width: 100%}
 }
 
 .sortable-block .sortable-element label {
-	margin-left: 14px;
+	/*margin-left: 14px;*/
 	color: #1F507F;
 }
 

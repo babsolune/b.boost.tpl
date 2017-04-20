@@ -7,23 +7,15 @@
 
 		<!-- Theme CSS -->
 		# IF C_CSS_CACHE_ENABLED #
-		<link rel="stylesheet" href="${CSSCacheManager::get_css_path('/templates/default/theme/default.css;/kernel/lib/css/font-awesome/css/font-awesome.css;/templates/default/theme/admin_design.css;/templates/default/theme/admin_content.css;/templates/default/theme/admin_cssmenu.css;/templates/default/theme/admin_menus.css;/templates/default/theme/admin_table.css;/templates/default/theme/admin_form.css;/templates/default/theme/admin_global.css')}" type="text/css" media="screen, print" />
+		<link rel="stylesheet" href="${CSSCacheManager::get_css_path('/kernel/lib/css/font-awesome/css/font-awesome.css;/kernel/lib/js/lightcase/css/lightcase.css;/templates/{THEME}/theme/bootstrap.css;/templates/{THEME}/theme/bootstrap-theme.css;/templates/{THEME}/theme/phpboostrap.css;/templates/{THEME}/theme/phpboostrap-theme.css;/templates/{THEME}/default/theme/admin_phpboostrap.css')}" type="text/css" media="screen, print" />
 		# ELSE #
-		<!-- <link rel="stylesheet" href="{PATH_TO_ROOT}/templates/default/theme/default.css" type="text/css" media="screen, print" /> -->
 		<link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/lib/css/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/lib/js/lightcase/css/lightcase.css" />
 		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/bootstrap.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/bootstrap-theme.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_phpboostrap.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_phpboostrap-theme.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/phpboostrap.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/phpboostrap-theme.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_design.css" type="text/css" media="screen" />
-		<!-- admin-content => sortables -->
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_content.css" type="text/css" media="screen, print" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_cssmenu.css" type="text/css" media="screen, print" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_menus.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_table.css" type="text/css" media="screen, print" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_form.css" type="text/css" media="screen, print" />
-		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_global.css" type="text/css" media="screen, print" />
+		<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/default/theme/admin_phpboostrap.css" type="text/css" media="screen" />
 		# ENDIF #
 
 		<!-- Modules CSS -->
@@ -39,6 +31,7 @@
 	<body>
 		# INCLUDE BODY #
 		# INCLUDE JS_BOTTOM #
+		<script src="{PATH_TO_ROOT}/templates/{THEME}/js/bootstrap.min.js"></script>
 		<script>
 		<!--
 			function open_submenu(myid)

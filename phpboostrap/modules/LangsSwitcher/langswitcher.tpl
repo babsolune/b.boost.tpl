@@ -3,7 +3,7 @@
 	<form action="{REWRITED_SCRIPT}" method="get" class="form-group">
 		<select class="form-control" name="switchlang" onchange="document.location = '?switchlang=' + this.options[this.selectedIndex].value;">
 		# START langs #
-			<option value="{langs.IDNAME}"{langs.SELECTED}>{langs.NAME}</option>
+			<option value="{langs.IDNAME}"# IF langs.C_SELECTED # selected="selected"# ENDIF #>{langs.NAME}</option>
 		# END langs #
 		</select>
 		<div class="text-center">
@@ -20,7 +20,7 @@
 			</span>
 			<select class="form-control" name="switchlang" onchange="document.location = '?switchlang=' + this.options[this.selectedIndex].value;">
 			# START langs #
-				<option value="{langs.IDNAME}"{langs.SELECTED}>{langs.NAME}</option>
+				<option value="{langs.IDNAME}"# IF langs.C_SELECTED # selected="selected"# ENDIF #>{langs.NAME}</option>
 			# END langs #
 			</select>
 			<span class="input-group-addon btn-pbt">

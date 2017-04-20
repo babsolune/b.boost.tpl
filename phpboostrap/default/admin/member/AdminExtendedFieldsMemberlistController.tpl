@@ -27,7 +27,7 @@ ExtendedFields.prototype = {
 				jQuery("#move-up-" + sequence[i].id).hide();
 			else
 				jQuery("#move-up-" + sequence[i].id).show();
-			
+
 			if (jQuery('#list-' + sequence[i].id).is(':last-child'))
 				jQuery("#move-down-" + sequence[i].id).hide();
 			else
@@ -40,7 +40,7 @@ var ExtendedField = function(id, display, extended_fields){
 	this.id = id;
 	this.more_is_opened = false;
 	this.ExtendedFields = extended_fields;
-	
+
 	# IF C_MORE_THAN_ONE_FIELD #
 	this.ExtendedFields.change_reposition_pictures();
 	# ENDIF #
@@ -115,18 +115,30 @@ jQuery(document).ready(function() {
 						<div class="sortable-title">
 							{list_extended_fields.NAME}
 							<div class="sortable-actions">
-								{@field.required} : # IF list_extended_fields.C_REQUIRED #${LangLoader::get_message('yes', 'common')}# ELSE #${LangLoader::get_message('no', 'common')}# ENDIF #
-								# IF C_MORE_THAN_ONE_FIELD #
-								<a href="" title="${LangLoader::get_message('position.move_up', 'common')}" id="move-up-{list_extended_fields.ID}" onclick="return false;"><i class="fa fa-arrow-up"></i></a>
-								<a href="" title="${LangLoader::get_message('position.move_down', 'common')}" id="move-down-{list_extended_fields.ID}" onclick="return false;"><i class="fa fa-arrow-down"></i></a>
-								# ENDIF #
-								<a href="{list_extended_fields.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
-								# IF NOT list_extended_fields.C_FREEZE #
-								<a href="" onclick="return false;" title="${LangLoader::get_message('delete', 'common')}" id="delete-{list_extended_fields.ID}"><i class="fa fa-delete"></i></a>
-								# ELSE #
-								&nbsp;
-								# ENDIF #
-								<a href="" onclick="return false;" id="change-display-{list_extended_fields.ID}"><i # IF list_extended_fields.C_DISPLAY #class="fa fa-eye" title="{@field.display}"# ELSE #class="fa fa-eye-slash" title="{@field.not_display}"# ENDIF #></i></a>
+								<div class="btn-group btn-group-xs">
+									<span class="btn btn-default">
+										{@field.required} : # IF list_extended_fields.C_REQUIRED #${LangLoader::get_message('yes', 'common')}# ELSE #${LangLoader::get_message('no', 'common')}# ENDIF #
+									</span>
+									# IF C_MORE_THAN_ONE_FIELD #
+									<a class="btn btn-primary" href="" title="${LangLoader::get_message('position.move_up', 'common')}" id="move-up-{list_extended_fields.ID}" onclick="return false;"><i class="fa fa-arrow-up"></i></a>
+									<a class="btn btn-primary" href="" title="${LangLoader::get_message('position.move_down', 'common')}" id="move-down-{list_extended_fields.ID}" onclick="return false;"><i class="fa fa-arrow-down"></i></a>
+									# ENDIF #
+									<a class="btn btn-info" href="{list_extended_fields.U_EDIT}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
+									# IF NOT list_extended_fields.C_FREEZE #
+									<a class="btn btn-danger" href="" onclick="return false;" title="${LangLoader::get_message('delete', 'common')}" id="delete-{list_extended_fields.ID}"><i class="fa fa-delete"></i></a>
+									# ELSE #
+									&nbsp;
+									# ENDIF #
+									# IF list_extended_fields.C_DISPLAY #
+									<a class="btn btn-success" href="" onclick="return false;" id="change-display-{list_extended_fields.ID}">
+										<i class="fa fa-eye" title="{@field.display}"></i>
+									</a>
+									# ELSE #
+									<a class="btn btn-danger" href="" onclick="return false;" id="change-display-{list_extended_fields.ID}">
+										<i class="fa fa-eye-slash" title="{@field.not_display}"></i>
+									</a>
+									# ENDIF #
+								</div>
 							</div>
 						</div>
 						<div class="spacer"></div>
@@ -134,24 +146,24 @@ jQuery(document).ready(function() {
 						<!--
 						jQuery(document).ready(function() {
 							var extended_field = new ExtendedField({list_extended_fields.ID}, '{list_extended_fields.C_DISPLAY}', ExtendedFields);
-							
+
 							# IF NOT list_extended_fields.C_FREEZE #
 							jQuery('#delete-{list_extended_fields.ID}').on('click',function(){
 								extended_field.delete();
 							});
 							# ENDIF #
-							
+
 							jQuery('#change-display-{list_extended_fields.ID}').on('click',function(){
 								extended_field.change_display();
 							});
-							
+
 							# IF C_MORE_THAN_ONE_FIELD #
 							jQuery('#move-up-{list_extended_fields.ID}').on('click',function(){
 								var li = jQuery(this).closest('li');
 								li.insertBefore( li.prev() );
 								ExtendedFields.change_reposition_pictures();
 							});
-							
+
 							jQuery('#move-down-{list_extended_fields.ID}').on('click',function(){
 								var li = jQuery(this).closest('li');
 								li.insertAfter( li.next() );
@@ -164,16 +176,14 @@ jQuery(document).ready(function() {
 					</li>
 				# END list_extended_fields #
 			</ul>
-			<div id="no_field" class="center"# IF C_FIELDS # style="display:none;"# ENDIF #>${LangLoader::get_message('no_item_now', 'common')}</div>
+			<div id="no_field" class="text-center"# IF C_FIELDS # style="display:none;"# ENDIF #>${LangLoader::get_message('no_item_now', 'common')}</div>
 		</div>
 	</fieldset>
 	# IF C_MORE_THAN_ONE_FIELD #
-	<fieldset class="fieldset-submit">
-		<div class="fieldset-inset">
-			<button type="submit" class="submit" name="submit" value="true">${LangLoader::get_message('position.update', 'common')}</button>
-			<input type="hidden" name="token" value="{TOKEN}">
-			<input type="hidden" name="tree" id="tree" value="">
-		</div>
-	</fieldset>
+	<p class="text-center">
+		<button type="submit" class="btn btn-primary" name="submit" value="true">${LangLoader::get_message('position.update', 'common')}</button>
+		<input type="hidden" name="token" value="{TOKEN}">
+		<input type="hidden" name="tree" id="tree" value="">
+	</p>
 	# ENDIF #
 </form>

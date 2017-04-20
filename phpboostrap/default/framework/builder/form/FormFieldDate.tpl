@@ -34,10 +34,10 @@ jQuery(document).ready(function() {
 			<div class="input-group">
 				{CALENDAR}
 				# IF C_HOUR #
-				<div class="input-group-addon">{L_AT}</div>
-				<input type="number" min="0" max="23" id="${escape(HTML_ID)}_hours" class="form-control input-hours" name="${escape(HTML_ID)}_hours" value="{HOURS}" # IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_READONLY # readonly="readonly"# ENDIF #/>
-				<div class="input-group-addon">{L_H}</div>
-				<input type="number" min="0" max="59" id="${escape(HTML_ID)}_minutes" class="form-control input-minutes" name="${escape(HTML_ID)}_minutes" value="{MINUTES}"# IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_READONLY # readonly="readonly"# ENDIF #/>
+				<span class="input-group-addon">{L_AT}</span>
+				<input type="number" min="0" max="23" id="${escape(HTML_ID)}_hours" class="form-control hours-control" name="${escape(HTML_ID)}_hours" value="{HOURS}" # IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_READONLY # readonly="readonly"# ENDIF #/>
+				<input type="number" min="0" max="59" id="${escape(HTML_ID)}_minutes" class="form-control minutes-control" name="${escape(HTML_ID)}_minutes" value="{MINUTES}"# IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_READONLY # readonly="readonly"# ENDIF #/>
+				<span class="input-group-addon">{L_H}</span>
 				# ENDIF #
 			</div>
 			<span class="text-status-constraint alert alert-danger" style="display:none" id="onblurMessageResponse${escape(HTML_ID)}"></span>

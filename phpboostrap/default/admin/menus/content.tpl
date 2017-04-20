@@ -16,67 +16,64 @@ function CheckForm() {
 -->
 </script>
 <div id="admin-contents">
-	<form action="content.php" method="post" onsubmit="return CheckForm();" class="fieldset-content">
-		<p class="center">{L_REQUIRE}</p>
-			<fieldset> 
+	<form action="content.php" method="post" onsubmit="return CheckForm();" class="form-horizontal">
+		<p class="text-center">{L_REQUIRE}</p>
+		<fieldset>
 			<legend>{L_ACTION_MENUS}</legend>
-			<div class="form-element">
-				<label for="name">* {L_NAME}</label>
-				<div class="form-field"><input type="text" name="name" id="name" value="{NAME}"></div>
-			</div>
-			<div class="form-element">
-				<label for="name">{L_DISPLAY_TITLE}</label>
-				<div class="form-field">
-					<div class="form-field-checkbox">
-						<input type="checkbox" id="display_title" name="display_title[]" value="display_title" {DISPLAY_TITLE_CHECKED} />
-						<label for="display_title"></label>
-					</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="name">* {L_NAME}</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" name="name" id="name" value="{NAME}">
 				</div>
 			</div>
-			<div class="form-element">
-				<label for="location">{L_LOCATION}</label>
-				<div class="form-field"><select name="location" id="location">{LOCATIONS}</select></div>
-			</div>
-			<div class="form-element-textarea">
-				<label for="contents" id="preview_description">* {L_CONTENT}</label>
-				{KERNEL_EDITOR}
-				<div class="form-field-textarea"">
-					<textarea rows="15" id="contents" name="contents">{CONTENTS}</textarea>
+			<div class="form-group">
+				<label class="col-sm-4" for="name">{L_DISPLAY_TITLE}</label>
+				<div class="col-sm-8">
+					<input type="checkbox" id="display_title" name="display_title[]" value="display_title" {DISPLAY_TITLE_CHECKED} />
 				</div>
-				<div class="center"><button type="button" class="small" onclick="XMLHttpRequest_preview(); return false;" value="true">{L_PREVIEW}</button></div>
 			</div>
-			<div class="form-element">
-				<label for="activ">{L_STATUS}</label>
-				<div class="form-field">
-					<select name="activ" id="activ">
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="location">{L_LOCATION}</label>
+				<div class="col-sm-8">
+					<select class="form-control" name="location" id="location">{LOCATIONS}</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label for="contents" id="preview_description">* {L_CONTENT}</label>
+					{KERNEL_EDITOR}
+					<textarea class="form-control" rows="15" id="contents" name="contents">{CONTENTS}</textarea>
+					<div class="text-center"><button type="button" class="btn btn-default btn-sm" onclick="XMLHttpRequest_preview(); return false;" value="true">{L_PREVIEW}</button></div>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="activ">{L_STATUS}</label>
+				<div class="col-sm-8">
+					<select class="form-control" name="activ" id="activ">
 						<option value="1"# IF C_ENABLED # selected="selected"# ENDIF #>{L_ENABLED}</option>
 						<option value="0"# IF NOT C_ENABLED # selected="selected"# ENDIF #>{L_DISABLED}</option>
 					</select>
 				</div>
 			</div>
-			<div class="form-element">
-				<label for="hidden_with_small_screens">{L_HIDDEN_WITH_SMALL_SCREENS}</label>
-				<div class="form-field">
-					<div class="form-field-checkbox">
-						<input type="checkbox" name="hidden_with_small_screens" id="hidden_with_small_screens"# IF C_MENU_HIDDEN_WITH_SMALL_SCREENS # checked="checked"# ENDIF # />
-						<label for="hidden_with_small_screens"></label>
-					</div>
+			<div class="form-group">
+				<label class="col-sm-4" for="hidden_with_small_screens">{L_HIDDEN_WITH_SMALL_SCREENS}</label>
+				<div class="col-sm-8">
+					<input type="checkbox" name="hidden_with_small_screens" id="hidden_with_small_screens"# IF C_MENU_HIDDEN_WITH_SMALL_SCREENS # checked="checked"# ENDIF # />
 				</div>
 			</div>
-			<div class="form-element">
-				<label>{L_AUTHS}</label>
-				<div class="form-field">{AUTH_MENUS}</div>
+			<div class="form-group">
+				<label class="col-sm-4">{L_AUTHS}</label>
+				<div class="col-sm-8">{AUTH_MENUS}</div>
 			</div>
 		</fieldset>
 
 		# INCLUDE filters #
-		
-		<fieldset class="fieldset-submit">
-			<legend>{L_ACTION}</legend>
+
+		<p class="text-center">
 			<input type="hidden" name="action" value="{ACTION}">
 			<input type="hidden" name="id" value="{IDMENU}">
-			<button type="submit" class="submit" name="valid" value="true">{L_ACTION}</button>
+			<button type="submit" class="btn btn-primary" name="valid" value="true">{L_ACTION}</button>
 			<input type="hidden" name="token" value="{TOKEN}">
-		</fieldset>
+		</p>
 	</form>
 </div>

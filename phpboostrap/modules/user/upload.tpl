@@ -318,41 +318,42 @@
 				<form class="form-group" action="upload.php?f={FOLDER_ID}&amp;token={TOKEN}{POPUP}" enctype="multipart/form-data" method="post">
 					<fieldset>
 						<legend>{L_ADD_FILES}</legend>
-						<div class="text-center">
-							<div class="form-field">
+						<div class="row">
+							<div class="col-sm-8">
 								<input class="mb15" type="file" name="upload_file" id="upload-file">
 								<input type="hidden" name="max_file_size" value="2000000">
 							</div>
-							<input type="hidden" name="token" value="{TOKEN}">
-							<button type="submit" name="valid_up" value="true" class="btn btn-primary">{L_UPLOAD}</button>
+							<div class="col-sm-4 text-right">
+								<input type="hidden" name="token" value="{TOKEN}">
+								<button type="submit" name="valid_up" value="true" class="btn btn-primary">{L_UPLOAD}</button>
+							</div>
 						</div>
 					</fieldset>
 				</form>
 			</div>
 
-			<div class="upload-address-bar">
-				<a href="upload.php?root=1{POPUP}"><i class="fa fa-home"></i> {L_ROOT}</a>{URL}
+			<div class="well well-sm">
+				<a href="upload.php?root=1{POPUP}"><i class="fa fa-home"></i> {L_ROOT} </a> {URL}
 			</div>
 
-			<div class="btn btn-group btn-group-sm">
+			<div class="btn-group btn-group-sm">
 				<a class="btn btn-info" href="upload.php?fup={FOLDER_ID}{POPUP}">
 					<i class="fa fa-level-up"></i> {L_FOLDER_UP}
 				</a>
 				<a class="btn btn-pbt" href="javascript:display_new_folder();">
 					<i class="fa fa-plus"></i> {L_FOLDER_NEW}
 				</a>
-				<a class="btn btn-default" href="javascript:document.getElementById('upload-file').click();">
+				<a class="btn btn-primary" href="javascript:document.getElementById('upload-file').click();">
 					<i class="fa fa-save"></i> {L_ADD_FILES}
 				</a>
 			</div>
-			<div class="spacer"></div>
 
 			<legend>{L_FOLDER_CONTENT}</legend>
 
 			<div class="row">
 
 				# IF C_EMPTY_FOLDER #
-					<div id="empty-folder" class="notice">{L_EMPTY_FOLDER}</div>
+					<div id="empty-folder" class="alert alert-notice">{L_EMPTY_FOLDER}</div>
 					<span id="new-folder"></span>
 				# ELSE #
 					<div class="row grid-columns">
@@ -389,30 +390,34 @@
 								<div class="panel-heading">
 									<div class="upload-element-name# IF files.C_RECENT_FILE # upload-recent-file# ENDIF #" id="fi1{files.ID}">{files.NAME}</div>
 									<span id="fi{files.ID}"></span>
-
 								</div>
-
-									# IF files.C_IMG #
-									<div class="panel-body upload-file-picture">
-										<a href="{files.URL}" data-lightbox="formatter" data-rel="lightcase:collection" title="{files.TITLE}">
-											<div class="upload-element-picture" style="background-image: url({files.URL})"></div>
-										</a>
-									</div>
-									# ELSE #
-									<div class="panel-body text-center">
-										<a class="# IF files.C_RECENT_FILE #upload-recent-file# END IF #" href="{files.URL}" title="{files.TITLE}"{files.LIGHTBOX}>
-											<div class="upload-element-icon"><i class="fa {files.IMG}"></i></div>
-										</a>
-									</div>
-									# ENDIF #
+								# IF files.C_IMG #
+								<div class="panel-body upload-file-picture">
+									<a href="{files.URL}" data-lightbox="formatter" data-rel="lightcase:collection" title="{files.TITLE}">
+										<div class="upload-element-picture" style="background-image: url({files.URL})"></div>
+									</a>
+								</div>
+								# ELSE #
+								<div class="panel-body text-center">
+									<a class="# IF files.C_RECENT_FILE #upload-recent-file# END IF #" href="{files.URL}" title="{files.TITLE}"{files.LIGHTBOX}>
+										<div class="upload-element-icon"><i class="fa {files.IMG}"></i></div>
+									</a>
+								</div>
+								# ENDIF #
 
 								<ul class="list-group">
 									<li class="list-group-item">{files.BBCODE}</li>
 									<li class="list-group-item">
-										{files.RENAME_FILE}
-										<a href="upload.php?del={files.ID}&amp;f={FOLDER_ID}&amp;token={TOKEN}{POPUP}" title="{L_DELETE}" class="fa fa-delete" data-confirmation="delete-element"></a>
-										<a href="upload{files.U_MOVE}" title="{L_MOVETO}" class="fa fa-move"></a>
-										{files.INSERT}
+										<div class="btn-group btn-group-xs">
+											<span class="btn btn-info">{files.RENAME_FILE}</span>
+											<a href="upload.php?del={files.ID}&amp;f={FOLDER_ID}&amp;token={TOKEN}{POPUP}" title="{L_DELETE}" class="btn btn-danger" data-confirmation="delete-element">
+												<i class="fa fa-delete"></i>
+											</a>
+											<a href="upload{files.U_MOVE}" title="{L_MOVETO}" class="btn btn-info">
+												<i class="fa fa-move"></i>
+											</a>
+											<span class="btn btn-primary">{files.INSERT}</span>
+										</div>
 										<span id="imgf{files.ID}"></span>
 									</li>
 									<li class="list-group-item">{files.FILETYPE}</li>

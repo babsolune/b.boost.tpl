@@ -3,7 +3,7 @@
 	<form action="{REWRITED_SCRIPT}" method="get" class="form-group">
 		<select class="form-control" name="switchtheme" onchange="document.location = '?switchtheme=' + this.options[this.selectedIndex].value;">
 		# START themes #
-			<option value="{themes.IDNAME}"{themes.SELECTED}>{themes.NAME}</option>
+			<option value="{themes.IDNAME}"# IF themes.C_SELECTED# selected="selected"# ENDIF #>{themes.NAME}</option>
 		# END themes #
 		</select>
 		<div class="text-center">
@@ -20,7 +20,7 @@
 			</span>
 			<select class="form-control" name="switchtheme" onchange="document.location = '?switchtheme=' + this.options[this.selectedIndex].value;">
 			# START themes #
-				<option value="{themes.IDNAME}"{themes.SELECTED}>{themes.NAME}</option>
+				<option value="{themes.IDNAME}"# IF themes.C_SELECTED# selected="selected"# ENDIF #>{themes.NAME}</option>
 			# END themes #
 			</select>
 			<span class="input-group-addon btn-pbt">
