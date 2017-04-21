@@ -165,7 +165,7 @@ a.modo     { color: #66512c; }
 a.member   {}
 
 .new-content {
-    background-color: #c6abed;
+    border-top: 5px solid #c6abed;
 }
 
 /* --- Grid-columns
@@ -375,7 +375,7 @@ select,
 
 @media (min-width: 767px) {
     .breadcrumb {
-        margin-right: 35px;
+        margin-right: 50px;
     }
 }
 
@@ -625,6 +625,8 @@ h6.formatter-title { margin-left: 4rem; }
 
 .mtb5  { margin-top: 5px; margin-bottom: 5px; }
 .mtb15 { margin-top: 15px; margin-bottom: 15px; }
+
+.mr15 {margin-right: 15px;}
 
 .m5    { margin: 5px; }
 .m15   { margin: 15px; }
