@@ -1,3 +1,18 @@
+/* --- User Upload
+============================================================================= */
+
+#module-user-upload .btn-group a,
+.upload-elements-container .btn-group a {
+    color: #ffffff;
+}
+
+#module-user-upload input,
+.upload-elements-container input {
+	width: 100%;
+}
+
+..btn-group a
+
 /* --- User Login
 ============================================================================= */
 .global-maintain #site-logo {

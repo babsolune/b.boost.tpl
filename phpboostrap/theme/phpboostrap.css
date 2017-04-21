@@ -367,11 +367,6 @@ select,
     }
 }
 
-.panel .btn a, .panel a.btn {
-    color: #ffffff;
-}
-
-
 .panel-heading * { margin: 0; }
 
 .text-status-constraint {
