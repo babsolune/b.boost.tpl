@@ -2,6 +2,7 @@
 <form action="{REWRITED_SCRIPT}" method="post" class="form-horizontal">
 	<input type="hidden" name="token" value="{TOKEN}">
 	<div class="col-sm-12"># INCLUDE MSG #</div>
+	<div class="clearfix"></div>
 	<fieldset>
 		<legend>{@modules.modules_available}</legend>
 		<div class="fieldset-inset">
@@ -61,7 +62,7 @@
 				</table>
 			</div>
 		# ELSE #
-		<div class="alert alert-notice">${LangLoader::get_message('no_item_now', 'common')}</div>
+			<div class="alert alert-notice">${LangLoader::get_message('no_item_now', 'common')}</div>
 		# ENDIF #
 		</div>
 	</fieldset>

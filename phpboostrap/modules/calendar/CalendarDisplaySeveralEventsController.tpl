@@ -1,6 +1,6 @@
 # INCLUDE MSG #
 
-<section id="module-calendar" class="row">
+<section id="module-calendar">
 	<header>
 		<div class="pull-right text-right">
 			<a class="btn btn-warning btn-xs" href="${relative_url(SyndicationUrlBuilder::rss('calendar'))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
@@ -10,7 +10,7 @@
 		</h1>
 	</header>
 
-	<div class="col-md-12">
+	<div>
 		# IF NOT C_PENDING_PAGE #
 		<div id="calendar">
 			# INCLUDE CALENDAR #

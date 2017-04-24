@@ -115,6 +115,7 @@
 						# IF C_AUTHOR_EXIST #<a itemprop="author" href="{U_AUTHOR_PROFILE}" class="{AUTHOR_LEVEL_CLASS}" # IF C_AUTHOR_GROUP_COLOR # style="color:{AUTHOR_GROUP_COLOR}" # ENDIF #>{AUTHOR}</a># ELSE #{AUTHOR}# ENDIF #
 					</li>
 				</ul>
+				# IF C_LOCATION_MAP #<div class="location-map">{LOCATION_MAP}</div># ENDIF #
 			</div>
 			<hr>
 			# INCLUDE COMMENTS #
