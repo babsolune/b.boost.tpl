@@ -1,113 +1,118 @@
 # IF redirections #
 	{L_REDIRECTIONS}
 	# START redirections #
-	<table id="table">
-		<thead>
-			<tr>
-				<th>
-					{L_REDIRECTION_TITLE}
-				</th>
-				<th>
-					{L_REDIRECTION_TARGET}
-				</th>
-				<th>
-					{L_ACTIONS}
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			# START redirections.list #
-			<tr>
-				<td>
-					{redirections.list.REDIRECTION_TITLE}
-				</td>
-				<td>
-					{redirections.list.REDIRECTION_TARGET}
-				</td>
-				<td>
-					{redirections.list.ACTIONS}
-				</td>
-			</tr>
-			# END redirections.list #
-			# IF C_NO_REDIRECTION #
-			<tr>
-				<td colspan="3">
-					{L_NO_REDIRECTION}
-				</td>
-			</tr>
-			# ENDIF #
-		</tbody>
-	</table>
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						{L_REDIRECTION_TITLE}
+					</th>
+					<th>
+						{L_REDIRECTION_TARGET}
+					</th>
+					<th>
+						{L_ACTIONS}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				# START redirections.list #
+				<tr>
+					<td>
+						{redirections.list.REDIRECTION_TITLE}
+					</td>
+					<td>
+						{redirections.list.REDIRECTION_TARGET}
+					</td>
+					<td>
+						{redirections.list.ACTIONS}
+					</td>
+				</tr>
+				# END redirections.list #
+				# IF C_NO_REDIRECTION #
+				<tr>
+					<td colspan="3">
+						{L_NO_REDIRECTION}
+					</td>
+				</tr>
+				# ENDIF #
+			</tbody>
+		</table>
+	</div>
+
 	# END redirections #
 # ENDIF #
 
 # IF redirection #
 	{L_redirection}
 	# START redirection #
-	<table id="table2">
-		<thead>
-			<tr>
-				<th>
-					{L_REDIRECTION_TITLE}
-				</th>
-				<th>
-					{L_ACTIONS}
-				</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<th colspan="2">
-					<a href="{U_CREATE_REDIRECTION}">{L_CREATE_REDIRECTION}</a>
-				</th>
-			</tr>
-		</tfoot>
-		<tbody>
-			# START redirection.list #
-			<tr>
-				<td>
-					{redirection.list.REDIRECTION_TITLE}
-				</td>
-				<td>
-					{redirection.list.ACTIONS}
-				</td>
-			</tr>
-			# END redirection.list #
-			# IF C_NO_REDIRECTION #
-			<tr>
-				<td colspan="2">
-					{L_NO_REDIRECTION}
-				</td>
-			</tr>
-			# ENDIF #
-		</tbody>
-	</table>
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						{L_REDIRECTION_TITLE}
+					</th>
+					<th>
+						{L_ACTIONS}
+					</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th colspan="2">
+						<a href="{U_CREATE_REDIRECTION}">{L_CREATE_REDIRECTION}</a>
+					</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				# START redirection.list #
+				<tr>
+					<td>
+						{redirection.list.REDIRECTION_TITLE}
+					</td>
+					<td>
+						{redirection.list.ACTIONS}
+					</td>
+				</tr>
+				# END redirection.list #
+				# IF C_NO_REDIRECTION #
+				<tr>
+					<td colspan="2">
+						{L_NO_REDIRECTION}
+					</td>
+				</tr>
+				# ENDIF #
+			</tbody>
+		</table>
+	</div>
+
 	# END redirection #
 # ENDIF #
 
 # START rename #
 # INCLUDE message_helper #
-<form action="action.php" method="post" class="fieldset-content">
+<form action="action.php" method="post" class="form-horizontal">
 	<fieldset>
 		<legend>{L_TITLE}</legend>
 		<p>{L_EXPLAIN_RENAME}</p>
-		<div class="form-element">
-			<label for="new_title">{L_NEW_TITLE}</label>
-			<div class="form-field">
-				<input type="text" id="new_title" name="new_title" value="{FORMER_TITLE}" maxlength="250" class="field-large">
+		<div class="form-group">
+			<label class="control-label col-sm-4" for="new_title">{L_NEW_TITLE}</label>
+			<div class="col-sm-8">
+				<input type="text" id="new_title" name="new_title" value="{FORMER_TITLE}" maxlength="250" class="form-control">
 			</div>
 		</div>
-		<div class="form-element">
-			<label for="create_redirection">{L_CREATE_REDIRECTION}</label>
-			<div class="form-field"><label><input type="checkbox" name="create_redirection" id="create_redirection"></label></div>
+		<div class="form-group">
+			<label class="col-sm-4" for="create_redirection">{L_CREATE_REDIRECTION}</label>
+			<div class="col-sm-8"><input type="checkbox" name="create_redirection" id="create_redirection"></div>
 		</div>
 		<input type="hidden" name="id_rename" value="{ID_RENAME}">
 	</fieldset>
-	<fieldset class="fieldset-submit">
-		<legend>{L_SUBMIT}</legend>
+	<p class="text-center">
 		<input type="hidden" name="token" value="{TOKEN}">
-		<button type="submit" name="" value="true" class="submit">{L_SUBMIT}</button>
-	</fieldset>
+		<button type="submit" name="" value="true" class="btn btn-primary">{L_SUBMIT}</button>
+	</p>
 </form>
 # END rename #
 
@@ -125,7 +130,7 @@
 		</div>
 		<input type="hidden" name="id_new" value="{ID_NEW}">
 	</fieldset>
-	
+
 	<fieldset class="fieldset-submit">
 		<legend>{L_SUBMIT}</legend>
 		<input type="hidden" name="token" value="{TOKEN}">
@@ -165,7 +170,7 @@
 			</div>
 		</div>
 	</fieldset>
-	
+
 	<fieldset class="fieldset-submit">
 		<legend>{L_SUBMIT}</legend>
 		<input type="hidden" name="token" value="{TOKEN}">

@@ -10,11 +10,11 @@
 	<header>
 		<h1>{TITLE}</h1>
 	</header>
-	<div class="content">
+	<div class="row">
 		<div class="explorer">
-			<div class="cats">
+			<div class="cats col-sm-6">
 				<h2>{TITLE}</h2>
-				<div class="content">
+				<div>
 					<ul>
 						<li><a id="class-0" class="{CAT_0}" href="javascript:open_cat(0);"><i class="fa fa-folder"></i>{L_ROOT}</a>
 							<ul>
@@ -36,9 +36,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="files">
+			<div class="files col-sm-6">
 				<h2>{L_CATS}</h2>
-				<div class="content" id="cat-contents">
+				<div id="cat-contents">
 					<ul>
 						# START list_cats #
 						<li>

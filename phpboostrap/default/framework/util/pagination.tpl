@@ -1,5 +1,5 @@
 
-<ul class="pagination # IF C_FULL #pagination-block# ENDIF #">
+<ul class="pagination# IF C_FULL # pagination-block# ENDIF #">
 	# START page #
 	<li # IF page.C_CURRENT_PAGE #class="active"# ENDIF #>
 		# IF page.C_PREVIOUS #

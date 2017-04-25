@@ -27,7 +27,6 @@
 /* --- media --- */
 #last-media .media-content {
 	position: relative;
-	margin: 25px auto;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;

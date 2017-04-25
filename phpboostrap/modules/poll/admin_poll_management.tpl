@@ -16,72 +16,82 @@
 					<a href="${relative_url(PollUrlBuilder::documentation())}" class="quick-link">${LangLoader::get_message('module.documentation', 'admin-modules-common')}</a>
 				</li>
 			</ul>
-		</nav> 
-		
+		</nav>
+
 		<div class="admin-module-poll" id="admin-contents">
-			<table id="table">
-				<caption>{L_POLL_MANAGEMENT}</caption>
-				<thead>
-					<tr>
-						<th>
-							{L_QUESTION}
-						</th>
-						<th>
-							{L_POLLS}
-						</th>
-						<th>
-							{L_PSEUDO}
-						</th>
-						<th>
-							{L_DATE}
-						</th>
-						<th>
-							${LangLoader::get_message('hidden', 'common')}
-						</th>
-						<th>
-							{L_APROB}
-						</th>
-						<th></th>
-					</tr>
-				</thead>
-				# IF C_PAGINATION #
-				<tfoot>
-					<tr>
-						<th colspan="7">
-							# INCLUDE PAGINATION #
-						</th>
-					</tr>
-				</tfoot>
-				# ENDIF #
-				<tbody>
-					# START questions #
-					<tr> 
-						<td class="left"> 
-							{questions.QUESTIONS}
-						</td>
-						<td>
-							<a href="{PATH_TO_ROOT}/poll/poll.php?id={questions.IDPOLL}">${LangLoader::get_message('display', 'common')}</a>
-						</td>
-						<td> 
-							# IF questions.PSEUDO #<a href="{questions.U_AUTHOR_PROFILE}" class="small {questions.USER_LEVEL_CLASS}" # IF questions.C_USER_GROUP_COLOR # style="color:{questions.USER_GROUP_COLOR}" # ENDIF #>{questions.PSEUDO}</a># ELSE #${LangLoader::get_message('guest', 'main')}# ENDIF # 
-						</td>
-						<td>
-							{questions.DATE}
-						</td>
-						<td>
-							{questions.ARCHIVES}
-						</td>	
-						<td>
-							{questions.APROBATION} 
-							<br />
-							<span class="smaller">{questions.VISIBLE}</span>
-						</td>
-						<td> 
-							<a href="admin_poll.php?id={questions.IDPOLL}" title="{L_UPDATE}" class="fa fa-edit"></a>
-							<a href="admin_poll.php?delete=1&amp;id={questions.IDPOLL}&amp;token={TOKEN}" title="${LangLoader::get_message('delete', 'common')}" class="fa fa-delete" data-confirmation="delete-element"></a>
-						</td>
-					</tr>
-					# END questions #
-				</tbody>
-			</table>
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover">
+					<caption>{L_POLL_MANAGEMENT}</caption>
+					<thead>
+						<tr>
+							<th>
+								{L_QUESTION}
+							</th>
+							<th>
+								{L_POLLS}
+							</th>
+							<th>
+								{L_PSEUDO}
+							</th>
+							<th>
+								{L_DATE}
+							</th>
+							<th>
+								${LangLoader::get_message('hidden', 'common')}
+							</th>
+							<th>
+								{L_APROB}
+							</th>
+							<th></th>
+						</tr>
+					</thead>
+					# IF C_PAGINATION #
+					<tfoot>
+						<tr>
+							<th colspan="7">
+								# INCLUDE PAGINATION #
+							</th>
+						</tr>
+					</tfoot>
+					# ENDIF #
+					<tbody>
+						# START questions #
+						<tr>
+							<td class="left">
+								{questions.QUESTIONS}
+							</td>
+							<td>
+								<a href="{PATH_TO_ROOT}/poll/poll.php?id={questions.IDPOLL}">${LangLoader::get_message('display', 'common')}</a>
+							</td>
+							<td>
+								# IF questions.PSEUDO #<a href="{questions.U_AUTHOR_PROFILE}" class="{questions.USER_LEVEL_CLASS}" # IF questions.C_USER_GROUP_COLOR # style="color:{questions.USER_GROUP_COLOR}" # ENDIF #>{questions.PSEUDO}</a># ELSE #${LangLoader::get_message('guest', 'main')}# ENDIF #
+							</td>
+							<td>
+								{questions.DATE}
+							</td>
+							<td>
+								{questions.ARCHIVES}
+							</td>
+							<td>
+								{questions.APROBATION}
+								<br />
+								{questions.VISIBLE}
+							</td>
+							<td>
+								<div class="btn-group btn-group-xs">
+									<a href="admin_poll.php?id={questions.IDPOLL}" title="{L_UPDATE}" class="btn btn-info">
+										<i class="fa fa-edit"></i>
+									</a>
+									<a href="admin_poll.php?delete=1&amp;id={questions.IDPOLL}&amp;token={TOKEN}" title="${LangLoader::get_message('delete', 'common')}" class="btn btn-danger" data-confirmation="delete-element">
+										<i class="fa fa-delete"></i>
+									</a>
+								</div>
+
+							</td>
+						</tr>
+						# END questions #
+					</tbody>
+				</table>
+			</div>
+
 		</div>

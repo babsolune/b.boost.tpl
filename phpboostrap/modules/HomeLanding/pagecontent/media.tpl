@@ -12,7 +12,7 @@
 	</header>
 	<div class="row grid-columns">
 		# START media_swf #
-			<div class="col-sm-6 col-md-4" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+			<div class="col-sm-6 col-md-4 mb15" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 				<h4><a href="{media_swf.U_MEDIA_LINK}">{media_swf.TITLE}</a></h4>
 				<div class="well well-sm">
 					${LangLoader::get_message('by', 'common')} <span class="color-topic">{media_swf.PSEUDO}</span> ${Langloader::get_message('the', 'common')} {media_swf.DATE}

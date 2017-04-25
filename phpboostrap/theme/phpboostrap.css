@@ -166,6 +166,7 @@ a.member   {}
 
 .new-content {
     border-top: 5px solid #c6abed;
+    background-color: #c6abed;
 }
 
 /* --- Grid-columns
@@ -208,6 +209,10 @@ table select {
     .mini-table > tfoot > tr > td {
         padding: 4px;
     }
+}
+
+table .btn a {
+    color: #ffffff;
 }
 
 /* --- Calendar ---

@@ -57,7 +57,7 @@
 				</script>
 
 				<form action="{U_ACTION}" method="post" class="form-horizontal">
-					<label class="col-sm-4 control-label" for="login">{L_SEARCH_USER} <span class="field-description">{L_JOKER}</span></label>
+					<label class="col-sm-4 control-label" for="login">{L_SEARCH_USER} <span class="help-block">{L_JOKER}</span></label>
 					<div class="col-sm-8 input-group">
 						<input class="form-control" type="text" maxlength="25" id="login" value="" name="login">
 						<span class="input-group-btn">

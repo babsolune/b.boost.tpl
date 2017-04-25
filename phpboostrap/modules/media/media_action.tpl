@@ -137,11 +137,11 @@
 							</header>
 							<div class="well well-lg">{L_NOTICE_CONTRIBUTION}</div>
 							<div class="form-group">
-								<label class="col-sm-12 control-label">{L_CONTRIBUTION_COUNTERPART} <p class="field-description">{L_CONTRIBUTION_COUNTERPART_EXPLAIN}</p></label>
+								<label class="col-sm-12 control-label">{L_CONTRIBUTION_COUNTERPART} <p class="help-block">{L_CONTRIBUTION_COUNTERPART_EXPLAIN}</p></label>
 								<div class="col-sm-12">
 									{CONTRIBUTION_COUNTERPART_EDITOR}
 									<textarea class="form-control" rows="20" cols="40" id="counterpart" name="counterpart">{CONTRIBUTION_COUNTERPART}</textarea>
-								</div> 								
+								</div>
 							</div>
 						</article>
 						# ENDIF #
