@@ -123,7 +123,7 @@
 								<select class="form-control" name="img" id="img_group" onchange="img_change(this.options[selectedIndex].value)">
 									{IMG_GROUPS}
 								</select>
-								<img src="{PATH_TO_ROOT}/images/group/{IMG}" id="img_group_change" alt="{IMG}" class="valign-middle" style="display:none" />
+								<img src="{PATH_TO_ROOT}/images/group/{IMG}" id="img_group_change" alt="{IMG}" style="display:none" />
 							</div>
 						</div>
 					</div>
@@ -148,7 +148,7 @@
 							<label class="control-label col-sm-4" for="login">* {L_PSEUDO}</label>
 							<div class="col-sm-8">
 								<div class="input-group">
-									<input class="form-control" type="text" maxlength="25" id="login" value="{LOGIN}" name="login_mbr">
+									<input class="form-control" type="text" id="login" value="{LOGIN}" name="login_mbr">
 									<div class="input-group-btn">
 										<button class="btn btn-info" onclick="XMLHttpRequest_search();" type="button">{L_SEARCH}</button>
 									</div>
@@ -240,7 +240,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="name">* {L_NAME}</label>
 							<div class="col-sm-8">
-								<input class="form-control" type="text" maxlength="25" id="name" name="name" value="">
+								<input class="form-control" type="text" id="name" name="name" value="">
 							</div>
 						</div>
 						<div class="form-group">
@@ -281,7 +281,7 @@
 								<select class="form-control" name="img" id="img_group" onchange="img_change(this.options[selectedIndex].value)">
 									{IMG_GROUPS}
 								</select>
-								<img src="{PATH_TO_ROOT}/images/group/{IMG}" id="img_group_change" alt="{IMG}" class="valign-middle" style="display:none" />
+								<img src="{PATH_TO_ROOT}/images/group/{IMG}" id="img_group_change" alt="{IMG}" style="display:none" />
 							</label></div>
 						</div>
 					</div>

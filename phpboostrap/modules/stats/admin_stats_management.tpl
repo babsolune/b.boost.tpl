@@ -162,7 +162,7 @@
 							# START templates #
 							<tr>
 								<td>
-									{templates.THEME} <span class="smaller">({templates.PERCENT}%)</span>
+									{templates.THEME} <span class="small">({templates.PERCENT}%)</span>
 								</td>
 								<td>
 									<div style="margin:auto;width:10px;margin:auto;height:10px;background:{templates.COLOR};border:1px solid black;"></div>
@@ -204,7 +204,7 @@
 								# START sex #
 								<tr>
 									<td>
-										{sex.SEX} <span class="smaller">({sex.PERCENT}%)</span>
+										{sex.SEX} <span class="small">({sex.PERCENT}%)</span>
 									</td>
 									<td>
 										<div style="margin:auto;width:10px;margin:auto;height:10px;background:{sex.COLOR};border:1px solid black;"></div>
@@ -422,7 +422,7 @@
 										<div style="margin:auto;width:10px;height:10px;margin:auto;background:{list.COLOR};border:1px solid black;"></div>
 									</td>
 									<td>
-										 {list.L_NAME} <span class="smaller">({list.PERCENT}%)</span>
+										 {list.L_NAME} <span class="small">({list.PERCENT}%)</span>
 									</td>
 								</tr>
 								# END list #
@@ -462,7 +462,7 @@
 										<div style="margin:auto;width:10px;height:10px;background:{list.COLOR};border:1px solid black;"></div>
 									</td>
 									<td>
-										{list.L_NAME} <span class="smaller">({list.PERCENT}%)</span>
+										{list.L_NAME} <span class="small">({list.PERCENT}%)</span>
 									</td>
 								</tr>
 								# END list #
@@ -503,7 +503,7 @@
 										<div style="margin:auto;width:10px;margin:auto;height:10px;background:{list.COLOR};border:1px solid black;"></div>
 									</td>
 									<td>
-										{list.L_NAME} <span class="smaller">({list.PERCENT}%)</span>
+										{list.L_NAME} <span class="small">({list.PERCENT}%)</span>
 									</td>
 								</tr>
 								# END list #
@@ -595,7 +595,7 @@
 					<tr>
 						<td>
 							{referer_list.IMG_MORE}
-							<a class="fa fa-plus-square-o" style="cursor: pointer;" onclick="XMLHttpRequest_referer({referer_list.ID})" id="img-url-{referer_list.ID}"></a> <span class="smaller">({referer_list.NBR_LINKS})</span> <a href="{referer_list.URL}">{referer_list.URL}</a> <span id="load{referer_list.ID}"></span>
+							<a class="fa fa-plus-square-o" style="cursor: pointer;" onclick="XMLHttpRequest_referer({referer_list.ID})" id="img-url-{referer_list.ID}"></a> <span class="small">({referer_list.NBR_LINKS})</span> <a href="{referer_list.URL}">{referer_list.URL}</a> <span id="load{referer_list.ID}"></span>
 						</td>
 						<td>
 							{referer_list.TOTAL_VISIT}
@@ -695,7 +695,7 @@
 					# START keyword_list #
 					<tr>
 						<td>
-							<a class="fa fa-plus-square-o" style="cursor:pointer;" onclick="XMLHttpRequest_referer({keyword_list.ID})" id="img-url-{keyword_list.ID}"></a> <span class="smaller">({keyword_list.NBR_LINKS})</span> {keyword_list.KEYWORD} <span id="load{keyword_list.ID}"></span>
+							<a class="fa fa-plus-square-o" style="cursor:pointer;" onclick="XMLHttpRequest_referer({keyword_list.ID})" id="img-url-{keyword_list.ID}"></a> <span class="small">({keyword_list.NBR_LINKS})</span> {keyword_list.KEYWORD} <span id="load{keyword_list.ID}"></span>
 						</td>
 						<td>
 							{keyword_list.TOTAL_VISIT}
@@ -760,7 +760,7 @@
 									# START list #
 									<tr>
 										<td>
-											 {list.L_NAME}  <span class="smaller">({list.PERCENT}%)</span>
+											 {list.L_NAME}  <span class="small">({list.PERCENT}%)</span>
 										</td>
 										<td>
 											<div style="margin:auto;width:10px;margin:auto;height:10px;background:{list.COLOR}"></div>

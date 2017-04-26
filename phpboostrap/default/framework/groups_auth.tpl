@@ -1,5 +1,5 @@
 <div class="advanced-auth-group">
-	<select class="form-control" id="groups_auth{IDSELECT}" name="groups_auth{IDSELECT}[]" size="8" multiple="multiple" onclick="{DISABLED_SELECT} document.getElementById('id{IDSELECT}r2').selected = true;">
+	<select class="form-control" id="groups_auth{IDSELECT}" name="groups_auth{IDSELECT}[]" multiple="multiple" onclick="{DISABLED_SELECT} document.getElementById('id{IDSELECT}r2').selected = true;">
 		<optgroup label="{L_RANKS}">
 		# START ranks_list #
 			<option {ranks_list.DISABLED} value="r{ranks_list.IDRANK}" id="id{IDSELECT}r{ranks_list.ID}" {ranks_list.SELECTED} onclick="check_select_multiple_ranks('id{IDSELECT}r', {ranks_list.ID})">{ranks_list.RANK_NAME}</option>
@@ -20,7 +20,7 @@
 
 # IF C_ADVANCED_AUTH #
 <div id="advanced_authb{IDSELECT}" class="advanced-auth-select">
-	<select class="form-control" id="members_auth{IDSELECT}" name="members_auth{IDSELECT}[]" size="8" multiple="multiple">
+	<select class="form-control" id="members_auth{IDSELECT}" name="members_auth{IDSELECT}[]" multiple="multiple">
 		<optgroup label="{L_USERS}" id="advanced_auth3{IDSELECT}">
 			# START members_list #
 			<option value="{members_list.USER_ID}" selected="selected">{members_list.LOGIN}</option>
@@ -33,7 +33,7 @@
 	<strong>{L_ADD_USER}</strong>
 	<div class="clearfix"></div>
 	<div class="input-group">
-		<input class="form-control" type="text" size="14" value="" id="login{IDSELECT}" name="login{IDSELECT}">
+		<input class="form-control" type="text" value="" id="login{IDSELECT}" name="login{IDSELECT}">
 		<span class="input-group-btn">
 			<button onclick="XMLHttpRequest_search_members('{IDSELECT}', '{THEME}', 'add_member_auth', '{L_REQUIRE_PSEUDO}');" type="button" name="valid" class="btn btn-info">{L_GO}</button>
 		</span>

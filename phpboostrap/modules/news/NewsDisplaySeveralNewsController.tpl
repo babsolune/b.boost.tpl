@@ -4,7 +4,7 @@
 			<div class="btn-group btn-group-xs">
 				# IF C_CATEGORY #
 					# IF IS_ADMIN #
-					<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a>
+					<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>
 					# ENDIF #
 				# ENDIF #
 				<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('news', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
@@ -80,7 +80,7 @@
 				</div>
 
 				# IF news.C_SOURCES #
-				<div class="spacer"></div>
+				<div class="clearfix"></div>
 				<aside>
 				<div id="news-sources-container">
 					<span>${LangLoader::get_message('form.sources', 'common')}</span> :
@@ -156,7 +156,7 @@
 
 
 				# IF news.C_SOURCES #
-				<div class="spacer"></div>
+				<div class="clearfix"></div>
 				<aside>
 				<div id="news-sources-container">
 					<span>${LangLoader::get_message('form.sources', 'common')}</span> :

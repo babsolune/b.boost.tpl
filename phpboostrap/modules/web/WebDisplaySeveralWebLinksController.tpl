@@ -150,7 +150,7 @@
 									# END weblinks.keywords #
 								# ENDIF #
 								# IF C_NOTATION_ENABLED #
-									<span class="float-right">{weblinks.STATIC_NOTATION}</span>
+									<span class="pull-right">{weblinks.STATIC_NOTATION}</span>
 								# ENDIF #
 							</div>
 							<p>
@@ -188,7 +188,7 @@
 									# END weblinks.keywords #
 								# ENDIF #
 								# IF C_NOTATION_ENABLED #
-									<span class="float-right">{weblinks.STATIC_NOTATION}</span>
+									<span class="pull-right">{weblinks.STATIC_NOTATION}</span>
 								# ENDIF #
 							</div>
 						</header>

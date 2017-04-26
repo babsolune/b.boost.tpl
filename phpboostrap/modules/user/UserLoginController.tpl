@@ -11,7 +11,7 @@
 			<a class="social-connect google" href="${relative_url(UserUrlBuilder::connect('google'))}" title="${LangLoader::get_message('google-connect', 'user-common')}"><i class="fa fa-google-plus"></i></a>
 			# ENDIF #
 		# ENDIF #
-		<div class="spacer"></div>
+		<div class="clearfix"></div>
 		<a href="{U_FORGET_PASSWORD}"><i class="fa fa-question-circle"></i> {L_FORGET_PASSWORD}</a>
 	</div>
 # ELSE #

@@ -115,7 +115,7 @@ function display_description(id){
 				<tr>
 					<td>
 						<span id="m{modules_activated.ID}"></span>
-						<img class="valign-middle" src="{PATH_TO_ROOT}/{modules_activated.ICON}/{modules_activated.ICON}.png" alt="{modules_activated.NAME}" /><br />
+						<img src="{PATH_TO_ROOT}/{modules_activated.ICON}/{modules_activated.ICON}.png" alt="{modules_activated.NAME}" /><br />
 						<strong>{modules_activated.NAME}</strong> <em>({modules_activated.VERSION})</em>
 					</td>
 					<td>

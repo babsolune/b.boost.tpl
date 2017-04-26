@@ -141,7 +141,7 @@ jQuery(document).ready(function() {
 								</div>
 							</div>
 						</div>
-						<div class="spacer"></div>
+						<div class="clearfix"></div>
 						<script>
 						<!--
 						jQuery(document).ready(function() {

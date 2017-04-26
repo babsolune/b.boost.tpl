@@ -253,10 +253,10 @@
 			<h1>{ENTITLED}</h1>
 		</header>
 		<div class="col-sm-12">
-			<form action="contribution_panel.php" method="post">
+			<form action="contribution_panel.php" method="post" class="form-horizontal">
 				<fieldset>
 					<legend>{L_CONTRIBUTION}</legend>
-					<div class="form-horizontal">
+					<div class="form-group">
 						<label class="col-sm-4 control-label" for="entitled">{L_ENTITLED}</label>
 						<div class="col-sm-8">
 							<input class="form-control" type="text" name="entitled" id="entitled" value="{ENTITLED}">
@@ -265,11 +265,9 @@
 					<div class="form-group">
 						<label for="contents">{L_DESCRIPTION}</label>
 						{EDITOR}
-						<div class="form-field-textarea">
-							<textarea class="form-control" rows="15" id="contents" name="contents">{DESCRIPTION}</textarea>
-						</div>
+						<textarea class="form-control" rows="15" id="contents" name="contents">{DESCRIPTION}</textarea>
 					</div>
-					<div class="form-horizontal">
+					<div class="form-group">
 						<label class="col-sm-4 control-label" for="status">{L_STATUS}</label>
 						<div class="col-sm-8">
 							<select class="form-control" name="status" id="status">
@@ -280,13 +278,13 @@
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class="mtb5 fieldset-submit">
+				<p class="text-center">
 					<input type="hidden" name="idedit" value="{CONTRIBUTION_ID}">
 					<input type="hidden" name="token" value="{TOKEN}">
 					<button type="submit" value="true" class="btn btn-primary">{L_SUBMIT}</button>
 					<button class="btn btn-default" type="button" name="preview" onclick="XMLHttpRequest_preview();">{L_PREVIEW}</button>
 					<button class="btn btn-default" type="reset">{L_RESET}</button>
-				</fieldset>
+				</p>
 			</form>
 		</div>
 		<footer></footer>

@@ -118,7 +118,7 @@ function addSubMenu(menu_element_id) {
 	jQuery('<span/>', {id : 'menu_element_' + id + '_image_preview_span', class : 'preview'}).appendTo('#menu_title_' + id);
 	jQuery('<img/>', {id : 'menu_element_' + id + '_image_preview'}).appendTo('#menu_element_' + id + '_image_preview_span');
 
-	jQuery('<div/>', {class : 'spacer'}).appendTo('#menu_element_' + id);
+	jQuery('<div/>', {class : 'clearfix'}).appendTo('#menu_element_' + id);
 
 	jQuery('<fieldset/>', {id : 'menu_element_' + id + '_properties', style : 'display:none;'}).appendTo('#menu_element_' + id);
 	jQuery('<legend/>').text({JL_PROPERTIES}).appendTo('#menu_element_' + id + '_properties');

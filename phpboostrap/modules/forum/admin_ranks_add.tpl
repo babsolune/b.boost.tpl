@@ -78,7 +78,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="name">* {L_RANK_NAME}</label>
 							<div class="col-sm-8">
-								<input class="form-control" type="text" maxlength="30" id="name" name="name">
+								<input class="form-control" type="text" id="name" name="name">
 							</div>
 						</div>
 						<div class="form-group">

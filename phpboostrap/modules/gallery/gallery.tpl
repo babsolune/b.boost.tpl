@@ -281,7 +281,7 @@
 				<h1>
 					<div class="pull-right text-right mr-btn">
 						<div class="btn-group btn-group-xs">
-							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
 							<a href="${relative_url(SyndicationUrlBuilder::rss('gallery', CAT_ID))}" class="btn btn-warning" title="${LangLoader::get_message('syndication', 'common')}">
 								<i class="fa fa-syndication"></i>
 							</a>

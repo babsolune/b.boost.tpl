@@ -93,7 +93,7 @@
 					# ENDIF #
 					<td data-title="{@titles.informations}" # IF bug.C_LINE_COLOR #style="background-color:{bug.LINE_COLOR};"# ENDIF #>
 						<span>{@labels.fields.status} : {bug.STATUS}</span>
-						<div class="spacer"></div>
+						<div class="clearfix"></div>
 						# IF bug.C_PROGRESS #
 						<div class="progress">
 							<div class="progress-bar" aria-valuenow="{bug.PROGRESS}" aria-valuemin="0" aria-valuemax="100" style="width:{bug.PROGRESS}%">
@@ -105,7 +105,7 @@
 					</td>
 					<td data-title="# IF C_UNSOLVED #{@labels.detected}# ELSE #{@labels.fields.fix_date}# ENDIF #" # IF bug.C_LINE_COLOR # style="background-color:{bug.LINE_COLOR};"# ENDIF #>
 						# IF C_UNSOLVED #${LangLoader::get_message('the', 'common')} {bug.SUBMIT_DATE_FULL}# ELSE ## IF bug.C_FIX_DATE #{bug.FIX_DATE_FULL}# ELSE #{@labels.not_yet_fixed}# ENDIF ## ENDIF #
-						<div class="spacer"></div>
+						<div class="clearfix"></div>
 						# IF C_DISPLAY_AUTHOR #${LangLoader::get_message('by', 'common')} # IF bug.C_AUTHOR_EXIST #<a href="{bug.U_AUTHOR_PROFILE}" class="{bug.AUTHOR_LEVEL_CLASS}" # IF bug.C_AUTHOR_GROUP_COLOR # style="color:{bug.AUTHOR_GROUP_COLOR}" # ENDIF #>{bug.AUTHOR}</a># ELSE #{bug.AUTHOR}# ENDIF ## ENDIF #
 					</td>
 					# IF C_IS_ADMIN #

@@ -248,8 +248,8 @@
 .bbcode-icon-center:before      { content: "\f037"; }
 .bbcode-icon-right:before       { content: "\f038"; }
 .bbcode-icon-justify:before     { content: "\f039"; }
-.bbcode-icon-float-left:before  { content: "\f048"; }
-.bbcode-icon-float-right:before { content: "\f051"; }
+.bbcode-icon-pull-left:before  { content: "\f048"; }
+.bbcode-icon-pull-right:before { content: "\f051"; }
 .bbcode-icon-sup:before         { content: "\f12b"; }
 .bbcode-icon-sub:before         { content: "\f12c"; }
 .bbcode-icon-indent:before      { content: "\f03c"; }

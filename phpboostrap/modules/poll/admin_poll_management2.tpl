@@ -59,7 +59,7 @@
 					<div class="fieldset-inset">
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="question">* {L_QUESTION}</label>
-							<div class="col-sm-8"><input class="form-control" type="text" maxlength="100" id="question" name="question" value="{QUESTIONS}" /></div>
+							<div class="col-sm-8"><input class="form-control" type="text" id="question" name="question" value="{QUESTIONS}" /></div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-4" for="type">* {L_ANSWER_TYPE}</label>
@@ -95,10 +95,10 @@
 								<table class="table table-bordered table-hover">
 									<tbody>
 										<tr>
-											<td class="no-separator text-strong">
+											<td>
 												{L_ANSWERS}
 											</td>
-											<td class="no-separator text-strong">
+											<td>
 												{L_NUMBER_VOTE}
 											</td>
 										</tr>
@@ -172,8 +172,8 @@
 							<div class="col-sm-8">
 								<div class="input-group">
 									{CALENDAR_CURRENT_DATE}
-									<input class="form-control hours-control" type="number" maxlength="2" name="hour" value="{HOUR}" />
-									<input class="form-control minutes-control" type="number" maxlength="2" name="min" value="{MIN}" />
+									<input class="form-control hours-control" type="number" name="hour" value="{HOUR}" />
+									<input class="form-control minutes-control" type="number" name="min" value="{MIN}" />
 									<div class="input-group-addon">H</div>
 								</div>
 

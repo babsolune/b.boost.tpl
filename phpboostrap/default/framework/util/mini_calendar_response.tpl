@@ -22,13 +22,13 @@
 <table class="mini-table table table-bordered">
 	<thead>
 		<tr>
-			<th><span class="smaller">{@monday_short}</span></th>
-			<th><span class="smaller">{@tuesday_short}</span></th>
-			<th><span class="smaller">{@wednesday_short}</span></th>
-			<th><span class="smaller">{@thursday_short}</span></th>
-			<th><span class="smaller">{@friday_short}</span></th>
-			<th><span class="smaller">{@saturday_short}</span></th>
-			<th><span class="smaller">{@sunday_short}</span></th>
+			<th><span class="small">{@monday_short}</span></th>
+			<th><span class="small">{@tuesday_short}</span></th>
+			<th><span class="small">{@wednesday_short}</span></th>
+			<th><span class="small">{@thursday_short}</span></th>
+			<th><span class="small">{@friday_short}</span></th>
+			<th><span class="small">{@saturday_short}</span></th>
+			<th><span class="small">{@sunday_short}</span></th>
 		</tr>
 	</thead>
 	<tbody>

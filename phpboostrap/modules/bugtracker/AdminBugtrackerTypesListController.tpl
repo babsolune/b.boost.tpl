@@ -70,10 +70,10 @@ var BugtrackerFormFieldTypes = new BugtrackerFormFieldTypes();
 	<tfoot>
 		<tr>
 			<th colspan="3">
-				<div class="cw25 float-left">
+				<div class="cw25 pull-left">
 					<a href="" onclick="BugtrackerFormFieldTypes.add_type();return false;" title="{@titles.add_type}" id="add-type"><i class="fa fa-plus"></i></a>
 				</div>
-				<div class="float-right">
+				<div class="pull-right">
 					# IF C_DISPLAY_DEFAULT_DELETE_BUTTON #<a href="{LINK_DELETE_DEFAULT}" title="${LangLoader::get_message('delete', 'common')}" data-confirmation="{@actions.confirm.del_default_value}"><i class="fa fa-delete"></i> {@labels.del_default_value}</a># ENDIF #
 				</div>
 			</th>

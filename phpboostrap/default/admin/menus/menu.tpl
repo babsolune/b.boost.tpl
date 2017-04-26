@@ -10,7 +10,7 @@
 				<i class="fa fa-fw fa-chevron-up"></i>
 			</a>
 			# ENDIF #
-			<a href="" class="btn btn-warning" title="${LangLoader::get_message('move', 'admin')}" onclick="return false;">
+			<a href="" class="btn btn-pbt" title="${LangLoader::get_message('move', 'admin')}" onclick="return false;">
 				<i class="fa fa-arrows"></i>
 			</a>
 			# IF C_EDIT #

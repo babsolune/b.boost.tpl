@@ -37,10 +37,11 @@
 	});
 -->
 </script>
-<select multiple="multiple" name="${escape(NAME)}[]" id="${escape(HTML_ID)}" size="{SIZE}" class="form-control ${escape(CSS_CLASS)}"# IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_HIDDEN # style="display:none;"# ENDIF #>
+<select multiple="multiple" name="${escape(NAME)}[]" id="${escape(HTML_ID)}" class="form-control ${escape(CSS_CLASS)}"# IF C_DISABLED # disabled="disabled"# ENDIF ## IF C_HIDDEN # style="display:none;"# ENDIF #>
 	# START options # # INCLUDE options.OPTION # # END options #
 </select>
-<br />
-<a href="" id="${escapejscharacters(NAME)}_select_all" onclick="return false;" class="small">{L_SELECT_ALL}</a> / <a href="" id="${escapejscharacters(NAME)}_unselect_all" onclick="return false;" class="small">{L_UNSELECT_ALL}</a>
-<br />
-<span class="smaller">{L_SELECT_EXPLAIN}</span>
+<div class="btn-group btn-group-xs">
+	<a href="" id="${escapejscharacters(NAME)}_select_all" onclick="return false;" class="btn btn-default">{L_SELECT_ALL}</a>
+	<a href="" id="${escapejscharacters(NAME)}_unselect_all" onclick="return false;" class="btn btn-default">{L_UNSELECT_ALL}</a>
+</div>
+<span class="help-block">{L_SELECT_EXPLAIN}</span>

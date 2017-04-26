@@ -28,7 +28,7 @@
 					<legend>{L_DATABASE_MANAGEMENT}</legend>
 					<div class="fieldset-inset">
 							{L_EXPLAIN_ACTIONS}
-							<div class="spacer"></div>
+							<div class="clearfix"></div>
 							<div class="question">{L_EXPLAIN_ACTIONS_QUESTION}</div>
 					</div>
 				</fieldset>
@@ -114,7 +114,7 @@
 							<tr>
 								<td>
 									<label for="check-all">
-										<input type="checkbox" id="check-all" onclick="check_all(this.checked, 'id');" class="valign-middle">
+										<input type="checkbox" id="check-all" onclick="check_all(this.checked, 'id');">
 										{L_ALL}
 									</label>
 								</td>
@@ -249,7 +249,7 @@
 						<tbody>
 							<tr>
 								<td>
-									<select class="form-control mb15" name="table_list[]" size="15" multiple="multiple">
+									<select class="form-control mb15" name="table_list[]" multiple="multiple">
 									# START table_list #
 										<option value="{table_list.NAME}" name="table_{table_list.NAME}" id="{table_list.I}" {table_list.SELECTED}>{table_list.NAME}</option>
 									# END table_list #

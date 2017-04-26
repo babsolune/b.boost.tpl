@@ -275,9 +275,9 @@ function createSortableMenu()
 									# START mod_central #
 										{mod_central.MENU}
 									# END mod_central #
-									<div class="spacer"></div>
+									<div class="clearfix"></div>
 									<div id="menu-spacer5" class="menu-spacer"></div>
-									<div class="spacer"></div>
+									<div class="clearfix"></div>
 								</div>
 							</div>
 						</div> <!-- container-central -->

@@ -3,7 +3,7 @@
 				<header>
 					<div class="pull-right text-right">
 						<div class="btn-group btn-group-xs">
-							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+							# IF IS_ADMIN #<a class="btn btn-info" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
 							<a class="btn btn-warning" href="${relative_url(SyndicationUrlBuilder::rss('media', ID_CAT))}" title="${LangLoader::get_message('syndication', 'common')}"><i class="fa fa-syndication"></i></a>
 						</div>
 
@@ -43,7 +43,7 @@
 				</div>
 				# IF C_SUBCATEGORIES_PAGINATION #<span class="text-center"># INCLUDE SUBCATEGORIES_PAGINATION #</span># ENDIF #
 				# ELSE #
-					<div class="spacer"></div>
+					<div class="clearfix"></div>
 				# ENDIF #
 
 				<div class="row">
@@ -150,7 +150,7 @@
 		<section id="module-media">
 			<header>
 				<div class="pull-right text-right">
-					# IF IS_ADMIN #<a class="btn btn-info btn-xs" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit smaller"></i></a># ENDIF #
+					# IF IS_ADMIN #<a class="btn btn-info btn-xs" href="{U_EDIT_CATEGORY}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a># ENDIF #
 				</div>
 				<h1>
 					${LangLoader::get_message('module_title', 'common', 'media')}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #

@@ -29,9 +29,9 @@
 								<th class="forum-author">{L_AUTHOR}</th>
 								<th class="forum-message-nb">{L_MESSAGE}</th>
 								<th class="forum-view">{L_VIEW}</th>
-								<th class="forum-pm"><input type="checkbox" class="valign-middle" onclick="check_convers(this.checked, 'p');"> {L_PM}</th>
-								<th class="forum-mail"><input type="checkbox" class="valign-middle" onclick="check_convers(this.checked, 'm');"> {L_MAIL}</th>
-								<th class="forum-delete"><input type="checkbox" class="valign-middle" onclick="check_convers(this.checked, 'd');"> {L_DELETE}</th>
+								<th class="forum-pm"><input type="checkbox" onclick="check_convers(this.checked, 'p');"> {L_PM}</th>
+								<th class="forum-mail"><input type="checkbox" onclick="check_convers(this.checked, 'm');"> {L_MAIL}</th>
+								<th class="forum-delete"><input type="checkbox" onclick="check_convers(this.checked, 'd');"> {L_DELETE}</th>
 								<th class="forum-last-topic">{L_LAST_MESSAGE}</th>
 							</tr>
 						</thead>
@@ -60,7 +60,7 @@
 									# IF topics.C_PAGINATION #<span class="pagin-forum"># INCLUDE topics.PAGINATION #</span># ENDIF #
 									{topics.ANCRE} <strong>{topics.TYPE}</strong> <a title="{topics.TITLE}" href="topic{topics.U_TOPIC_VARS}">{topics.L_DISPLAY_MSG} {topics.TITLE}</a>
 									<br />
-									<span class="smaller">{topics.DESC}</span>
+									<span class="help-block">{topics.DESC}</span>
 								</td>
 								<td class="forum-author">
 									{topics.AUTHOR}
@@ -100,7 +100,7 @@
 					<button type="submit" name="valid" value="true" class="btn btn-primary">{L_SUBMIT}</button>
 				</div>
 				<footer>
-					<span class="float-left">
+					<span class="pull-left">
 						{U_FORUM_CAT}
 					</span>
 					# IF C_PAGINATION #

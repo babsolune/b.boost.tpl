@@ -74,11 +74,11 @@
 					<div class="fieldset-inset">
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="cookie_name">* {L_COOKIE_NAME}</label>
-							<div class="col-sm-8"><input class="form-control" type="text" maxlength="25" name="cookie_name" id="cookie_name" value="{COOKIE_NAME}"></div>
+							<div class="col-sm-8"><input class="form-control" type="text" name="cookie_name" id="cookie_name" value="{COOKIE_NAME}"></div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="cookie_lenght">* {L_COOKIE_LENGHT} <span class="help-block">{L_DAYS}</span></label>
-							<div class="col-sm-8"><input class="form-control" type="text" maxlength="11" name="cookie_lenght" id="cookie_lenght" value="{COOKIE_LENGHT}"></div>
+							<div class="col-sm-8"><input class="form-control" type="text" name="cookie_lenght" id="cookie_lenght" value="{COOKIE_LENGHT}"></div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-4" for="display_results_before_polls_end">{L_DISPLAY_RESULTS_BEFORE_POLLS_END}</label>

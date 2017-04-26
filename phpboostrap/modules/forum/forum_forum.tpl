@@ -41,8 +41,7 @@
 								</td>
 								<td class="forum-topic" colspan="4">
 									<a href="{subcats.U_FORUM_URL}" title="{subcats.NAME}">{subcats.NAME}</a>
-									<br />
-									<span class="smaller">{subcats.DESC}</span>
+									<span class="help-block">{subcats.DESC}</span>
 								</td>
 								# ELSE #
 								<td class="forum-announce-topic">
@@ -50,9 +49,8 @@
 								</td>
 								<td class="forum-topic">
 									<a href="forum{subcats.U_FORUM_VARS}" title="{subcats.NAME}">{subcats.NAME}</a>
-									<br />
-									<span class="smaller">{subcats.DESC}</span>
-									<span class="smaller">{subcats.SUBFORUMS}</span>
+									<span class="help-block">{subcats.DESC}</span>
+									<span class="help-block">{subcats.SUBFORUMS}</span>
 								</td>
 								<td class="forum-subject-nb">
 									{subcats.NBR_TOPIC}

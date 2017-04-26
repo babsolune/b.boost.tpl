@@ -281,12 +281,12 @@
 									</tr>
 									<tr>
 										# IF pics.pics_max.C_PREVIOUS #
-										<td class="left no-separator">
+										<td class="text-left">
 											<a href="admin_gallery.php?cat={pics.pics_max.ID_CATEGORY}&amp;id={pics.pics_max.ID_PREVIOUS}#pics_max" class="fa fa-arrow-left fa-2x"></a> <a href="admin_gallery.php?cat={pics.pics_max.ID_CATEGORY}&amp;id={pics.pics_max.ID_PREVIOUS}#pics_max">{L_PREVIOUS}</a>
 										</td>
 										# ENDIF #
 										# IF pics.pics_max.C_NEXT #
-										<td class="right no-separator">
+										<td class="text-right">
 											<a href="admin_gallery.php?cat={pics.pics_max.ID_CATEGORY}&amp;id={pics.pics_max.ID_NEXT}#pics_max">{L_NEXT}</a> <a href="admin_gallery.php?cat={pics.pics_max.ID_CATEGORY}&amp;id={pics.pics_max.ID_NEXT}#pics_max" class="fa fa-arrow-right fa-2x"></a>
 										</td>
 										# ENDIF #
@@ -294,7 +294,7 @@
 								</tbody>
 							</table>
 
-							<div class="spacer"></div>
+							<div class="clearfix"></div>
 
 							<table id="table2" class="table">
 								<thead>
@@ -306,26 +306,26 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="smaller">
+										<td>
 											<strong>{L_NAME}:</strong> <span id="fi_{pics.pics_max.ID}">{pics.pics_max.PICTURE_NAME}</span> <span id="fi{pics.pics_max.ID}"></span>
 										</td>
-										<td class="smaller">
+										<td>
 											<strong>{L_POSTOR}:</strong> # IF pics.pics_max.C_POSTOR_EXIST #<a class="small {pics.pics_max.POSTOR_LEVEL_CLASS}"# IF pics.pics_max.C_POSTOR_GROUP_COLOR # style="color:{pics.pics_max.POSTOR_GROUP_COLOR}"# ENDIF # href="{pics.pics_max.U_POSTOR_PROFILE}">{pics.pics_max.POSTOR}</a># ELSE #${LangLoader::get_message('guest', 'main')}# ENDIF #
 										</td>
 									</tr>
 									<tr>
-										<td class="smaller">
+										<td>
 											<strong>{L_VIEWS}:</strong> {pics.pics_max.VIEWS}
 										</td>
-										<td class="smaller">
+										<td>
 											<strong>{L_ADD_ON}:</strong> {pics.pics_max.DATE}
 										</td>
 									</tr>
 									<tr>
-										<td class="smaller">
+										<td>
 											<strong>{L_DIMENSION}:</strong> {pics.pics_max.DIMENSION}
 										</td>
-										<td class="smaller">
+										<td>
 											<strong>{L_SIZE}:</strong> {pics.pics_max.SIZE} Ko
 										</td>
 									</tr>
@@ -338,7 +338,7 @@
 											<div id="move{pics.pics_max.ID}" class="move-pics-container">
 												<div class="bbcode-block move-pics-block" onmouseover="pics_hide_block({pics.pics_max.ID}, 1);" onmouseout="pics_hide_block({pics.pics_max.ID}, 0);">
 													<div>{L_MOVETO} :</div>
-													<select class="valign-middle" name="{pics.pics_max.ID}cat" onchange="document.location = 'gallery.php?id={pics.pics_max.ID}&amp;token={pics.pics_max.TOKEN}&amp;move=' + this.options[this.selectedIndex].value">
+													<select class="form-control" name="{pics.pics_max.ID}cat" onchange="document.location = 'gallery.php?id={pics.pics_max.ID}&amp;token={pics.pics_max.TOKEN}&amp;move=' + this.options[this.selectedIndex].value">
 														{pics.pics_max.CAT}
 													</select>
 													<br /><br />
@@ -354,7 +354,7 @@
 								</tbody>
 							</table>
 
-							<div class="spacer"></div>
+							<div class="clearfix"></div>
 
 							<table id="table3" class="table">
 								<thead>
@@ -419,7 +419,7 @@
 													<div id="move{pics.list.ID}" class="move-pics-container">
 														<div class="bbcode-block move-pics-block" onmouseover="pics_hide_block({pics.list.ID}, 1);" onmouseout="pics_hide_block({pics.list.ID}, 0);">
 															<div>{L_MOVETO} :</div>
-															<select class="valign-middle" name="{pics.list.ID}cat" onchange="document.location = 'admin_gallery.php?id={pics.list.ID}&amp;token={TOKEN}&amp;move=' + this.options[this.selectedIndex].value">
+															<select class="form-control" name="{pics.list.ID}cat" onchange="document.location = 'admin_gallery.php?id={pics.list.ID}&amp;token={TOKEN}&amp;move=' + this.options[this.selectedIndex].value">
 																{pics.list.CAT}
 															</select>
 															<br /><br />

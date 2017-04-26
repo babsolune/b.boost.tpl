@@ -84,7 +84,7 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="name">{L_NAME}</label>
-							<div class="col-sm-8"><input class="form-control" type="text" maxlength="50" name="name" id="name"></div>
+							<div class="col-sm-8"><input class="form-control" type="text" name="name" id="name"></div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-4" for="gallery">{L_UPLOAD_IMG}</label>
@@ -104,7 +104,7 @@
 
 			<form action="admin_gallery_add.php" method="post" class="form-horizontal">
 				# IF C_IMG #
-				<div class="text-center"><a href="" onclick="unselect_all_pictures();return false;" id="change_all_pictures_selection_top" class="smaller">{L_UNSELECT_ALL_PICTURES}</a></div>
+				<div class="text-center"><a href="" onclick="unselect_all_pictures();return false;" id="change_all_pictures_selection_top" class="btn btn-info btn-sm">{L_UNSELECT_ALL_PICTURES}</a></div>
 
 				<div class="table-responsive">
 					<table class="table table-bordered table-hover">
@@ -116,7 +116,7 @@
 						<tbody>
 							# START list #
 							# IF list.C_DISPLAY_TR_START #<tr># ENDIF #
-								<td class="valign-bottom">
+								<td>
 									<div class="small">
 										<div class="thumbnail">
 											<img src="pics/thumbnails/{list.NAME}" alt="{list.NAME}" />
@@ -155,7 +155,7 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="text-center"><a href="" onclick="unselect_all_pictures();return false;" id="change_all_pictures_selection_bottom" class="smaller">{L_UNSELECT_ALL_PICTURES}</a></div>
+				<div class="text-center"><a href="" onclick="unselect_all_pictures();return false;" id="change_all_pictures_selection_bottom" class="btn btn-info btn-sm">{L_UNSELECT_ALL_PICTURES}</a></div>
 
 				<div class="clearfix"></div>
 

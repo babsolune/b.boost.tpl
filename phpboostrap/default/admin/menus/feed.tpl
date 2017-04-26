@@ -22,7 +22,7 @@ function CheckForm() {
 </script>
 <div id="admin-contents">
 	<form action="feed.php" method="post" class="form-horizontal" onsubmit="return CheckForm();">
-		<p class="center">{L_REQUIRE}</p>
+		<p class="text-center">{L_REQUIRE}</p>
 		<fieldset>
 			<legend>{L_ACTION_MENUS}</legend>
 			<div class="form-group">

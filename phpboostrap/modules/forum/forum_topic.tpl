@@ -391,8 +391,8 @@
 			<span id="go-bottom"></span>
 		# IF C_AUTH_POST #
 			<div class="forum-post-form">
-				<form class="form-group" action="post{U_FORUM_ACTION_POST}" method="post" onsubmit="return check_form_msg();">
-					<div class="form-element-textarea">
+				<form class="form-horizontal" action="post{U_FORUM_ACTION_POST}" method="post" onsubmit="return check_form_msg();">
+					<div class="form-group">
 						<label for="contents">{L_RESPOND}</label>
 						{KERNEL_EDITOR}
 						<textarea id="contents" name="contents" rows="15" cols="40" class="form-control">{CONTENTS}</textarea>

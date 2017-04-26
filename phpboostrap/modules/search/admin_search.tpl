@@ -46,7 +46,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="authorized_modules[]">* {L_AUTHORIZED_MODULES} <span class="help-block">{L_AUTHORIZED_MODULES_EXPLAIN}</span></label>
 							<div class="col-sm-8">
-								<select class="form-control" id="authorized_modules[]" name="authorized_modules[]" size="10" multiple="multiple" class="list-modules">
+								<select class="form-control" id="authorized_modules[]" name="authorized_modules[]" multiple="multiple" class="list-modules">
 									# START authorized_modules #
 									<option value="{authorized_modules.MODULE}" id="{authorized_modules.MODULE}"{authorized_modules.SELECTED}>{authorized_modules.L_MODULE_NAME}</option>
 									# END authorized_modules #
@@ -115,7 +115,7 @@
 								<input class="form-control" type="number" id="{weights.MODULE}" name="{weights.MODULE}" value="{weights.WEIGHT}" min="1" max="100">
 							</div>
 						</div>
-						# END weights #					
+						# END weights #
 				</fieldset>
 
 				<p class="text-center">

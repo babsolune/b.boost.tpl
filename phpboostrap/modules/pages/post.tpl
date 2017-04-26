@@ -51,7 +51,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="title">* {L_TITLE_FIELD}</label>
 					<div class="col-sm-8">
-						<input id="title" class="form-control" type="text" name="title" maxlength="250" class="field-large" value="{PAGE_TITLE}">
+						<input id="title" class="form-control" type="text" name="title" class="field-large" value="{PAGE_TITLE}">
 					</div>
 				</div>
 				# END create #

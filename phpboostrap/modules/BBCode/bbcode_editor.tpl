@@ -167,7 +167,7 @@ function XMLHttpRequest_preview(field)
 					<div class="clearfix"></div>
 					<p class="text-center">
 						<a class="btn btn-default" href="" onclick="{DISABLED_LIST}bbcode_list('{FIELD}');bb_hide_block('9', '{FIELD}', 0);return false;">
-							<i class="fa fa-fw bbcode-icon-list valign-middle" title="{L_BB_LIST}"></i> {L_INSERT_LIST}
+							<i class="fa fa-fw bbcode-icon-list" title="{L_BB_LIST}"></i> {L_INSERT_LIST}
 						</a>
 					</p>
 				</div>
@@ -275,11 +275,11 @@ function XMLHttpRequest_preview(field)
 
 		<div id="bbcode-container-positions" class="btn-group btn-group-xs bbcode-container-more">
 			<span class="btn btn-default">
-				<a href="" class="fa fa-fw bbcode-icon-float-left{AUTH_FLOAT}" onclick="{DISABLED_FLOAT}insertbbcode('[float=left]', '[/float]', '{FIELD}');return false;" title="{L_BB_FLOAT_LEFT}"></a>
+				<a href="" class="fa fa-fw bbcode-icon-pull-left{AUTH_FLOAT}" onclick="{DISABLED_FLOAT}insertbbcode('[float=left]', '[/float]', '{FIELD}');return false;" title="{L_BB_FLOAT_LEFT}"></a>
 			</span>
 
 			<span class="btn btn-default">
-				<a href="" class="fa fa-fw bbcode-icon-float-right{AUTH_FLOAT}" onclick="{DISABLED_FLOAT}insertbbcode('[float=right]', '[/float]', '{FIELD}');return false;" title="{L_BB_FLOAT_RIGHT}"></a>
+				<a href="" class="fa fa-fw bbcode-icon-pull-right{AUTH_FLOAT}" onclick="{DISABLED_FLOAT}insertbbcode('[float=right]', '[/float]', '{FIELD}');return false;" title="{L_BB_FLOAT_RIGHT}"></a>
 			</span>
 
 			<span class="btn btn-default">

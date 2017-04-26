@@ -79,49 +79,6 @@
 				<form class="form-horizontal" action="{U_ACTION}" method="post" onsubmit="return check_form_post();">
 					# INCLUDE message_helper #
 
-					# IF C_FORUM_PREVIEW_MSG #
-					<div class="module-position">
-						<div class="module-top-l"></div>
-						<div class="module-top-r"></div>
-						<div class="module-top">
-							<span class="float-left">{L_PREVIEW}</span>
-							<span class="float-right"></span>&nbsp;
-						</div>
-					</div>
-					<div class="msg-position">
-						<div class="msg-container">
-							<div class="msg-pseudo-mbr"></div>
-							<div class="msg-top-row">
-								<div class="float-left"><i class="fa fa-hand-o-right"></i> {DATE}</div>
-								<div class="float-right"><i class="fa fa-quote-right"></i></div>
-							</div>
-							<div class="msg-contents-container">
-								<div class="msg-info-mbr">
-								</div>
-								<div class="msg-contents">
-									<div class="msg-contents-overflow">
-										{CONTENTS_PREVIEW}
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="msg-sign">
-							<hr />
-							<span class="float-left">
-								<span class="basic-button smaller">MP</span>
-							</span>
-							<span class="float-left">
-							</span>&nbsp;
-						</div>
-					</div>
-					<div class="msg-position">
-						<div class="msg-bottom-l"></div>
-						<div class="msg-bottom-r"></div>
-						<div class="msg-bottom">&nbsp;</div>
-					</div>
-					<br /><br />
-					# ENDIF #
-
 					<div class="fieldset-content">
 						<p class="text-center">{L_REQUIRE}</p>
 						<fieldset>
@@ -139,21 +96,19 @@
 							<div class="form-group">
 								<label class="control-label col-sm-4" for="title">* {L_TITLE}</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control" maxlength="100" id="title" name="title" value="{TITLE}">
+									<input type="text" class="form-control" id="title" name="title" value="{TITLE}">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-sm-4" for="desc">{L_DESC}</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control" maxlength="75" id="desc" name="desc" value="{DESC}">
+									<input type="text" class="form-control" id="desc" name="desc" value="{DESC}">
 								</div>
 							</div>
-							<div class="form-element-textarea">
+							<div class="form-group">
 								<label for="contents">* {L_MESSAGE}</label>
 								{KERNEL_EDITOR}
-								<div class="form-field-textarea">
-									<textarea class="form-control" rows="25" cols="47" id="contents" name="contents">{CONTENTS}</textarea>
-								</div>
+								<textarea class="form-control" rows="25" cols="47" id="contents" name="contents">{CONTENTS}</textarea>
 							</div>
 							# IF C_FORUM_POST_TYPE #
 							<div class="form-group">

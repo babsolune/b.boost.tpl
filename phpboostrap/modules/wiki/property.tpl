@@ -225,7 +225,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="new_title">{L_NEW_TITLE}</label>
 					<div class="col-sm-8">
-						<input type="text" name="new_title" id="new_title" maxlength="250" class="form-control" value="{rename.FORMER_NAME}">
+						<input type="text" name="new_title" id="new_title" class="form-control" value="{rename.FORMER_NAME}">
 					</div>
 				</div>
 				<div class="form-group">

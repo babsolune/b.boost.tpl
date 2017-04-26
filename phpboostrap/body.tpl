@@ -30,7 +30,7 @@
 					{menus_header.MENU}
 					# END menus_header #
 					# ENDIF #
-				</div>				
+				</div>
 			</div>
 		</div>
 	</div>
@@ -118,7 +118,7 @@
 		# START menus_top_footer #
 		{menus_top_footer.MENU}
 		# END menus_top_footer #
-		<div class="spacer"></div>
+		<div class="clearfix"></div>
 	</div>
 	# ENDIF #
 

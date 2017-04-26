@@ -1,4 +1,4 @@
-<div class="spacer"></div>
+<div class="clearfix"></div>
 
 # IF C_VERSIONS_AVAILABLE #
 	<section class="block">
@@ -6,7 +6,7 @@
 			# INCLUDE SELECT_VERSION #
 		</div>
 	</section>
-	<div class="spacer"></div>
+	<div class="clearfix"></div>
 
 	# IF C_BUGS #
 	<table id="table">
@@ -94,7 +94,7 @@
 				# ENDIF #
 				<td class="left"# IF bug.C_LINE_COLOR # style="background-color:{bug.LINE_COLOR};"# ENDIF #> 
 					<span>{@labels.fields.status} : {bug.STATUS}</span>
-					<div class="spacer"></div>
+					<div class="clearfix"></div>
 					# IF bug.C_PROGRESS #
 					<div class="progressbar-container">
 						<div class="progressbar-infos">{bug.PROGRESS}% </div>

@@ -295,7 +295,7 @@
 										<span class="input-group-addon">
 											{L_SEARCH_USER}
 										</span>
-										<input class="form-control" type="text" maxlength="25" id="login" name="login">
+										<input class="form-control" type="text" id="login" name="login">
 									</div>
 									<span id="search_img"></span>
 									<span>
@@ -334,7 +334,7 @@
 											{user_list.U_ACTION_USER}
 										</td>
 										<td class="td25P">
-											<a href="{user_list.U_PM}" class="basic-button smaller" title="MP">MP</a>
+											<a href="{user_list.U_PM}" class="btn btn-pbt btn-xs" title="MP">MP</a>
 										</td>
 									</tr>
 									# END user_list #

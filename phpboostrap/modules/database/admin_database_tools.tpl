@@ -315,18 +315,16 @@
 				<fieldset>
 					<legend>{L_QUERY}</legend>
 					<div class="fieldset-inset">
-						<div class="content">
-							<span id="errorh"></span>
-							<div class="alert alert-warning">{L_EXPLAIN_QUERY}</div>
-							<fieldset>
-								<label for="query">* {L_EXECUTED_QUERY}</label>
-								<textarea class="form-control" rows="12" id="query" name="query">{QUERY}</textarea>
-							</fieldset>
-							<p class="text-center">
-								<button type="submit" name="submit" value="true" class="btn btn-primary">{L_EXECUTE}</button>
-								<input type="hidden" name="token" value="{TOKEN}">
-							</p>
-						</div>
+						<span id="errorh"></span>
+						<div class="alert alert-warning">{L_EXPLAIN_QUERY}</div>
+						<fieldset>
+							<label for="query">* {L_EXECUTED_QUERY}</label>
+							<textarea class="form-control" rows="12" id="query" name="query">{QUERY}</textarea>
+						</fieldset>
+						<p class="text-center">
+							<button type="submit" name="submit" value="true" class="btn btn-primary">{L_EXECUTE}</button>
+							<input type="hidden" name="token" value="{TOKEN}">
+						</p>
 					</div>
 				</fieldset>
 			</form>
@@ -400,7 +398,7 @@
 									# IF fields.C_FIELD_FORM_EXTEND #
 									<textarea class="form-control" rows="6" cols="37" name="{fields.FIELD_NAME}">{fields.FIELD_VALUE}</textarea>
 									# ELSE #
-									<input class="form-control" type="text" size="30" name="{fields.FIELD_NAME}" value="{fields.FIELD_VALUE}">
+									<input class="form-control" type="text" name="{fields.FIELD_NAME}" value="{fields.FIELD_VALUE}">
 									# ENDIF #
 								</td>
 							</tr>

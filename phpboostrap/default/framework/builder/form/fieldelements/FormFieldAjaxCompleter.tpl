@@ -1,4 +1,4 @@
-<input type="text" size="{SIZE}" maxlength="{MAX_LENGTH}" name="${escape(NAME)}" id="${escape(HTML_ID)}" value="${escape(VALUE)}"
+<input type="text" name="${escape(NAME)}" id="${escape(HTML_ID)}" value="${escape(VALUE)}"
 	class="form-control ${escape(CLASS)}" # IF C_DISABLED # disabled="disabled" # ENDIF # autocomplete="off" onfocus="javascript:load_autocompleter_{HTML_ID}();" />
 	<script>
 		function load_autocompleter_{HTML_ID}() {

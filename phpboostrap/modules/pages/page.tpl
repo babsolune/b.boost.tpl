@@ -6,8 +6,8 @@
 							<a href="{U_COM}" class="btn btn-info"><i class="fa fa-comments-o"></i> {L_COM}</a>&nbsp;
 						# ENDIF #
 						# IF C_TOOLS_AUTH #
-							<a href="{U_RENAME}" title="{L_RENAME}" class="btn btn-info"><i class="fa fa-magic"></i></a>
-							<a href="{U_EDIT}" title="{L_EDIT}" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+							<a href="{U_RENAME}" title="{L_RENAME}" class="btn btn-warning"><i class="fa fa-magic"></i></a>
+							<a href="{U_EDIT}" title="{L_EDIT}" class="btn btn-info"><i class="fa fa-edit"></i></a>
 							<a href="{U_DELETE}" title="{L_DELETE}" data-confirmation="delete-element" class="btn btn-danger"><i class="fa fa-delete"></i></a>
 						# ENDIF #
 						# IF C_PRINT #
@@ -21,14 +21,14 @@
 			</header>
 			<div class="content">
 				# START redirect #
-					<div class="options">
+					<div class="pull-right">
 					{redirect.REDIRECTED_FROM} {redirect.DELETE_REDIRECTION}
 					</div>
 				# END redirect #
 
-				<div class="spacer"></div>
+				<div class="clearfix"></div>
 					{CONTENTS}
-				<div class="spacer"></div>
+				<div class="clearfix"></div>
 			</div>
 			<footer class="center">{COUNT_HITS}</footer>
 		</article>

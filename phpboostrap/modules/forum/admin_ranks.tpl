@@ -51,7 +51,7 @@
 								# START rank #
 								<tr>
 									<td>
-										<input class="form-control" type="text" maxlength="30" name="{rank.ID}name" value="{rank.RANK}">
+										<input class="form-control" type="text" name="{rank.ID}name" value="{rank.RANK}">
 									</td>
 									<td>
 										{rank.MSG}

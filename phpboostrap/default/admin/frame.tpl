@@ -35,7 +35,6 @@
 		<script src="{PATH_TO_ROOT}/templates/{THEME}/js/bootstrap.min.js"></script>
 		<script src="{PATH_TO_ROOT}/templates/{THEME}/js/navbar.js"></script>
 		<script src="{PATH_TO_ROOT}/templates/{THEME}/js/bootstrap-grid-columns.js"></script>
-		<script src="{PATH_TO_ROOT}/templates/{THEME}/js/metisMenu.js"></script>
 		<script>
 		<!--
 			function open_submenu(myid)

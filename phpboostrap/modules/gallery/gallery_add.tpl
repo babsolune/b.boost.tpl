@@ -36,7 +36,7 @@
 					</div>
 					<label class="col-sm-4 control-label">{L_NAME}</label>
 					<div class="col-sm-8 mb15">
-						<input class="form-control" type="text" maxlength="50" name="name">
+						<input class="form-control" type="text" name="name">
 					</div>
 					<label class="col-sm-4 control-label">*</label>
 					<div class="col-sm-8 mb15">

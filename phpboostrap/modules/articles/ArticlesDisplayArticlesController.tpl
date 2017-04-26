@@ -107,7 +107,7 @@
 				# IF C_DATE_UPDATED #
 				<div><i>${LangLoader::get_message('form.date.update', 'common')} : <time datetime="{DATE_UPDATED_ISO8601}" itemprop="datePublished">{DATE_UPDATED}</time></i></div>
 				# ENDIF #
-				<div class="spacer"></div>
+				<div class="clearfix"></div>
 				# IF C_NOTATION_ENABLED #
 				<p>{KERNEL_NOTATION}</p>
 				# ENDIF #

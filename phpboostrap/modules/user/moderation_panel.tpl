@@ -59,7 +59,7 @@
 				<form action="{U_ACTION}" method="post" class="form-horizontal">
 					<label class="col-sm-4 control-label" for="login">{L_SEARCH_USER} <span class="help-block">{L_JOKER}</span></label>
 					<div class="col-sm-8 input-group">
-						<input class="form-control" type="text" maxlength="25" id="login" value="" name="login">
+						<input class="form-control" type="text" id="login" value="" name="login">
 						<span class="input-group-btn">
 							<button class="btn btn-primary" onclick="XMLHttpRequest_search(this.form);" type="button">{L_SEARCH}</button>
 						</span>
@@ -91,7 +91,7 @@
 									{member_list.U_ACTION_USER}
 								</td>
 								<td>
-									<a href="{member_list.U_PM}" class="basic-button smaller">MP</a>
+									<a href="{member_list.U_PM}" class="btn btn-pbt btn-xs">MP</a>
 								</td>
 							</tr>
 							# END member_list #
@@ -137,7 +137,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4">{L_PM}</label>
 							<div class="col-sm-8">
-								<a href="{U_PM}" class="basic-button smaller">MP</a>
+								<a href="{U_PM}" class="btn btn-pbt">MP</a>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -182,7 +182,7 @@
 						<div class="form-element">
 							<label class="control-label col-sm-4">{L_PM}</label>
 							<div class="col-sm-8">
-								<a href="{U_PM}" class="basic-button smaller">MP</a>
+								<a href="{U_PM}" class="btn btn-pbt">MP</a>
 							</div>
 							<div class="clearfix"></div>
 						</div>

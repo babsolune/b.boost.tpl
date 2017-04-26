@@ -39,7 +39,7 @@
 	# ENDIF #
 	# ENDIF #
 	# IF C_NO_RANDOM_PICS #
-	<br /><span class="smaller"><em>{L_NO_RANDOM_PICS}</em></span><br />
+	<br /><span class="help-block"><em>{L_NO_RANDOM_PICS}</em></span><br />
 	# ENDIF #
 </div>
 <a class="small" href="{PATH_TO_ROOT}/gallery/gallery.php">{L_GALLERY}</a>

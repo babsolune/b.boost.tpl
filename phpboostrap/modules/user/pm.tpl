@@ -105,7 +105,7 @@
 								<tr>
 									<th colspan="6">
 										<div class="left">&nbsp;<input type="checkbox" id="validc" onclick="check_convers(this.checked, 'd');" title="{L_SELECT_ALL_MESSAGES}" /> &nbsp;<input type="hidden" name="token" value="{TOKEN}"><button type="submit" name="valid" value="true" class="submit">{L_DELETE}</button></div>
-										# IF convers.C_PAGINATION #<div class="float-right"># INCLUDE convers.PAGINATION #</div># ENDIF #
+										# IF convers.C_PAGINATION #<div class="pull-right"># INCLUDE convers.PAGINATION #</div># ENDIF #
 									</th>
 								</tr>
 							</tfoot>
@@ -235,13 +235,11 @@
 		# START post_pm #
 		# INCLUDE message_helper #
 		<span id="quote"></span>
-		<form action="pm{post_pm.U_PM_ACTION_POST}" method="post" onsubmit="return check_form_msg();" class="form-group">
+		<form action="pm{post_pm.U_PM_ACTION_POST}" method="post" onsubmit="return check_form_msg();" class="form-horizontal">
 			<legend>{L_RESPOND}</legend>
-			<div class="form-element-textarea">
+			<div class="form-group">
 				{KERNEL_EDITOR}
-				<div class="form-field-textarea">
-					<textarea class="form-control" rows="20" cols="66" id="contents" name="contents">{post_pm.CONTENTS}</textarea>
-				</div>
+				<textarea class="form-control" rows="20" cols="66" id="contents" name="contents">{post_pm.CONTENTS}</textarea>
 			</div>
 			<div class="text-center">
 				<input type="hidden" name="token" value="{TOKEN}">
@@ -265,17 +263,15 @@
 						<fieldset>
 							<legend>{L_EDIT}</legend>
 							# START edit_pm.title #
-							<div class="form-element">
-								<label for="title">* {L_TITLE}</label>
-								<div class="form-field"><label><input class="form-control" type="text" maxlength="100" id="title" name="title" value="{edit_pm.title.TITLE}"></label></div>
+							<div class="form-group">
+								<label class="col-sm-4" for="title">* {L_TITLE}</label>
+								<div class="col-sm-8"><input class="form-control" type="text" id="title" name="title" value="{edit_pm.title.TITLE}"></div>
 							</div>
 							# END edit_pm.title #
-							<div class="form-element-textarea">
+							<div class="form-group">
 								<label for="contents">* {L_MESSAGE}</label>
 								{KERNEL_EDITOR}
-								<div class="form-field-textarea">
-									<textarea class="form-control" rows="20" id="contents" name="contents">{edit_pm.CONTENTS}</textarea>
-								</div>
+								<textarea class="form-control" rows="20" id="contents" name="contents">{edit_pm.CONTENTS}</textarea>
 							</div>
 						</fieldset>
 
@@ -294,7 +290,7 @@
 
 
 		# START post_convers #
-		<form action="pm.php" method="post" onsubmit="return check_form_convers();" class="form-group">
+		<form action="pm.php" method="post" onsubmit="return check_form_convers();" class="form-horizontal">
 			<section id="module-user-post-convers">
 				<header>
 					<h1>{post_convers.U_PM_BOX}</h1>
@@ -307,11 +303,11 @@
 						<fieldset>
 							<legend>{L_POST_NEW_CONVERS}</legend>
 							# START post_convers.user_id_dest #
-							<div class="form-horizontal">
+							<div class="form-group">
 								<label class="control-label col-sm-4" for="login">* {L_RECIPIENT}</label>
 								<div class="col-sm-8">
 									<div class="input-group">
-										<input class="form-control" type="text" maxlength="25" id="login" name="login" value="{post_convers.LOGIN}">
+										<input class="form-control" type="text" id="login" name="login" value="{post_convers.LOGIN}">
 										<div class="input-group-btn">
 											<button type="button" class="btn btn-primary" value="{L_SEARCH}" onclick="XMLHttpRequest_search_members('', '{THEME}', 'insert_member', '{L_REQUIRE_RECIPIENT}');">{L_SEARCH}</button>
 										</div>
@@ -324,18 +320,16 @@
 								</div>
 							</div>
 							# END post_convers.user_id_dest #
-							<div class="form-horizontal">
+							<div class="form-group">
 								<label class="control-label col-sm-4" for="title">* {L_TITLE}</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control" maxlength="100" id="title" name="title" value="{post_convers.TITLE}">
+									<input type="text" class="form-control" id="title" name="title" value="{post_convers.TITLE}">
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="contents">* {L_MESSAGE}</label>
 								{KERNEL_EDITOR}
-								<div class="form-field-textarea">
-									<textarea class="form-control" rows="25" id="contents" name="contents">{CONTENTS}</textarea>
-								</div>
+								<textarea class="form-control" rows="25" id="contents" name="contents">{CONTENTS}</textarea>
 							</div>
 						</fieldset>
 

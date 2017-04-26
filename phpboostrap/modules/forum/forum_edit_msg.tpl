@@ -18,54 +18,14 @@
 				</h2>
 			</header>
 			<div class="content">
-				<form class="form-group" action="{U_ACTION}" method="post" onsubmit="return check_form_post();">
+				<form class="form-horizontal" action="{U_ACTION}" method="post" onsubmit="return check_form_post();">
 					# INCLUDE message_helper #
-
-					# IF C_FORUM_PREVIEW_MSG #
-					<article id="article-forum-edit-message-preview">
-						<header>
-							<h3>
-								<span class="float-left">{L_PREVIEW}</span>
-							</h3>
-						</header>
-						<div class="row">
-							<div class="col-xs-3">
-								<div class="msg-pseudo-mbr"></div>
-								<div class="msg-top-row">
-									<div class="float-left"><i class="fa fa-hand-o-right"></i> {DATE}</div>
-									<div class="float-right"><i class="fa fa-quote-right"></i></div>
-								</div>
-							</div>
-								<div class="col-xs-9">
-									<div class="msg-info-mbr">
-									</div>
-									<div class="msg-contents">
-										<div class="msg-contents-overflow">
-											{CONTENTS}
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="msg-sign">
-								<hr />
-								<span class="float-left">
-									<span class="basic-button smaller">MP</span>
-								</span>
-								<span class="float-right">
-								</span>&nbsp;
-							</div>
-						</div>
-						<footer>
-							&nbsp;
-						</footer>
-					</article>
-					# ENDIF #
 
 					<div class="fieldset-content">
 						<p class="text-center">{L_REQUIRE}</p>
 						<fieldset>
 							<legend>{L_EDIT_MESSAGE}</legend>
-							<div class="form-element-textarea">
+							<div class="form-group">
 								<label for="contents">* {L_MESSAGE}</label>
 								{KERNEL_EDITOR}
 								<textarea class="form-control" rows="25" cols="66" id="contents" name="contents">{CONTENTS}</textarea>

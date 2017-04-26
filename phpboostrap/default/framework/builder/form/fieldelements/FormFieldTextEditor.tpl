@@ -1,7 +1,5 @@
 <input
 	type="{TYPE}"
-	size="{SIZE}"
-	maxlength="{MAX_LENGTH}"
 	name="${escape(NAME)}"
 	id="${escape(HTML_ID)}"
 	value="{VALUE}"

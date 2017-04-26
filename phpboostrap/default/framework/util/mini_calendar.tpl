@@ -45,7 +45,7 @@ function xmlhttprequest_calendar(field, input_field, year, month, day, calendar_
 </script>
 # ENDIF #
 
-<input type="text" size="11" maxlength="10" id="{CALENDAR_ID}" class="form-control date-control" name="{CALENDAR_ID}" value="{DEFAULT_DATE}" onclick="xmlhttprequest_calendar('{CALENDAR_ID}_date', ${escapejs(CALENDAR_ID)}, ${escapejs(YEAR)}, ${escapejs(MONTH)}, ${escapejs(DAY)}, ${escapejs(CALENDAR_NUMBER)});return false;" onchange="hide_mini_calendar(${escapejs(CALENDAR_NUMBER)});return false;"  placeholder="${LangLoader::get_message('date_format', 'date-common')}">
+<input type="text" id="{CALENDAR_ID}" class="form-control date-control" name="{CALENDAR_ID}" value="{DEFAULT_DATE}" onclick="xmlhttprequest_calendar('{CALENDAR_ID}_date', ${escapejs(CALENDAR_ID)}, ${escapejs(YEAR)}, ${escapejs(MONTH)}, ${escapejs(DAY)}, ${escapejs(CALENDAR_NUMBER)});return false;" onchange="hide_mini_calendar(${escapejs(CALENDAR_NUMBER)});return false;"  placeholder="${LangLoader::get_message('date_format', 'date-common')}">
 <div class="input-group-addon">
 	<a id="{CALENDAR_ID}_link" href="" onclick="xmlhttprequest_calendar('{CALENDAR_ID}_date', ${escapejs(CALENDAR_ID)}, ${escapejs(YEAR)}, ${escapejs(MONTH)}, ${escapejs(DAY)}, ${escapejs(CALENDAR_NUMBER)}, 1);return false;">
 		<i class="fa fa-calendar"></i>

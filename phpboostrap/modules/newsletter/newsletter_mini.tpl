@@ -1,7 +1,7 @@
 # IF C_VERTICAL #
 <form class="form-group" action="{PATH_TO_ROOT}/newsletter/?url=/subscribe/" method="post">
 	<div class="input-group">
-		<input class="form-control" type="text" name="mail_newsletter" maxlength="50" value="{USER_MAIL}" placeholder="${LangLoader::get_message('email', 'user-common')}">
+		<input class="form-control" type="text" name="mail_newsletter" value="{USER_MAIL}" placeholder="${LangLoader::get_message('email', 'user-common')}">
 		<input type="hidden" name="token" value="{TOKEN}">
 		<span class="input-group-btn">
 			<button class="btn btn-pbt" type="submit" value="true"><i class="fa fa-envelope-o"></i></button>
@@ -18,7 +18,7 @@
 	<form class="form-group" action="{PATH_TO_ROOT}/newsletter/?url=/subscribe/" method="post">
 		<div class="input-group">
 			<span class="input-group-addon">{@newsletter}</span>
-			<input class="form-control" type="text" name="mail_newsletter" maxlength="50" value="{USER_MAIL}" placeholder="${LangLoader::get_message('email', 'user-common')}">
+			<input class="form-control" type="text" name="mail_newsletter" value="{USER_MAIL}" placeholder="${LangLoader::get_message('email', 'user-common')}">
 			<input type="hidden" name="subscribe" value="subscribe">
 			<input type="hidden" name="token" value="{TOKEN}">
 			<span class="input-group-btn">

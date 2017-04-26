@@ -69,7 +69,7 @@
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="name">* {L_TITLE}</label>
 								<div class="col-sm-8">
-									<input type="text" maxlength="100" class="form-control" id="name" name="name" value="{NAME}" />
+									<input type="text" class="form-control" id="name" name="name" value="{NAME}" />
 								</div>
 							</div>
 							# IF C_CATEGORIES #
@@ -85,7 +85,7 @@
 							<div class="form-group" id="width_dl">
 								<label class="col-sm-4 control-label" for="width">{L_WIDTH}</label>
 								<div class="col-sm-8">
-									<input class="form-control" type="number" min="10" max="5000" maxlength="4" id="width" name="width" value="{WIDTH}" />
+									<input class="form-control" type="number" min="10" max="5000" id="width" name="width" value="{WIDTH}" />
 								</div>
 							</div>
 							<div class="form-group" id="height_dl">
@@ -97,13 +97,13 @@
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="u_media">* {L_U_MEDIA}</label>
 								<div class="col-sm-8">
-									<input type="text" maxlength="500" class="form-control" id="u_media" name="u_media" value="{U_MEDIA}" placeholder="http://" /></div>
+									<input type="text" class="form-control" id="u_media" name="u_media" value="{U_MEDIA}" placeholder="http://" /></div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="poster">{L_POSTER}</label>
 								<div class="col-sm-8# IF C_AUTH_UPLOAD # form-field-upload-file# ENDIF #">
 								<div class="input-group">
-									<input type="text" maxlength="255" class="form-control" id="poster" name="poster" value="{POSTER}" />
+									<input type="text" class="form-control" id="poster" name="poster" value="{POSTER}" />
 									<div class="input-group-addon">
 										# IF C_AUTH_UPLOAD #
 											<a title="${LangLoader::get_message('files_management', 'main')}" href="" class="fa fa-cloud-upload" onclick="window.open('{PATH_TO_ROOT}/user/upload.php?popup=1&amp;fd=poster&amp;parse=true&amp;no_path=true', '', 'height=500,width=720,resizable=yes,scrollbars=yes');return false;"></a>

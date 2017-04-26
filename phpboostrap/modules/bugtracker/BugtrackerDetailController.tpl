@@ -93,6 +93,6 @@
 </fieldset>
 # ENDIF #
 
-<div class="spacer"></div>
+<div class="clearfix"></div>
 
 # INCLUDE COMMENTS #
