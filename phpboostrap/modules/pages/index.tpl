@@ -11,7 +11,10 @@
 		<h1>{TITLE}</h1>
 	</header>
 	<div class="row">
-		{L_EXPLAIN_PAGES}
+		<div class="col-sm-12">
+			{L_EXPLAIN_PAGES}
+		</div>
+
 		<hr />
 		<div class="explorer">
 			<div class="cats col-sm-6">
@@ -22,7 +25,7 @@
 							# START list #
 								<li class="sub">
 									# IF list.C_SUB_CAT #
-										<a class="parent" href="javascript:show_pages_cat_contents({list.ID}, 1);" title="${LangLoader::get_message('display', 'common')}">
+										<a class="parent" href="javascript:show_pages_cat_contents({list.ID}, 0);" title="${LangLoader::get_message('display', 'common')}">
 											<i class="fa fa-plus-square-o" id="img-subfolder-{list.ID}"></i>
 											<i class="fa fa-folder" id ="img-folder-{list.ID}"></i>
 										</a>

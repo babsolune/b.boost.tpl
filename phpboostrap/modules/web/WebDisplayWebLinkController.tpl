@@ -63,7 +63,7 @@
 						# IF C_VISIBLE #
 						<li class="list-group-item">
 							<div class="btn-group">
-								<a href="{U_VISIT}" class="basic-button">
+								<a href="{U_VISIT}" class="btn btn-primary">
 									<i class="fa fa-globe"></i> {@visit}
 								</a>
 								# IF IS_USER_CONNECTED #

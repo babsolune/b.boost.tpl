@@ -113,7 +113,7 @@
 							# IF weblinks.C_PICTURE #
 								<img class="media-object" src="{weblinks.U_PICTURE}" alt="{weblinks.NAME}" itemprop="image" />
 							# ELSE #
-								<img class="media-object" src="{PATH_TO_ROO}/tempaltes/{THEME}/theme/images/theme.jpg" alt="{weblinks.NAME}" itemprop="image" />
+								<img class="media-object" src="{PATH_TO_ROOT}/templates/{THEME}/theme/images/theme.jpg" alt="{weblinks.NAME}" itemprop="image" />
 							# ENDIF #
 							</a>
 						</div>
@@ -198,7 +198,7 @@
 								# IF weblinks.C_PICTURE #
 									<img class="media-object" src="{weblinks.U_PICTURE}" alt="{weblinks.NAME}" itemprop="image" />
 								# ELSE #
-									<img class="media-object" src="{PATH_TO_ROO}/tempaltes/{THEME}/theme/images/theme.jpg" alt="{weblinks.NAME}" itemprop="image" />
+									<img class="media-object" src="{PATH_TO_ROOT}/templates/{THEME}/theme/images/theme.jpg" alt="{weblinks.NAME}" itemprop="image" />
 								# ENDIF #
 								</a>
 								<p>

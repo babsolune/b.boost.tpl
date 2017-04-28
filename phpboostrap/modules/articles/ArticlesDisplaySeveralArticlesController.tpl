@@ -88,7 +88,7 @@
 						# ENDIF #
 						<div class="caption">
 
-							<div class="pull-right ">
+							<div class="pull-right text-right">
 								<div class="btn-group btn-group-xs">
 									# IF articles.C_EDIT #
 										<a class="btn btn-info" href="{articles.U_EDIT_ARTICLE}" title="${LangLoader::get_message('edit', 'common')}"><i class="fa fa-edit"></i></a>

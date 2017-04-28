@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 -->
 </script>
 # ENDIF #
-<div id="${escape(HTML_ID)}_field" class="form-group pos-rel# IF C_HOUR ## ENDIF ## IF C_REQUIRED_AND_HAS_VALUE # constraint-status-right# ENDIF #"# IF C_HIDDEN # style="display:none;"# ENDIF #>
+<div id="${escape(HTML_ID)}_field" class="form-group pos-rel# IF C_HOUR # date-control# ENDIF ## IF C_REQUIRED_AND_HAS_VALUE # constraint-status-right# ENDIF #"# IF C_HIDDEN # style="display:none;"# ENDIF #>
 	# IF C_HAS_LABEL #
 		<label class="col-sm-4 control-label" for="${escape(HTML_ID)}">
 			{LABEL}
