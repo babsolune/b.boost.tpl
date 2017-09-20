@@ -22,22 +22,22 @@
 
 # IF C_VERTICAL #
 	# IF C_USER_NOTCONNECTED #
-		<div class="panel panel-default">
+		<div class="panel panel-pbt">
 			<div class="panel-heading">
-				<h5>{L_CONNECT}</h5>
+				<h5>{@connection}</h5>
 			</div>
 			<div class="panel-body">
 				<form action="{U_CONNECT}" method="post" onsubmit="return check_connect();" class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-fw fa-at"></i></span>
-						<input class="form-control" type="text" id="login" name="login" title="{L_PSEUDO}" placeholder="{L_PSEUDO}">
+						<input class="form-control" type="text" id="login" name="login" title="{@login}" placeholder="{@login}">
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-fw fa-key"></i></span>
-						<input class="form-control" type="password" id="password" name="password" title="{L_PASSWORD}" placeholder="{L_PASSWORD}">
+						<input class="form-control" type="password" id="password" name="password" title="{@password}" placeholder="{@password}">
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon">{L_AUTOCONNECT}</span>
+						<span class="input-group-addon">{@autoconnect}</span>
 						<span class="input-group-addon">
 							<input checked="checked" type="checkbox" name="autoconnect" class="">
 						</span>
@@ -46,20 +46,20 @@
 					<input type="hidden" name="token" value="{TOKEN}">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-fw fa-sign-in"></i></span>
-						<button type="submit" name="authenticate" value="internal" class="btn btn-info form-control">{L_CONNECT}</button>
+						<button type="submit" name="authenticate" value="internal" class="btn btn-info form-control">{@connection}</button>
 					</div>
 
 				</form>
 
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-fw fa-question-circle"></i></span>
-					<a class="btn btn-default form-control" href="${relative_url(UserUrlBuilder::forget_password())}"> {L_FORGOT_PASS}</a>
+					<a class="btn btn-default form-control" href="${relative_url(UserUrlBuilder::forget_password())}"> ${LangLoader::get_message('forget-password', 'user-common')}</a>
 				</div>
 
 				# IF C_USER_REGISTER #
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-fw fa-ticket"></i></span>
-						<a href="${relative_url(UserUrlBuilder::registration())}" class="btn btn-info form-control"> {L_REGISTER}</a>
+						<a href="${relative_url(UserUrlBuilder::registration())}" class="btn btn-info form-control"> {@register}</a>
 					</div>
 
 					# IF C_FB_AUTH_ENABLED #
@@ -81,17 +81,16 @@
 					# ENDIF #
 				# ENDIF #
 			</div>
-			<div class="panel-footer"></div>
 		</div>
 	# ELSE #
-		<div class="panel panel-default">
+		<div class="panel panel-pbt">
 			<div class="panel-heading">
 				<h5>{L_PRIVATE_PROFIL}</h5>
 			</div>
 			<ul class="list-group">
 				<li class="list-group-item">
 					<i class="fa fa-fw fa-profil"></i>
-					<a href="${relative_url(UserUrlBuilder::home_profile())}"> {L_PROFIL}</a>
+					<a href="${relative_url(UserUrlBuilder::home_profile())}"> {@dashboard}</a>
 				</li>
 				<li class="list-group-item">
 					<i class="fa fa-fw fa-envelope# IF C_HAS_PM # blink# ENDIF #"></i>
@@ -115,11 +114,9 @@
 				</li>
 				<li class="list-group-item">
 					<i class="fa fa-fw fa-sign-out"></i>
-					<a href="${relative_url(UserUrlBuilder::disconnect())}"> {L_DISCONNECT}</a>
+					<a href="${relative_url(UserUrlBuilder::disconnect())}"> {@disconnect}</a>
 				</li>
 			</ul>
-			<div class="panel-footer">
-			</div>
 		</div>
 	# ENDIF #
 # ELSE #
@@ -128,27 +125,29 @@
 		<div class="container-fluid">
 			<div class="navbar-header visible-xs-block">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#not-connected-menu" aria-expanded="false">
-					<span class="sr-only">{L_CONNECT}</span>
+					<span class="sr-only">{@connection}</span>
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="#">{L_CONNECT}</a>
+				<a class="navbar-brand" href="#">{@connection}</a>
 			</div>
 			<div class="collapse navbar-collapse" id="not-connected-menu">
 				<div class="navbar-form navbar-left">
 					<form action="{U_CONNECT}" method="post" onsubmit="return check_connect();">
 						<div class="form-group">
-							<input type="text" class="form-control" id="login" name="login" title="{L_PSEUDO}" placeholder="{L_PSEUDO}">
+							<input type="text" class="form-control" id="login" name="login" title="{@login}" placeholder="{@login}">
 							<div class="col-xs-12 visible-xs"><br /></div>
-							<input type="password" class="form-control" id="password" name="password" class="form-control" title="{L_PASSWORD}" placeholder="{L_PASSWORD}">
-							<input checked="checked" type="checkbox" name="autoconnect">
+							<input type="password" class="form-control" id="password" name="password" class="form-control" title="{@password}" placeholder="{@password}">
+							<input checked="checked" type="checkbox" name="autoconnect"> {@autoconnect}
 							<input type="hidden" name="redirect" value="{SITE_REWRITED_SCRIPT}">
 							<input type="hidden" name="token" value="{TOKEN}">
-							<button type="submit" name="authenticate" value="internal" class="btn btn-info">{L_CONNECT}</button>
+							<button type="submit" name="authenticate" value="internal" class="btn btn-info">{@connection}</button>
 						</div>
 					</form>
 				</div>
 				<div class="navbar-form navbar-left">
-					<a href="${relative_url(UserUrlBuilder::forget_password())}" title="{L_FORGOT_PASS}" class="btn btn-default">{L_FORGOT_PASS}</a>
+					<a href="${relative_url(UserUrlBuilder::forget_password())}" title="{L_FORGOT_PASS}" class="btn btn-default">
+						${LangLoader::get_message('forget-password', 'user-common')}
+					</a>
 				</div>
 
 				# IF C_USER_REGISTER #
@@ -167,7 +166,7 @@
 				<div class="navbar-form navbar-right">
 					<form action="${relative_url(UserUrlBuilder::registration())}" method="post">
 						<div class="form-group">
-							<button type="submit" name="register" value="true" class="btn btn-info">{L_REGISTER}</button>
+							<button type="submit" name="register" value="true" class="btn btn-info">{@register}</button>
 							<input type="hidden" name="token" value="{TOKEN}">
 						</div>
 					</form>
@@ -198,7 +197,7 @@
 			<ul class="nav navbar-nav">
 				<li>
 					<a href="${relative_url(UserUrlBuilder::home_profile())}">
-						<i class="fa fa-fw fa-profil"></i> {L_PROFIL}
+						<i class="fa fa-fw fa-profil"></i> {@dashboard}
 					</a>
 				</li>
 				<li>
@@ -227,7 +226,7 @@
 				</li>
 				<li>
 					<a href="${relative_url(UserUrlBuilder::disconnect())}">
-						<i class="fa fa-fw fa-sign-out"></i> {L_DISCONNECT}
+						<i class="fa fa-fw fa-sign-out"></i> {@disconnect}
 					</a>
 				</li>
 			</ul>

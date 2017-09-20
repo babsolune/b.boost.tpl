@@ -18,6 +18,7 @@ Bootstrap grid columns : http://www.jqueryscript.net/layout/Tiny-Equal-Height-Pl
 
 /* --- Design ---
 ============================================================================= */
+
 body {
     word-wrap: break-word;
 }
@@ -596,8 +597,9 @@ a.modo     { color: #66512c; }
 a.member   {}
 
 .new-content {
-    border-top: 5px solid #c6abed;
-    background-color: #c6abed;
+    border-top: 5px solid #64e36e;
+    background-color: #B5E5B9;
+    padding: 15px;
 }
 
 /* --- Pad --- */
@@ -688,6 +690,16 @@ img {max-width: 100%}
 
 .navbar li {
     position: relative;
+}
+
+.dropdown-menu > li > span {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
 }
 
 /* --- Actionslinks ------ */
@@ -1315,7 +1327,7 @@ div.field-required:after {
 
 /* --- metismenu
 ==============================================*/
-.metismenu {
+/*.metismenu {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -1419,4 +1431,4 @@ div.field-required:after {
     -ms-transform:     rotate(-135deg) translateY(-50%);
     -o-transform:      rotate(-135deg) translateY(-50%);
     transform:         rotate(-135deg) translateY(-50%;);
-}
+}*/
