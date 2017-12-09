@@ -584,9 +584,9 @@
 				# IF C_PAGINATION #
 				<tfoot>
 					<tr>
-						<th colspan="5">
+						<td colspan="5">
 							# INCLUDE PAGINATION #
-						</th>
+						</td>
 					</tr>
 				</tfoot>
 				# ENDIF #
@@ -685,9 +685,9 @@
 				# IF C_PAGINATION #
 				<tfoot>
 					<tr>
-						<th colspan="5">
+						<td colspan="5">
 							# INCLUDE PAGINATION #
-						</th>
+						</td>
 					</tr>
 				</tfoot>
 				# ENDIF #

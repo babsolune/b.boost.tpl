@@ -134,9 +134,9 @@ function delete_alert(id)
 				# IF C_PAGINATION #
 				<tfoot>
 					<tr>
-						<th colspan="4">
+						<td colspan="4">
 							# INCLUDE PAGINATION #
-						</th>
+						</td>
 					</tr>
 				</tfoot>
 				# ENDIF #

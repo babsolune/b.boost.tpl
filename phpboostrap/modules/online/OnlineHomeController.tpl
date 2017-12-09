@@ -26,7 +26,7 @@
 			# IF C_PAGINATION #
 			<tfoot>
 				<tr>
-					<th colspan="3"># INCLUDE PAGINATION #</th>
+					<td colspan="3"># INCLUDE PAGINATION #</td>
 				</tr>
 			</tfoot>
 			# ENDIF #

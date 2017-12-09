@@ -86,9 +86,9 @@
 						# IF C_PAGINATION #
 						<tfoot>
 							<tr>
-								<th colspan="6">
+								<td colspan="6">
 									# INCLUDE PAGINATION #
-								</th>
+								</td>
 							</tr>
 						</tfoot>
 						# ENDIF #

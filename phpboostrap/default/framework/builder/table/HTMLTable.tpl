@@ -36,7 +36,7 @@
     	# IF C_DISPLAY_FOOTER #
         <tfoot>
     		<tr>
-    			<th colspan="{NUMBER_OF_COLUMNS}">
+    			<td colspan="{NUMBER_OF_COLUMNS}">
     				<div class="pull-left">
     					<span>
     						{NUMBER_OF_ELEMENTS}
@@ -59,7 +59,7 @@
     						# INCLUDE pagination #
     					</div>
     				# ENDIF #
-    			</th>
+    			</td>
     		</tr>
     	</tfoot>
     	# ENDIF #

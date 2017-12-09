@@ -33,9 +33,9 @@
 		# IF C_PAGINATION #
 		<tfoot>
 			<tr>
-				<th colspan="{NUMBER_COLUMN}">
+				<td colspan="{NUMBER_COLUMN}">
 					# INCLUDE PAGINATION #
-				</th>
+				</td>
 			</tr>
 		</tfoot>
 		# ENDIF #

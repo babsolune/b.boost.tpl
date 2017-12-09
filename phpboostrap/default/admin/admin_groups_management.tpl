@@ -36,9 +36,9 @@
 							</thead>
 							<tfoot>
 								<tr>
-									<th colspan="4">
+									<td colspan="4">
 										<a href="admin_groups.php?add=1" class="btn btn-info" title="{L_ADD_GROUPS}">{L_ADD_GROUPS}</a>
-									</th>
+									</td>
 								</tr>
 							</tfoot>
 							<tbody>
