@@ -371,6 +371,10 @@ select,
     }
 }
 
+select[multiple], select[size] {
+    min-height: 150px;
+}
+
 /* --- Menus --- */
 .nav-tabs.nav-justified {
     margin-bottom: 15px;
