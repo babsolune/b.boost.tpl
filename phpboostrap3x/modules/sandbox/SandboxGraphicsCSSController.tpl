@@ -47,7 +47,7 @@
 		</li>
       </ul>
     </div>
-	<div class="open-summary">
+	<div class="open-summary btn-pbt">
         <i class="fa fa-arrow-circle-right"></i> {@sandbox.summary}
     </div>
 	<script>jQuery("#cssmenu-sandbox").menumaker({ title: "Sandbox", format: "multitoggle", breakpoint: 768 }); </script>
@@ -56,144 +56,150 @@
 		<h2>{@css.title.framework}</h2>
 	</div>
 
-	<div class="no-style">
-		<article id="page-title" class="block">
-			<header>
+	<div class="row">
+		<article id="page-title" class="col-md-12">
+			<header class="page-header">
+				<div class="pull-right text-right">
+					<div class="btn-group btn-group-xs">
+						<a href="#" class="btn btn-info" title="{@css.edit}"><i class="fa fa-edit"></i></a>
+						<a href="#" class="btn btn-warning" title="{@css.delete}"><i class="fa fa-trash"></i></a>
+					</div>
+				</div>
 				<h2>
 					<span>{@css.page.title}</span>
-					<span class="actions">
-						<a href="#" class="fa fa-edit" title="{@css.edit}"></a>
-						<a href="#" class="fa fa-trash" title="{@css.delete}"></a>
-					</span>
 				</h2>
-				<div class="more">{@css.more}</div>
+				<div>{@css.more}</div>
 			</header>
-			<div class="content">
-				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
+			<div>
+				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="pull-left" />
 				<div>{@framework.lorem.large}</div>
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{PAGE}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style">
-		<article id="options" class="block">
+	<div class="row">
+		<article id="options" class="col-md-12">
 			<header>
-				<h5>{@css.form} {@css.options}</h5>
+				<h5>{@css.form}</h5>
 			</header>
-			<div class="content">
-				<form class="options">
-					<div class="horizontal-fieldset">
-					    <span class="horizontal-fieldset-desc">{@css.options.sort_by}</span>
-					    <div class="horizontal-fieldset-element">
-							<div class="form-element">
-								<div class="form-field form-field-select picture-status-constraint">
-									<select>
-										<option value="{@css.options.sort_by.alphabetical}">{@css.options.sort_by.alphabetical}</option>
-										<option value="{@css.options.sort_by.size}">{@css.options.sort_by.size}</option>
-										<option value="{@css.options.sort_by.date}">{@css.options.sort_by.date}</option>
-										<option value="{@css.options.sort_by.popularity}">{@css.options.sort_by.popularity}</option>
-										<option value="{@css.options.sort_by.note}">{@css.options.sort_by.note}</option>
-									</select>
-									<span class="text-status-constraint" style="display: none;"></span>
+			<div>
+				<div class="items-filters">
+					<form class="form-horizontal options">
+						<div class="form-group">
+						    <div class="col-sm-12">{@css.options.sort_by}</div>
+						    <div class="col-sm-6">
+								<div class="form-group">
+									<div class="form-field form-field-select picture-status-constraint">
+										<select class="form-control">
+											<option value="{@css.options.sort_by.alphabetical}">{@css.options.sort_by.alphabetical}</option>
+											<option value="{@css.options.sort_by.size}">{@css.options.sort_by.size}</option>
+											<option value="{@css.options.sort_by.date}">{@css.options.sort_by.date}</option>
+											<option value="{@css.options.sort_by.popularity}">{@css.options.sort_by.popularity}</option>
+											<option value="{@css.options.sort_by.note}">{@css.options.sort_by.note}</option>
+										</select>
+										<span class="text-status-constraint" style="display: none;"></span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="horizontal-fieldset-element">
-							<div class="form-element">
-								<div class="form-field form-field-select picture-status-constraint">
-									<select>
-										<option value="{@css.modules_menus.direction.up}">{@css.modules_menus.direction.up}</option>
-										<option value="{@css.modules_menus.direction.down}">{@css.modules_menus.direction.down}</option>
-									</select>
-									<span class="text-status-constraint" style="display: none;"></span>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="form-field form-field-select picture-status-constraint">
+										<select class="form-control">
+											<option value="{@css.modules_menus.direction.up}">{@css.modules_menus.direction.up}</option>
+											<option value="{@css.modules_menus.direction.down}">{@css.modules_menus.direction.down}</option>
+										</select>
+										<span class="text-status-constraint" style="display: none;"></span>
+									</div>
 								</div>
 							</div>
-						</div>
-				    </div>
-				</form>
-				<div class="spacer"></div>
+					    </div>
+					</form>
+				</div>
+				<div class="clearfix"></div>
 				{@framework.lorem.large}
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{FORM_OPTION}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style">
-		<article id="options-infos" class="block">
+	<div class="row">
+		<article id="options-infos" class="col-md-12">
 			<header>
-				<h5>{@css.class} {@css.options}.infos</h5>
+				<h5>{@css.class} .panel</h5>
 			</header>
-			<div class="content">
-				<div class="options infos">
-					<div class="center">
-						<span>
-							<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="PHPBoost" itemprop="image">
-						</span>
-						<div class="spacer"></div>
-						<a href="#" class="basic-button">
-							<i class="fa fa-globe"></i> {@css.options.link}
-						</a>
-						<a href="#" class="basic-button alt" title="{@css.options.link}">
-							<i class="fa fa-unlink"></i>
-						</a>
-					</div>
-					<h6>{@css.options.file.title}</h6>
-					<span class="text-strong">{@css.options.option.title} : </span><span>0</span><br />
-					<span class="text-strong">{@css.options.option.title} : </span><span><a itemprop="about" class="small" href="#">{@css.options.link}</a></span><br />
-					<span> {@css.options.option.com}</span>
-					<div class="spacer"></div>
-					<div class="center">
-						<div class="notation" id="notation-1">
-							<span class="stars">
-								<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-1"></a>
-								<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-2"></a>
-								<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-3"></a>
-								<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-4"></a>
-								<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-5"></a>
-							</span>
-							<span class="notes">
-								<span class="number-notes">0</span>
-								<span title="0 {@css.options.sort_by.note}">{@css.options.sort_by.note}</span>
-							</span>
-						</div>
+			<div>
+				<div class="col-sm-5 pull-right">
+					<div class="panel panel-default">
+						<div class="panel-heading">{@css.options.file.title}</div>
+						<ul class="list-group">
+							<li class="list-group-item text-center">
+								<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="PHPBoost" itemprop="image">
+							</li>
+							<li class="list-group-item">
+								<div class="btn-group">
+									<div class="input-group-btn">
+										<a href="#" class="btn btn-info"><i class="fa fa-globe"></i> {@css.options.link}</a>
+									</div>
+									<span class="input-group-addon" title="{@css.options.link}"><i class="fa fa-unlink"></i></span>
+								</div>
+							</li>
+							<li class="list-group-item"><span class="text-strong">{@css.options.option.title} : </span><span>0</span></li>
+							<li class="list-group-item"><span class="text-strong">{@css.options.option.title} : </span><span><a itemprop="about" href="#">{@css.options.link}</a></span></li>
+							<li class="list-group-item">{@css.options.option.com}</li>
+							<li class="list-group-item">
+								<div class="notation" id="notation-1">
+									<span class="stars">
+										<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-1"></a>
+										<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-2"></a>
+										<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-3"></a>
+										<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-4"></a>
+										<a href="" onclick="return false;" class="fa star star-hover fa-star-o" id="star-1-5"></a>
+									</span>
+									<span class="notes">
+										<span class="number-notes">0</span>
+										<span title="0 {@css.options.sort_by.note}">{@css.options.sort_by.note}</span>
+									</span>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				{@framework.lorem.large}
 			</div>
-			<div class="spacer"></div>
+			<div class="clearfix"></div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{DIV_OPTION}
 		</div>
-	</div>
+	</div> -->
 
 	<div id="typography" class="sandbox-title">
 		<h2>{@css.title.typography}</h2>
 	</div>
 
-	<div class="no-style">
-		<article id="titles" class="block">
+	<div class="row">
+		<article id="titles" class="col-md-12">
 			<header>
 				<h5>{@css.titles}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<h1>h1. {@css.title} 1</h1>
 				<h2>h2. {@css.title} 2</h2>
 				<h3>h3. {@css.title} 3</h3>
@@ -204,36 +210,25 @@
 		</article>
 	</div>
 
-	<div class="no-style elements-container columns-3">
-		<article id="sizes" class="block">
-			<header>
-				<h5>{@css.title.sizes}</h5>
-			</header>
-			<div class="content">
-				<span href="#" class="smaller">{@css.text.smaller}</span> <br />
-				<span href="#" class="small">{@css.text.small}</span> <br />
-				<span href="#" class="big">{@css.text.big}</span> <br />
-				<span href="#" class="bigger">{@css.text.bigger}</span> <br />
-				<span href="#" class="biggest">{@css.text.biggest}</span>
-			</div>
-		</article>
-		<article id="styles" class="block">
+	<div class="row">
+		<article id="styles" class="col-sm-6">
 			<header>
 				<h5>{@css.styles}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<strong>{@css.text_bold}</strong><br />
 				<em>{@css.text_italic}</em><br />
+				<span class="small">{@css.text.small}</span><br />
 				<span style="text-decoration: underline;">{@css.text_underline}</span><br />
 				<strike>{@css.text_strike}</strike><br />
 				<a href="#" title="{@css.link}">{@css.link}</a>
 			</div>
 		</article>
-		<article id="rank-colors" class="block">
+		<article id="rank-colors" class="col-sm-6">
 			<header>
 				<h5>{@css.rank_color}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<a href="#" class="admin" title="{@css.admin}">{@css.admin}</a> <br />
 				<a href="#" class="modo" title="{@css.modo}">{@css.modo}</a> <br />
 				<a href="#" class="member" title="{@css.member}">{@css.member}</a> <br />
@@ -245,43 +240,45 @@
 		<h2>{@css.miscellaneous}</h2>
 	</div>
 
-	<div class="no-style elements-container columns-2">
-		<article id="progress-bar" class="block">
+	<div class="row">
+		<article id="progress-bar" class="col-md-6">
 			<header>
 				<h5>{@css.progress_bar}</h5>
 			</header>
-			<div class="content">
-				<h6>25%</h6>
-				<div class="progressbar-container">
-					<div class="progressbar-infos">25%</div>
-					<div class="progressbar" style="width:25%;"></div>
+			<h6>25%</h6>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+				25%
 				</div>
+			</div>
 
-				<h6>50%</h6>
-				<div class="progressbar-container">
-					<div class="progressbar-infos">50%</div>
-					<div class="progressbar" style="width:50%"></div>
+			<h6>50%</h6>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+				50%
 				</div>
+			</div>
 
-				<h6>75%</h6>
-				<div class="progressbar-container">
-					<div class="progressbar-infos">75%</div>
-					<div class="progressbar" style="width:75%"></div>
+			<h6>75%</h6>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+				75%
 				</div>
+			</div>
 
-				<h6>100%</h6>
-				<div class="progressbar-container">
-					<div class="progressbar-infos">100%</div>
-					<div class="progressbar" style="width:100%"></div>
+			<h6>100%</h6>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+				100%
 				</div>
 			</div>
 		</article>
 
-		<article id="icons" class="block">
+		<article id="icons" class="col-md-6">
 			<header>
 				<h5>{@css.main_actions_icons}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<ul>
 					<li>{@css.rss_feed} : <a href="#" class="fa fa-syndication" title="{@css.rss_feed}"></a></li>
 					<li>{@css.edit} : <a href="#" class="fa fa-edit" title="{@css.edit}"></a></li>
@@ -293,23 +290,23 @@
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{PROGRESS_BAR}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style">
-		<article id="explorer" class="block">
+	<div class="row">
+		<article id="explorer" class="col-md-12">
 			<header>
 				<h5>{@css.explorer}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<div class="explorer">
 					<div class="cats">
 							<h2>{@css.explorer}</h2>
-						<div class="content">
+						<div>
 							<ul>
 								<li><a id="class_0" href="#" title="{@css.root}"><i class="fa fa-folder"></i>{@css.root}</a>
 									<ul>
@@ -333,7 +330,7 @@
 					</div>
 					<div class="files">
 							<h2>{@css.tree}</h2>
-						<div class="content" id="cat_contents">
+						<div id="cat_contents">
 							<ul>
 								<li><a href="#" title="{@css.cat} 3"><i class="fa fa-folder"></i>{@css.cat} 3</a></li>
 								<li><a href="javascript:open_cat(2); show_cat_contents(0, 0);" title="{@css.cat} 4"><i class="fa fa-folder"></i>{@css.cat} 4</a></li>
@@ -347,19 +344,19 @@
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{EXPLORER}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style elements-container columns-2">
-		<article id="lists" class="block">
+	<div class="row">
+		<article id="lists" class="col-md-6">
 			<header>
 				<h5>{@css.lists}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<ul>
 					<li>{@css.element} 1
 						<ul>
@@ -383,33 +380,36 @@
 				</ol>
 			</div>
 		</article>
-		<article id="buttons" class="block">
+		<article id="buttons" class="col-md-6">
 			<header>
 				<h5>{@css.button}</h5>
 			</header>
-			<div class="content">
-				<button type="submit" class="button">{@css.button}</button>
-				<button type="submit" class="submit">.submit</button><br />
-				<button type="submit" class="button-small">.small</button><br />
-				<button type="submit" class="basic-button">.basic-button</button><br />
-				<button type="submit" class="basic-button alt">.basic-button.alt</button>
+			<div>
+				<button type="submit" class="btn btn-default">btn-default</button>
+				<button type="submit" class="btn btn-primary">btn-primary</button>
+				<button type="submit" class="btn btn-info">btn-info</button>
+				<button type="submit" class="btn btn-success">btn-success</button>
+				<button type="submit" class="btn btn-warning">btn-warning</button>
+				<button type="submit" class="btn btn-danger">btn-danger</button>
+				<button type="submit" class="btn btn-pbt">btn-pbt</button>
+				<button type="submit" class="btn btn-link">btn-link</button>
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{BUTTON}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style elements-container columns-2">
-		<article id="notation" class="block">
+	<div class="row">
+		<article id="notation" class="col-md-12">
 			<header>
 				<h5>{@css.notation}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<div class="notation">
 					<a href="" onclick="return false;" class="fa star fa-star"></a>
 					<a href="" onclick="return false;" class="fa star fa-star"></a>
@@ -419,22 +419,22 @@
 				</div>
 			</div>
 		</article>
-		<article id="pagination" class="block">
+		<article id="pagination" class="col-md-12">
 			<header>
 				<h5>{@css.pagination}</h5>
 			</header>
-			<div class="content">
+			<div>
 				# INCLUDE PAGINATION #
 			</div>
 		</article>
 	</div>
 
-	<div class="no-style">
-		<article id="sortable" class="block">
+	<div class="row">
+		<article id="sortable" class="col-md-12">
 			<header>
 				<h5>{@css.sortable}</h5>
 			</header>
-			<div class="content">
+			<div>
 				<ul class="sortable-block">
 					<li class="sortable-element">
 						<div class="sortable-selector" title="{@css.sortable.move}"></div>
@@ -456,20 +456,20 @@
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{SORTABLE}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style">
-		<article id="css-table" class="block">
+	<div class="row">
+		<article id="css-table" class="col-md-12">
 			<header>
 				<h5>{@css.table}</h5>
 			</header>
-			<div class="content">
-				<table id="table">
+			<div class="table-responsive">
+				<table class="table">
 					<caption>
 						{@css.table.description}
 					</caption>
@@ -511,150 +511,159 @@
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{TABLE}
 		</div>
-	</div>
+	</div> -->
 
-	<div class="no-style">
-		<article id="messages" class="block">
+	<div class="row">
+		<article id="messages" class="col-md-12">
 			<header>
 				<h5>{@css.messages.and.coms}</h5>
 			</header>
-			<div class="content">
-				<div id="com2" class="message" itemscope="itemscope" itemtype="http://schema.org/Comment">
-					<div class="message-container">
+			<div id="com2" class="panel panel-default" itemscope="itemscope" itemtype="http://schema.org/Comment">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-4">
+							<a itemprop="author" href="{PATH_TO_ROOT}/user/?url=/profile/1" class="admin" title="{@css.messages.login}">{@css.messages.login}</a>
 
-						<div class="message-user-infos">
-							<div class="message-pseudo">
-								<a itemprop="author" href="{PATH_TO_ROOT}/user/?url=/profile/1" class="admin" title="{@css.messages.login}">{@css.messages.login}</a>
-								<div class="message-level">{@css.messages.level}</div>
+						</div>
+						<div class="col-sm-8">
+							<div class="pull-right text-right">
+								<div class="btn-group btn-group-xs">
+									<a itemprop="url" href="#com2" class="btn btn-default" title="#2">#2</a>
+									<span class="btn btn-default" itemprop="datePublished" content="2013-09-05T15:37:01+00:00">{@css.messages.date}</span>
+									<a href="#" class="btn btn-info" title="{@css.edit}"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-danger" data-confirmation="delete-element" title="{@css.delete.confirm}"><i class="fa fa-delete"></i></a>
+								</div>
 							</div>
-							<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" class="message-avatar" alt="${LangLoader::get_message('avatar', 'user-common')}" />
 						</div>
 
-						<div class="message-date">
-							<span class="actions">
-								<a itemprop="url" href="#com2" title="#2">#2</a>
-								<a href="#" class="fa fa-edit" title="{@css.edit}"></a>
-								<a href="#" class="fa fa-delete" data-confirmation="delete-element" title="{@css.delete.confirm}"></a>
-							</span>
-							<span itemprop="datePublished" content="2013-09-05T15:37:01+00:00">{@css.messages.date}</span>
-						</div>
+					</div>
 
-						<div class="message-message">
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-4">
+							<p class="text-center">
+								{@css.messages.level}
+							</p>
+							<p class="text-center">
+								<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" class="message-avatar" alt="${LangLoader::get_message('avatar', 'user-common')}" />
+							</p>
+						</div>
+						<div class="col-sm-8">
 							<div itemprop="text" class="message-content">{@css.messages.content}</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{MESSAGE}
 		</div>
-	</div>
+	</div> -->
 
-	<div id="alerts" class="no-style">
-		<article class="block">
+	<div id="alerts" class="row">
+		<article class="col-md-12">
 			<header>
 				<h5>{@css.alert.messages}</h5>
 			</header>
-			<div class="content">
+			<div>
 				# START messages # # INCLUDE messages.VIEW # # END messages #
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{ALERT}
 		</div>
-	</div>
+	</div> -->
 
 	<div id="blocks" class="sandbox-title">
 		<h2>{@css.blocks}</h2>
 	</div>
 
-	<div class="content">1 {@css.blocks.per.line}</div>
-	<div class="elements-container">
-		<article class="block">
+	<div>1 {@css.blocks.per.line}</div>
+	<div class="row">
+		<article class="col-md-12">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.medium}
 			</div>
 		</article>
 	</div>
 
-	<div class="content">2 {@css.blocks.per.line}</div>
-	<div class="elements-container columns-2">
-		<article class="block">
+	<div>2 {@css.blocks.per.line}</div>
+	<div class="row">
+		<article class="col-md-6">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.mini}
 			</div>
 		</article>
-		<article class="block">
+		<article class="col-md-6">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.mini}
 			</div>
 		</article>
 	</div>
 
-	<div class="content">3 {@css.blocks.per.line}</div>
-	<div class="elements-container columns-3">
-		<article class="block">
+	<div>3 {@css.blocks.per.line}</div>
+	<div class="row">
+		<article class="col-md-4">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.mini}
 			</div>
 		</article>
-		<article class="block">
+		<article class="col-md-4">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.mini}
 			</div>
 		</article>
-		<article class="block">
+		<article class="col-md-4">
 			<header>
 				<h2>{@css.block.title}</h2>
 			</header>
-			<div class="content">
+			<div>
 				<img src="{PATH_TO_ROOT}/templates/{THEME}/images/no_avatar.png" alt="{@css.picture}" class="thumbnail-item" />
 				{@framework.lorem.mini}
 			</div>
 		</article>
 	</div>
 	<!-- Source code -->
-	<div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
+	<!-- <div class="formatter-container formatter-hide no-js tpl" onclick="bb_hide(this)">
 		<span class="formatter-title title-perso">{@sandbox.source.code} :</span>
 		<div class="formatter-content">
 			{BLOCK}
 		</div>
-	</div>
+	</div> -->
 	<footer></footer>
 </section>
 <script src="{PATH_TO_ROOT}/sandbox/templates/js/sandbox.js"></script>

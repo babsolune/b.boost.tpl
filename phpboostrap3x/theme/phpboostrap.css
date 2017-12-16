@@ -420,7 +420,7 @@ select[multiple], select[size] {
 .formatter-title {
 	display: inline-block;
 	margin: 1.5rem 0 1rem 0;
-	border-color: #366393;
+	border-color: #C6ABED;
 }
 
 h2.formatter-title {
@@ -815,7 +815,7 @@ img {max-width: 100%}
 ============================================================================= */
 
 .progress {
-    margin: 0;
+    margin: 0 0 15px;
 }
 
 /* --- Drag & Drop

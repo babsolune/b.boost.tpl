@@ -45,7 +45,7 @@
 	# IF C_NEXT_MENU #
 		<li # IF C_HAS_CHILD #class="has-sub"# ENDIF #>
 			# IF C_URL #
-				<a href="{REL_URL}" title="{TITLE}" # IF C_HAS_CHILD #class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"# ENDIF #># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /> # ENDIF #{TITLE}# IF C_HAS_CHILD # <i class="fa fa-has-sub"></i># ENDIF #</a>
+				<a href="{REL_URL}" # IF C_HAS_CHILD #class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"# ENDIF #># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /> # ENDIF #{TITLE}# IF C_HAS_CHILD # <i class="fa fa-has-sub"></i># ENDIF #</a>
 			# ELSE #
 				<a href="#" # IF C_HAS_CHILD #class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"# ENDIF #># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /># ENDIF#{TITLE}# IF C_HAS_CHILD # <i class="fa fa-has-sub"></i># ENDIF #</a>
 			# ENDIF #
@@ -59,7 +59,7 @@
 # ELSE #
 	<li>
 		# IF C_URL #
-			<a href="{REL_URL}" title="{TITLE}"># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /> # ENDIF #{TITLE}</a>
+			<a href="{REL_URL}"># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /> # ENDIF #{TITLE}</a>
 		# ELSE #
 			<span># IF C_IMG #<img src="{REL_IMG}" alt="{TITLE}" height="{IMG_HEIGHT}" width="{IMG_WIDTH}" /># ENDIF#{TITLE}</span>
 		# ENDIF #

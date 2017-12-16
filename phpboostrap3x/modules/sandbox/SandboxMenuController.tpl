@@ -1,181 +1,145 @@
 	<header id="header">
-		<div id="top-header">
-			<div id="site-infos">
-				<div id="site-logo" # IF C_HEADER_LOGO #style="background-image: url({HEADER_LOGO});"# ENDIF #></div>
-				<div id="site-name-container">
-					<a id="site-name" href="{PATH_TO_ROOT}/">{SITE_NAME}</a>
-					<span id="site-slogan">{SITE_SLOGAN}</span>
+		<div id="top-header" class="container-fluid">
+			<div class="container">
+				<div id="site-infos" class="row">
+					<div id="site-name-container">
+						<div id="site-logo" # IF C_HEADER_LOGO #style="background-image: url({HEADER_LOGO});"# ENDIF #></div>
+						<a id="site-name" href="{PATH_TO_ROOT}/">{SITE_NAME}</a>
+						<p id="site-slogan">{SITE_SLOGAN}</p>
+					</div>
 				</div>
-			</div>
-			<div id="top-header-content">
-				<nav id="horizontal-scrolling-top" class="cssmenu cssmenu-horizontal">
-					<ul class="level-0">
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-								<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-							</a>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-										<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-									</a>
-								</li>
-								<li class="has-sub">
-									<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-									<ul class="level-2">
-										<li>
-											<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-												<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-											</a>
-										</li>
-										<li class="has-sub">
-											<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-											<ul class="level-3">
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-													</a>
-												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-													</a>
-												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<script>jQuery("#horizontal-scrolling-top").menumaker({ title: "{@cssmenu.horizontal.top}", format: "multitoggle", breakpoint: 768 }); </script>
+				<div id="top-header-content" class="row">
+					<div class="col-sm-12">
+						<nav class="navbar navbar-default dropdown-horizontal dropdown-with-submenu">
+							<div class="navbar-header">
+			                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".hor-top">
+			                        <span class="sr-only">{@cssmenu.horizontal.top}</span>
+									<i class="fa fa-bars"></i>
+			                    </button>
+			                    <a class="navbar-brand visible-xs" href="#">{@cssmenu.horizontal.top}</a>
+			            	</div>
+							<div class="collapse navbar-collapse hor-top">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="#">
+											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
+										</a>
+									</li>
+									<li class="has-sub">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-hor-top-1">
+											<li>
+												<a href="#">
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+												</a>
+											</li>
+											<li class="has-sub">
+												<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+												<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-hor-top-2">
+													<li>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
+													</li>
+													<li class="has-sub">
+														<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+														<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-hor-top-3">
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="has-sub">
+										<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1">
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="sub-header">
-			<div id="sub-header-content">
-				<nav id="horizontal-sub-header" class="cssmenu cssmenu-horizontal">
-					<ul class="level-0">
-						<li class="has-sub">
-							<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a class="cssmenu-title" href="{PATH_TO_ROOT}/admin" title="{@cssmenu.sub.admin}">{@cssmenu.sub.admin}</a>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li class="has-sub">
-									<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-									<ul class="level-2">
-										<li>
-											<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-										</li>
-										<li class="has-sub">
-											<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-											<ul class="level-3">
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<script>jQuery("#horizontal-sub-header").menumaker({ title: "{@cssmenu.horizontal.sub.header}", format: "multitoggle", breakpoint: 768 }); </script>
-			</div>
-			<div class="spacer"></div>
-		</div>
-		<div class="spacer"></div>
-	</header>
-
-	<div id="global">
-
-		<aside id="menu-left" class="narrow-menu-left">
-			<div class="module-mini-container cssmenu-content">
-				<div class="module-mini-top hidden-small-screens">
-					<div class="sub-title">{@cssmenu.vertical.scrolling}</div>
-				</div>
-				<div class="module-mini-contents">
-					<nav id="vertical-scrolling-left" class="cssmenu cssmenu-vertical cssmenu-left cssmenu-with-submenu">
-						<ul class="level-0">
+			<div id="sub-header-content" class="container">
+				<nav class="navbar navbar-default dropdown-horizontal dropdown-with-submenu">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".hor-sub-top">
+							<span class="sr-only">{@cssmenu.horizontal.sub.header}</span>
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand visible-xs" href="#">{@cssmenu.horizontal.sub.header}</a>
+					</div>
+					<div class="collapse navbar-collapse hor-sub-top">
+						<ul class="nav navbar-nav">
 							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+								<a href="#">
+									<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
+								</a>
 							</li>
 							<li class="has-sub">
-								<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-								<ul class="level-1">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+								<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-hor-sub-top-1">
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">
+											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+										</a>
 									</li>
 									<li class="has-sub">
-										<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-										<ul class="level-2">
+										<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-hor-sub-top-2">
 											<li>
-												<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+												<a href="#">
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+												</a>
 											</li>
 											<li class="has-sub">
-												<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-												<ul class="level-3">
+												<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+												<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-hor-sub-top-3">
 													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
 													</li>
 													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
 													</li>
 													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
 													</li>
 												</ul>
 											</li>
@@ -184,200 +148,219 @@
 								</ul>
 							</li>
 							<li class="has-sub">
-								<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-								<ul class="level-1">
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+								<ul class="dropdown-menu level-1">
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">{@cssmenu.element}</a>
 									</li>
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">{@cssmenu.element}</a>
 									</li>
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">{@cssmenu.element}</a>
 									</li>
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">{@cssmenu.element}</a>
 									</li>
 								</ul>
 							</li>
 						</ul>
-					</nav>
-					<script>jQuery("#vertical-scrolling-left").menumaker({ title: "{@cssmenu.vertical.scrolling.left}", format: "multitoggle", breakpoint: 768 }); </script>
-				</div>
-				<div class="module-mini-bottom hidden-small-screens"></div>
+					</div>
+				</nav>
 			</div>
+		</div>
+	</header>
 
-			<div class="module-mini-container cssmenu-content">
-				<div class="module-mini-top hidden-small-screens">
-					<div class="sub-title">{@cssmenu.vertical.img}</div>
+	<div id="global" class="container">
+
+		<div id="main" class="row" role="main">
+
+			<aside id="menu-left" class="col-md-3">
+				<div class="panel panel-pbt">
+					<div class="panel-heading">
+						<div class="panel-title">{@cssmenu.vertical.scrolling}</div>
+					</div>
+					<div class="panel-body">
+						<nav class="navbar dropdown-vertical dropdown-left dropdown-with-submenu">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".vert-left-top">
+									<span class="sr-only">{@cssmenu.vertical.scrolling.left}</span>
+									<i class="fa fa-bars"></i>
+								</button>
+								<a class="navbar-brand visible-xs" href="#">{@cssmenu.vertical.scrolling.left}</a>
+							</div>
+							<div class="collapse navbar-collapse vert-left-top">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="#">
+											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
+										</a>
+									</li>
+									<li class="has-sub">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-vert-left-top-1">
+											<li>
+												<a href="#">
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+												</a>
+											</li>
+											<li class="has-sub">
+												<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+												<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-vert-left-top-2">
+													<li>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
+													</li>
+													<li class="has-sub">
+														<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+														<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-vert-left-top-3">
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="has-sub">
+										<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1">
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+
+					</div>
+					<div class="module-mini-bottom hidden-small-screens"></div>
 				</div>
-				<div class="module-mini-contents">
-					<nav id="vertical-img" class="cssmenu cssmenu-vertical cssmenu-left">
-						<ul class="level-0">
-							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-									<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />
-									{@cssmenu.element}
-								</a>
-							</li>
-							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-									<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />
-									{@cssmenu.element}
-								</a>
-							</li>
-							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-									<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />
-									{@cssmenu.element}
-								</a>
-							</li>
-							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">
-									<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />
-									{@cssmenu.element}
-								</a>
-							</li>
+			</aside>
 
-						</ul>
-					</nav>
-					<script>jQuery("#vertical-img").menumaker({ title: "{@cssmenu.vertical.img}", format: "multitoggle", breakpoint: 768 }); </script>
-				</div>
-				<div class="module-mini-bottom hidden-small-screens"></div>
-			</div>
-		</aside>
+			<div id="main-content" class="col-md-6">
 
-		<div id="main" class="main-with-left main-with-right" role="main">
+				<ol class="breadcrumb">
+					<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="{PATH_TO_ROOT}/" title="{@cssmenu.breadcrumb.index}" itemprop="url">
+							<span itemprop="title">{@cssmenu.breadcrumb.index}</span>
+						</a>
+					</li>
+					<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="{PATH_TO_ROOT}/sandbox" title="{@cssmenu.breadcrumb.sandbox}" itemprop="url">
+							<span itemprop="title">{@cssmenu.breadcrumb.sandbox}</span>
+						</a>
+					</li>
+					<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<span itemprop="title">{@cssmenu.breadcrumb.cssmenu}</span>
+					</li>
+				</ol>
 
-			<div id="top-content">
-				<nav id="horizontal-scrolling" class="cssmenu cssmenu-horizontal">
-					<ul class="level-0">
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
+				<div id="top-content">
+					<nav class="navbar navbar-default dropdown-horizontal dropdown-with-submenu">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".hor-scrolling">
+								<span class="sr-only">{@cssmenu.horizontal.scrolling}</span>
+								<i class="fa fa-bars"></i>
+							</button>
+							<a class="navbar-brand visible-xs" href="#">{@cssmenu.horizontal.scrolling}</a>
+						</div>
+						<div class="collapse navbar-collapse hor-scrolling">
+							<ul class="nav navbar-nav">
 								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+									<a href="#">
+										<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
+									</a>
 								</li>
 								<li class="has-sub">
-									<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-									<ul class="level-2">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+									<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-hor-scrolling-1">
 										<li>
-											<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+											<a href="#">
+												<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+											</a>
 										</li>
 										<li class="has-sub">
-											<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-											<ul class="level-3">
+											<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+											<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-hor-scrolling-2">
 												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+													<a href="#">
+														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+													</a>
 												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-												</li>
-												<li>
-													<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+												<li class="has-sub">
+													<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+													<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-hor-scrolling-3">
+														<li>
+															<a href="#">
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															</a>
+														</li>
+													</ul>
 												</li>
 											</ul>
 										</li>
 									</ul>
 								</li>
-							</ul>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<script>jQuery("#horizontal-scrolling").menumaker({ title: "{@cssmenu.horizontal.scrolling}", format: "multitoggle", breakpoint: 768 }); </script>
-
-			</div>
-
-			<div id="main-content">
-
-				<nav id="sandbox-actionslinks" class="cssmenu cssmenu-right cssmenu-actionslinks">
-					<ul class="level-0">
-						<li class="has-sub">
-							<span class="cssmenu-title" href="#" title="{@cssmenu.actionslinks.sandbox}">{@cssmenu.actionslinks.sandbox}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox" title="{@cssmenu.actionslinks.index}">{@cssmenu.actionslinks.index}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/css" title="{@cssmenu.actionslinks.css}">{@cssmenu.actionslinks.css}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/bbcode" title="{@cssmenu.actionslinks.css}">{@cssmenu.actionslinks.bbcode}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/menu" title="{@cssmenu.actionslinks.menu}">{@cssmenu.actionslinks.menu}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/icons" title="{@cssmenu.actionslinks.icons}">{@cssmenu.actionslinks.icons}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/table" title="{@cssmenu.actionslinks.table}">{@cssmenu.actionslinks.table}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/mail" title="{@cssmenu.actionslinks.mail}">{@cssmenu.actionslinks.mail}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="{PATH_TO_ROOT}/sandbox/template" title="{@cssmenu.actionslinks.template}">{@cssmenu.actionslinks.template}</a>
+								<li class="has-sub">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+									<ul class="dropdown-menu level-1">
+										<li>
+											<a href="#">{@cssmenu.element}</a>
+										</li>
+										<li>
+											<a href="#">{@cssmenu.element}</a>
+										</li>
+										<li>
+											<a href="#">{@cssmenu.element}</a>
+										</li>
+										<li>
+											<a href="#">{@cssmenu.element}</a>
+										</li>
+									</ul>
 								</li>
 							</ul>
-						</li>
-						<li class="has-sub">
-							<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-							<ul class="level-1">
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-								<li>
-									<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-					</ul>
-				</nav>
-				<script>jQuery("#sandbox-actionslinks").menumaker({ title: "{@cssmenu.actionslinks}", format: "multitoggle", breakpoint: 768 }); </script>
+						</div>
+					</nav>
+				</div>
 
-				<nav id="breadcrumb" itemprop="breadcrumb">
-					<ol>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-							<a href="{PATH_TO_ROOT}/" title="{@cssmenu.breadcrumb.index}" itemprop="url">
-								<span itemprop="title">{@cssmenu.breadcrumb.index}</span>
-							</a>
-						</li>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-							<a href="{PATH_TO_ROOT}/sandbox" title="{@cssmenu.breadcrumb.sandbox}" itemprop="url">
-								<span itemprop="title">{@cssmenu.breadcrumb.sandbox}</span>
-							</a>
-						</li>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-							<span itemprop="title">{@cssmenu.breadcrumb.cssmenu}</span>
-						</li>
-					</ol>
-				</nav>
 
-				<div class="spacer"></div>
+
+
 				<section>
 					<header>
 						<h1>{@cssmenu.h1}</h1>
@@ -387,7 +370,7 @@
 							<header>
 								<h2>{@cssmenu.h2}</h2>
 							</header>
-							<nav id="sandbox-group" class="cssmenu cssmenu-group">
+							<!-- <nav id="sandbox-group" class="cssmenu cssmenu-group">
 								<ul class="level-0">
 									<li>
 										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
@@ -402,9 +385,10 @@
 										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
 									</li>
 								</ul>
-							</nav>
+							</nav> -->
+
 							<div class="content">
-								<script>jQuery("#sandbox-group").menumaker({ title: "{@cssmenu.group}", format: "multitoggle", breakpoint: 768 }); </script>
+
 								<div class="warning">
 									{@cssmenu.warning}
 								</div>
@@ -417,92 +401,112 @@
 					<footer></footer>
 				</section>
 
-			</div>
+				<div id="bottom-content">
 
-			<div id="bottom-content">
-
-			</div>
-		</div>
-
-		<aside id="menu-right" class="narrow-menu-right">
-			<div class="module-mini-container cssmenu-content">
-				<div class="module-mini-top hidden-small-screens">
-					<div class="sub-title">{@cssmenu.vertical.scrolling}</div>
 				</div>
-				<div class="module-mini-contents">
-					<nav id="vertical-scrolling-right" class="cssmenu cssmenu-vertical cssmenu-right cssmenu-with-submenu">
-						<ul class="level-0">
-							<li>
-								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-							</li>
-							<li class="has-sub">
-								<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-								<ul class="level-1">
+			</div>
+
+			<aside id="menu-right" class="col-md-3">
+				<div class="panel panel-pbt">
+					<div class="panel-heading">
+						<div class="panel-title">{@cssmenu.vertical.scrolling}</div>
+					</div>
+					<div class="panel-body">
+						<nav class="navbar dropdown-vertical dropdown-right dropdown-with-submenu">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".vert-right-top">
+									<span class="sr-only">{@cssmenu.vertical.scrolling.right}</span>
+									<i class="fa fa-bars"></i>
+								</button>
+								<a class="navbar-brand visible-xs" href="#">{@cssmenu.vertical.scrolling.right}</a>
+							</div>
+							<div class="collapse navbar-collapse vert-right-top">
+								<ul class="nav navbar-nav">
 									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+										<a href="#">
+											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
+										</a>
 									</li>
 									<li class="has-sub">
-										<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-										<ul class="level-2">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-vert-right-top-1">
 											<li>
-												<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+												<a href="#">
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+												</a>
 											</li>
 											<li class="has-sub">
-												<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-												<ul class="level-3">
+												<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+												<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-vert-right-top-2">
 													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+														<a href="#">
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														</a>
 													</li>
-													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-													</li>
-													<li>
-														<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+													<li class="has-sub">
+														<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+														<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-vert-right-top-3">
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																</a>
+															</li>
+														</ul>
 													</li>
 												</ul>
 											</li>
 										</ul>
 									</li>
+									<li class="has-sub">
+										<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{@cssmenu.sub.element} <i class="fa fa-has-sub"></i></a>
+										<ul class="dropdown-menu level-1">
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+											<li>
+												<a href="#">{@cssmenu.element}</a>
+											</li>
+										</ul>
+									</li>
 								</ul>
-							</li>
-							<li class="has-sub">
-								<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-								<ul class="level-1">
-									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-									</li>
-									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-									</li>
-									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-									</li>
-									<li>
-										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<script>jQuery("#vertical-scrolling-right").menumaker({ title: "{@cssmenu.vertical.scrolling.right}", format: "multitoggle", breakpoint: 768 }); </script>
+							</div>
+						</nav>
+					</div>
+					<div class="module-mini-bottom hidden-small-screens"></div>
 				</div>
-				<div class="module-mini-bottom hidden-small-screens"></div>
-			</div>
-		</aside>
+			</aside>
 
+
+		</div>
 
 	</div>
 
 	<footer id="footer">
 
 		<div id="top-footer">
-			<nav id="sandbox-static" class="cssmenu cssmenu-static">
+			<!-- <nav id="sandbox-static" class="cssmenu cssmenu-static">
 				<ul class="level-0">
 					<li class="has-sub">
-						<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
 						<ul class="level-1">
 							<li class="has-sub">
-								<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
+								<a class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
 								<ul class="level-2">
 									<li>
 										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
@@ -519,7 +523,7 @@
 								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
 							</li>
 							<li class="has-sub">
-								<span class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
+								<a class="cssmenu-title" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
 								<ul class="level-2">
 									<li>
 										<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
@@ -532,7 +536,7 @@
 						</ul>
 					</li>
 					<li class="has-sub">
-						<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
 						<ul class="level-1">
 							<li>
 								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
@@ -543,7 +547,7 @@
 						</ul>
 					</li>
 					<li class="has-sub">
-						<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
 						<ul class="level-1">
 							<li>
 								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
@@ -554,48 +558,50 @@
 						</ul>
 					</li>
 				</ul>
-			</nav>
-			<script>jQuery("#sandbox-static").menumaker({ title: "{@cssmenu.static}", format: "multitoggle", breakpoint: 768, static: true }); </script>
+			</nav> -->
+
 		</div>
 
 		<div class="footer-content">
-			<nav id="sandbox-static-footer" class="cssmenu cssmenu-static">
-			<ul class="level-0">
-				<li class="has-sub">
-					<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-					<ul class="level-1">
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-					</ul>
-				</li>
-				<li class="has-sub">
-					<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-					<ul class="level-1">
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-					</ul>
-				</li>
-				<li class="has-sub">
-					<span class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</span>
-					<ul class="level-1">
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-						<li>
-							<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-		<script>jQuery("#sandbox-static-footer").menumaker({ title: "{@cssmenu.static.footer}", format: "multitoggle", breakpoint: 768, static: true }); </script>
+			<!-- <nav id="sandbox-static-footer" class="cssmenu cssmenu-static">
+				<ul class="level-0">
+					<li class="has-sub">
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
+						<ul class="level-1">
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
+						<ul class="level-1">
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a class="cssmenu-title" href="#" title="{@cssmenu.sub.element}">{@cssmenu.sub.element}</a>
+						<ul class="level-1">
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+							<li>
+								<a class="cssmenu-title" href="#" title="{@cssmenu.element}">{@cssmenu.element}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav> -->
+
 		</div>
 	</footer>
+	<script src="{PATH_TO_ROOT}/templates/{THEME}/js/bootstrap.min.js"></script>
+	<script src="{PATH_TO_ROOT}/templates/{THEME}/js/navbar.js"></script>
