@@ -112,7 +112,7 @@
 								<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-hor-sub-top-1">
 									<li>
 										<a href="#">
-											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+											<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 										</a>
 									</li>
 									<li class="has-sub">
@@ -120,7 +120,7 @@
 										<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-hor-sub-top-2">
 											<li>
 												<a href="#">
-													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 												</a>
 											</li>
 											<li class="has-sub">
@@ -128,17 +128,17 @@
 												<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-hor-sub-top-3">
 													<li>
 														<a href="#">
-															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 														</a>
 													</li>
 													<li>
 														<a href="#">
-															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 														</a>
 													</li>
 													<li>
 														<a href="#">
-															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 														</a>
 													</li>
 												</ul>
@@ -201,7 +201,7 @@
 										<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-vert-left-top-1">
 											<li>
 												<a href="#">
-													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 												</a>
 											</li>
 											<li class="has-sub">
@@ -209,7 +209,7 @@
 												<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-vert-left-top-2">
 													<li>
 														<a href="#">
-															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 														</a>
 													</li>
 													<li class="has-sub">
@@ -217,17 +217,17 @@
 														<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-vert-left-top-3">
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 														</ul>
@@ -263,6 +263,68 @@
 			</aside>
 
 			<div id="main-content" class="col-md-6">
+
+				<nav class="dropdown actionslinks mr15">
+				    <button id="module-actionslinks" class="btn btn-pbt dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <small class="visible-xs">${LangLoader::get_message('content.menus.actions', 'admin-links-common')} {@cssmenu.actionslinks}</small>
+				        <i class="fa fa-bars"></i>
+				    </button>
+					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="module-actionslinks">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span> {@cssmenu.actionslinks.sandbox}
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="{PATH_TO_ROOT}/sandbox">{@cssmenu.actionslinks.index}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/form">{@cssmenu.actionslinks.form}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/css">{@cssmenu.actionslinks.css}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/bbcode">{@cssmenu.actionslinks.bbcode}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/menu">{@cssmenu.actionslinks.menu}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/icons">{@cssmenu.actionslinks.icons}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/table">{@cssmenu.actionslinks.table}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/mail">{@cssmenu.actionslinks.mail}</a></li>
+								<li><a href="{PATH_TO_ROOT}/sandbox/template">{@cssmenu.actionslinks.template}</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span> {@cssmenu.sub.element}
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">{@cssmenu.element}</a></li>
+								<li><a href="#">{@cssmenu.element}</a></li>
+							</ul>
+						</li>
+						<li><a href="#">{@cssmenu.element}</a></li>
+						<li><a href="{PATH_TO_ROOT}/sandbox/admin/config">{@mini.config}</a></li>
+					</ul>
+				</nav>
+
+				<script>
+				    <!--
+				    $(document).ready(function() {
+				        $('.actionslinks a.dropdown-toggle').on('click', function(e) {
+				            var $el = $(this);
+				            var $parent = $(this).offsetParent(".dropdown-menu");
+				            $(this).parent("li").toggleClass('open');
+
+				            if (window.matchMedia("(min-width: 767px)").matches) {
+				                if(!$parent.parent().hasClass('actionslinks')) {
+				                    $el.next().css({"top": $el[0].offsetTop, "right": $parent.outerWidth(), "left": "auto"});
+				                }
+				            } else {
+				                if(!$parent.parent().hasClass('actionslinks')) {
+				                    $el.next().css({"top": "100%", "right": 0, "left": 0});
+				                }
+				            }
+
+				            $('.actionslinks li.open').not($(this).parents("li")).removeClass("open");
+
+				            return false;
+				        });
+				    });
+				    -->
+				</script>
 
 				<ol class="breadcrumb">
 					<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -301,7 +363,7 @@
 									<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-hor-scrolling-1">
 										<li>
 											<a href="#">
-												<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+												<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 											</a>
 										</li>
 										<li class="has-sub">
@@ -309,7 +371,7 @@
 											<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-hor-scrolling-2">
 												<li>
 													<a href="#">
-														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+														<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 													</a>
 												</li>
 												<li class="has-sub">
@@ -317,17 +379,17 @@
 													<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-hor-scrolling-3">
 														<li>
 															<a href="#">
-																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 															</a>
 														</li>
 														<li>
 															<a href="#">
-																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 															</a>
 														</li>
 														<li>
 															<a href="#">
-																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 															</a>
 														</li>
 													</ul>
@@ -432,7 +494,7 @@
 										<ul class="dropdown-menu level-1" aria-labelledby="cssmenu-vert-right-top-1">
 											<li>
 												<a href="#">
-													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+													<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 												</a>
 											</li>
 											<li class="has-sub">
@@ -440,7 +502,7 @@
 												<ul class="dropdown-menu level-2" aria-labelledby="cssmenu-vert-right-top-2">
 													<li>
 														<a href="#">
-															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+															<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 														</a>
 													</li>
 													<li class="has-sub">
@@ -448,17 +510,17 @@
 														<ul class="dropdown-menu level-3" aria-labelledby="cssmenu-vert-right-top-3">
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 															<li>
 																<a href="#">
-																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" />{@cssmenu.element}
+																	<img src="{PATH_TO_ROOT}/sandbox/sandbox_mini.png" alt="{@cssmenu.element}" /> {@cssmenu.element}
 																</a>
 															</li>
 														</ul>
@@ -603,5 +665,3 @@
 
 		</div>
 	</footer>
-	<script src="{PATH_TO_ROOT}/templates/{THEME}/js/bootstrap.min.js"></script>
-	<script src="{PATH_TO_ROOT}/templates/{THEME}/js/navbar.js"></script>

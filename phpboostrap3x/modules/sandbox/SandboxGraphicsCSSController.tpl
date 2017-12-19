@@ -533,11 +533,13 @@
 						<div class="col-sm-8">
 							<div class="pull-right text-right">
 								<div class="btn-group btn-group-xs">
-									<a itemprop="url" href="#com2" class="btn btn-default" title="#2">#2</a>
-									<span class="btn btn-default" itemprop="datePublished" content="2013-09-05T15:37:01+00:00">{@css.messages.date}</span>
 									<a href="#" class="btn btn-info" title="{@css.edit}"><i class="fa fa-edit"></i></a>
 									<a href="#" class="btn btn-danger" data-confirmation="delete-element" title="{@css.delete.confirm}"><i class="fa fa-delete"></i></a>
 								</div>
+							</div>
+							<div class="btn-group btn-group-xs">
+								<a itemprop="url" href="#com2" class="btn btn-info" title="#2">#2</a>
+								<time class="btn btn-default" itemprop="datePublished" content="2013-09-05T15:37:01+00:00">{@css.messages.date}</time>
 							</div>
 						</div>
 
@@ -606,7 +608,7 @@
 	</div>
 
 	<div>2 {@css.blocks.per.line}</div>
-	<div class="row">
+	<div class="row grid-columns">
 		<article class="col-md-6">
 			<header>
 				<h2>{@css.block.title}</h2>
@@ -628,7 +630,7 @@
 	</div>
 
 	<div>3 {@css.blocks.per.line}</div>
-	<div class="row">
+	<div class="row grid-columns">
 		<article class="col-md-4">
 			<header>
 				<h2>{@css.block.title}</h2>
