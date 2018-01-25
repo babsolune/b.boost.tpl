@@ -41,10 +41,10 @@
 								<strong>{@themes.author} :</strong>
 								<div class="clearfix"></div>
 								<div class="btn-group btn-group-xs">
-									<a href="mailto:{themes_installed.AUTHOR_EMAIL}" class="btn btn-pbt">
-										<i class="fa fa-fw fa-at"></i> {themes_installed.AUTHOR_NAME}
-									</a>
-									# IF themes_installed.C_WEBSITE #
+									# IF themes_installed.C_AUTHOR_EMAIL #<a href="mailto:{themes_installed.AUTHOR_EMAIL}" class="btn btn-pbt">
+										<i class="fa fa-fw fa-at"></i># ENDIF # {themes_installed.AUTHOR}
+									# IF themes_installed.C_AUTHOR_EMAIL #</a># ENDIF #
+									# IF themes_installed.C_AUTHOR_WEBSITE #
 									<a href="{themes_installed.AUTHOR_WEBSITE}" class="btn btn-info">
 										<i class="fa fa-fw fa-globe"></i> Web
 									</a>

@@ -48,7 +48,7 @@ function display_description(id){
 							<strong>{@modules.author} :</strong>
 							<div class="clearfix"></div>
 							<div class="btn-group btn-group-xs">
-								# IF modules_not_activated.C_AUTHOR #
+								# IF modules_not_activated.C_AUTHOR_EMAIL #
 									<a class="btn btn-pbt" href="mailto:{modules_not_activated.AUTHOR_EMAIL}">
 										<i class="fa fa-fw fa-at"></i> {modules_not_activated.AUTHOR}
 									</a>
@@ -123,7 +123,7 @@ function display_description(id){
 							<strong>{@modules.name} :</strong>
 							<div class="clearfix"></div>
 							<div class="btn-group btn-group-xs">
-								# IF modules_activated.C_AUTHOR #
+								# IF modules_activated.C_AUTHOR_EMAIL #
 									<a class="btn btn-pbt" href="mailto:{modules_activated.AUTHOR_EMAIL}">
 										{modules_activated.AUTHOR}
 									</a>
