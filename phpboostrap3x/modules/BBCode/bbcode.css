@@ -285,6 +285,9 @@
 .bbcode-icon-help:before        { content: "\f059"; }
 .bbcode-icon-upload:before      { content: "\f0ee"; }
 .bbcode-icon-fa:before          { content: "\f024"; }
+.bbcode-icon-mail:before        { content: "\f0e0"; }
+.bbcode-icon-feed:before        { content: "\f09e"; }
+.bbcode-icon-bgcolor:before     { content: "\f1fc"; }
 
 /* Icones modifications size or color */
 .bbcode-icon-math:before {
