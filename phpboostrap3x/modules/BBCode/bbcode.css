@@ -302,3 +302,22 @@
 .bbcode-icon-more:before {
 	font-size: 0.8em;
 }
+
+/* wikipedia */
+
+a.wikipedia-link {
+	position: relative;
+	border-bottom: 1px dotted #CCCCCC;
+	cursor: help;
+	padding-left: 22px;
+}
+
+a.wikipedia-link:before {
+	position: absolute;
+	vertical-align: middle;
+	top: 0;
+	left: 0;
+	content: "\f266" ;
+	font-family: fontawesome;
+	font-size: 1em;
+}
