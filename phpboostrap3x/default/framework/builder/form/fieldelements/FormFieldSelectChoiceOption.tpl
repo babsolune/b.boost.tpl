@@ -1,1 +1,0 @@
-<option value="${escape(VALUE)}" # IF C_SELECTED # selected="selected" # ENDIF # # IF C_DISABLE # disabled="disabled" # ENDIF # label="{LABEL}">{LABEL}</option>
