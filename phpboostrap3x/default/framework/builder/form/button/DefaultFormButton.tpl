@@ -1,1 +1,0 @@
-<button type="${TYPE}" name="${HTML_NAME}" class="btn btn-primary ${CSS_CLASS}" onclick="${escape(ONCLICK_ACTION)}"# IF C_DATA_CONFIRMATION # data-confirmation="${escape(DATA_CONFIRMATION)}"# ENDIF # value="true">{LABEL}</button>
