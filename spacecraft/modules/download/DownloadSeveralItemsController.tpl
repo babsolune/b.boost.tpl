@@ -147,7 +147,12 @@
 				# ELSE #
 					<div class="cell-flex # IF C_GRID_VIEW #cell-columns-{ITEMS_PER_ROW}# ELSE #cell-row# ENDIF #">
 						# START items #
-							<article id="download-item-{items.ID}" class="download-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF #" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+							<article
+									itemscope="itemscope"
+									itemtype="https://schema.org/CreativeWork"
+									id="download-item-{items.ID}"
+									class="download-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF #"
+									style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url(# IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF #)">
 								<header class="cell-header">
 									<h2 class="cell-name"><a class="offload" href="{items.U_ITEM}" itemprop="name">{items.TITLE}</a></h2>
 								</header>
@@ -195,16 +200,6 @@
 										</div>
 									# ENDIF #
 								</div>
-								# IF NOT C_FULL_ITEM_DISPLAY #
-									# IF items.C_HAS_THUMBNAIL #
-										<div class="cell-thumbnail cell-landscape cell-center">
-											<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-											<a href="{items.U_ITEM}" class="cell-thumbnail-caption offload">
-												{@common.see.details}
-											</a>
-										</div>
-									# ENDIF #
-								# ENDIF #
 								<div class="cell-body">
 									<div class="cell-list">
 										<ul>
@@ -225,11 +220,6 @@
 									<div class="cell-content">
 										<div itemprop="text">
 											# IF C_FULL_ITEM_DISPLAY #
-												# IF items.C_HAS_THUMBNAIL #
-													<a href="{items.U_ITEM}" class="item-thumbnail offload">
-														<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-													</a>
-												# ENDIF #
 												{items.CONTENT}
 											# ELSE #
 												{items.SUMMARY}# IF items.C_READ_MORE # <a href="{items.U_ITEM}" class="read-more offload">[{@common.read.more}]</a># ENDIF #

@@ -115,7 +115,7 @@
 	height: 100%;
 }
 
-.several-items .cell { text-shadow: 0 0 5px rgba(var(--darken), 1); }
+.several-items .cell [class*="cell-"] { text-shadow: 0 0 5px rgba(var(--darken), 1); }
 
 .cell .cell-module {
 	min-width: 0;

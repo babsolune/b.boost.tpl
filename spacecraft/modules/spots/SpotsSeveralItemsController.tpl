@@ -131,7 +131,12 @@
 			# ELSE #
 				<div class="cell-flex cell-columns-{ITEMS_PER_ROW}">
 					# START items #
-						<article id="article-spots-{items.ID}" class="spots-item cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+						<article
+								id="article-spots-{items.ID}"
+								class="spots-item cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#"
+								itemscope="itemscope"
+								itemtype="https://schema.org/CreativeWork"
+								style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url(# IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF #)">
 							<header class="cell-header">
 								<h2>
 									<a class="offload" href="{items.U_ITEM}" itemprop="name">{items.TITLE}</a>
@@ -150,14 +155,6 @@
 									</div>
 								# ENDIF #
 							</div>
-							# IF items.C_HAS_THUMBNAIL #
-								<div class="cell-thumbnail cell-landscape cell-center">
-									<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-									<a href="{items.U_ITEM}" class="cell-thumbnail-caption offload">
-										{@common.see.details}
-									</a>
-								</div>
-							# ENDIF #
 							<div class="cell-body">
 								<div class="cell-content">
 									<div itemprop="text">{items.CONTENT}</div>
@@ -196,6 +193,9 @@
 			maxZoom: 18,
 			minZoom: 1,
 		});
+		var fr = new L.TileLayer('https://\{s\}.tile.openstreetmap.fr/osmfr/\{z\}/\{x\}/\{y\}.png', {
+            attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>'
+        });
 		var osm = new L.TileLayer('https://\{s\}.tile.openstreetmap.org/\{z\}/\{x\}/\{y\}.png', {
             attribution: '© OpenStreetMap contributors'
         });
@@ -273,6 +273,7 @@
 		//add on the map
 		map.addLayer(osm);
 		map.addControl(new L.Control.Layers( {
+			'FrenchMap': fr,
 			'OpenStreetMap': osm,
 			'OpenCycleMap': ocm,
 			'{@spots.osm.satellite}': sat,

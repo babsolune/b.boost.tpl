@@ -123,7 +123,12 @@
 				# ELSE #
 					<div class="cell-flex # IF C_GRID_VIEW #cell-columns-{ITEMS_PER_ROW}# ELSE #cell-row# ENDIF #">
 						# START items #
-							<article id="web-item-{items.ID}" class="web-item category-{items.CATEGORY_ID} cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+							<article
+								itemscope="itemscope"
+								itemtype="https://schema.org/CreativeWork"
+								id="web-item-{items.ID}"
+								class="web-item category-{items.CATEGORY_ID} cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#"
+								style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_IS_ADORNED ## IF items.C_HAS_PARTNER_THUMBNAIL #{items.U_PARTNER_THUMBNAIL}# ELSE ## IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF ## ENDIF ## ENDIF #')">
 								<header class="cell-header">
 									<h2 class="cell-name"><a class="offload" href="{items.U_ITEM}" itemprop="name">{items.TITLE}</a></h2>
 								</header>
@@ -147,26 +152,6 @@
 										</span>
 									# ENDIF #
 								</div>
-								# IF NOT C_FULL_ITEM_DISPLAY #
-									# IF items.C_IS_ADORNED #
-										<div class="cell-thumbnail cell-landscape cell-center">
-											# IF items.C_IS_PARTNER #
-												# IF items.C_HAS_PARTNER_THUMBNAIL #
-													<img src="{items.U_PARTNER_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-												# ELSE #
-													<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-												# ENDIF #
-											# ELSE #
-												# IF items.C_HAS_THUMBNAIL #
-													<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-												# ENDIF #
-											# ENDIF #
-											<a class="offload cell-thumbnail-caption" href="{items.U_ITEM}">
-												{@common.see.details}
-											</a>
-										</div>
-									# ENDIF #
-								# ENDIF #
 								<div class="cell-body">
 									<div class="cell-list">
 										<ul>
@@ -186,21 +171,6 @@
 									</div>
 									<div class="cell-content">
 										# IF C_FULL_ITEM_DISPLAY #
-											# IF items.C_IS_ADORNED #
-												<a class="offload item-thumbnail" href="{items.U_ITEM}">
-													# IF items.C_IS_PARTNER #
-														# IF items.C_HAS_PARTNER_THUMBNAIL #
-															<img src="{items.U_PARTNER_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-														# ELSE #
-															<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-														# ENDIF #
-													# ELSE #
-														# IF items.C_HAS_THUMBNAIL #
-															<img src="{items.U_THUMBNAIL}" alt="{items.TITLE}" itemprop="image" />
-														# ENDIF #
-													# ENDIF #
-												</a>
-											# ENDIF #
 											<div itemprop="text">{items.CONTENT}</div>
 										# ELSE #
 											{items.SUMMARY}# IF items.C_READ_MORE # <a href="{items.U_ITEM}" class="read-more offload">[{@common.read.more}]</a># ENDIF #

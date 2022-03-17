@@ -209,9 +209,11 @@
 					<div class="cell-flex # IF C_GRID_VIEW #cell-columns-{ITEMS_PER_ROW}# ELSE #cell-row# ENDIF #">
 						# START items #
 							<article
+									itemscope="itemscope"
+									itemtype="https://schema.org/CreativeWork"
 									id="{MODULE_ID}-item-{items.ID}"
-									class="{MODULE_ID}-item category-{items.CATEGORY_ID} cell# IF items.C_PRIME_ITEM # prime-item# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"
-									style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url(# IF items.C_HAS_PARTNER_THUMBNAIL #{items.U_PARTNER_THUMBNAIL}# ELSE ## IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF ## ENDIF #)">
+									class="{MODULE_ID}-item category-{items.CATEGORY_ID} cell# IF items.C_PRIME_ITEM # prime-item# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#"
+									style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_HAS_PARTNER_THUMBNAIL #{items.U_PARTNER_THUMBNAIL}# ELSE ## IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF ## ENDIF #')">
 
 								# IF C_ENABLED_CATEGORIES #
 									# IF items.C_HAS_CATEGORY #

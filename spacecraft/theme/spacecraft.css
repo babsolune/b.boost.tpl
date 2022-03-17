@@ -154,10 +154,14 @@ body::before {
 .item-thumbnail { padding: 0.309em; }
 
 /* --- global --- */
-.single-item {
+.single-item .section-header {
     background-color: rgba(var(--bgc-rgb-m), 0.5);
     border-radius: var(--radius);
-    padding: var(--pdg-thin)
+    padding: var(--pdg-large);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: var(--pdg-large);
 }
 
 .several-items br { display: block; }
@@ -167,6 +171,12 @@ body::before {
 table tbody tr.prime-item td,
 .prime-item {
     background-color: rgba(var(--bgc-rgb-s), 0.5);
+}
+
+.single-item .content.prime-item {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--bdr-main);
 }
 
 ul, ol { line-height: 1.6; }
@@ -181,7 +191,7 @@ ul, ol { line-height: 1.6; }
 	padding: 0.456em;
 }
 
-a:not(.cssmenu-title) {
+a:not(.cssmenu-title):not(.button):not(.leaflet-control-layers-toggle):not([data-target]) {
 	background-image: linear-gradient(to right, var(--main-tone) 0%, var(--main-tone) 100%);
 	background-size: 0px 2px;
 	background-repeat: no-repeat;
@@ -189,10 +199,15 @@ a:not(.cssmenu-title) {
 	transition: all 0.3s;
 }
 
-a:not(.cssmenu-title):hover {
+a:not(.cssmenu-title):not(.button):not(.leaflet-control-layers-toggle):not([data-target]):hover {
     text-decoration: none;
 	background-size: 100% 2px;
 	transition: all 0.3s;
+}
+
+.content-friends {
+    border-width: 1px;
+    border-color: var(--bdr-main);
 }
 
 /* --- messages --- */
