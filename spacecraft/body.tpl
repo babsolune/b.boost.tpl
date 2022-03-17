@@ -1,5 +1,4 @@
 # INCLUDE MAINTAIN #
-<a href="#global" aria-label="{@common.go.to.content}"></a>
 <header id="header">
 	<div id="inner-header-container" class="content-wrapper">
 		<div id="inner-header">

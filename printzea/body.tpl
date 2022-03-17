@@ -1,5 +1,4 @@
 # INCLUDE MAINTAIN #
-<a href="#global" aria-label="{@common.go.to.content}"></a>
 <header id="header" class="header-wrapper">
 	<div id="header-overlay">
 		# IF C_MENUS_TOP_HEADER_CONTENT #
