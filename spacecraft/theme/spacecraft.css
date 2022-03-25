@@ -162,7 +162,17 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: var(--pdg-large);
+    display: flex;
+    flex-direction: column;
 }
+
+@media (min-width: 769px) {
+    .single-item:not(.item-form) .section-header { min-height: 350px; }
+}
+
+.single-item .section-header > .controls { flex: 1 1 auto; }
+
+.single-item .section-header > .item-modified-date { border-width: 0; }
 
 .several-items br { display: block; }
 
@@ -178,6 +188,8 @@ table tbody tr.prime-item td,
     border-style: solid;
     border-color: var(--bdr-main);
 }
+
+
 
 ul, ol { line-height: 1.6; }
 

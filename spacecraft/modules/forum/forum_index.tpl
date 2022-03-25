@@ -39,7 +39,7 @@
 								</div>
 								<div>
 									# IF forums_list.subcats.U_LINK #
-										<a class="offload" href="{forums_list.subcats.U_LINK}" target="_blanc" rel="noopener noreferrer" aria-label="Vers l'infini et au-delà !">
+										<a class="offload" href="{forums_list.subcats.U_LINK}" target="_blanc" rel="noopener noreferrer" aria-label="{@theme.link.name}">
 											<i class="fa fa-share-square" aria-hidden="true"></i>
 										</a>
 									# ELSE #

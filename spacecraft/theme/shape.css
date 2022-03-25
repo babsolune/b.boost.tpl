@@ -44,8 +44,12 @@ body::before {
 .content-wrapper {
 	transition: all 0.5s;
 	margin: auto;
-	padding: 0 1.618em;
+	padding: 0 0.618em;
 	width: 100%;
+}
+
+@media (min-width: 481px)  {
+	.content-wrapper { padding: 0 1.618em; }
 }
 
 @media (min-width: 769px)  {

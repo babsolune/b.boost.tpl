@@ -117,13 +117,17 @@ body {
 }
 
 @media (min-width: 769px) {
-	#global  { width: calc(100% - 260px); }
+	#global  {
+		width: calc(100% - 260px);
+		margin-left: 260px;
+	}
 }
 
 @media (min-width: 1025px) {
 	#global  {
 		width: calc(100% - 320px);
 		padding: 0.618em 1.228em;
+		margin-left: 320px;
 	}
 }
 

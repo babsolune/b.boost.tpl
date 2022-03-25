@@ -139,10 +139,10 @@
     --moderator-light: #E4A7F6;
 
 /* .administrator */
-    --administrator-rgb-d: 33, 34, 108;
-    --administrator-dark:  #21226C;
-    --administrator-rgb-t: 71, 72, 150;
-    --administrator-tone:  #474897;
-    --administrator-rgb-l: 102, 103, 193;
-    --administrator-light: #6667C1;
+    --administrator-rgb-d: 194, 46, 13;
+    --administrator-dark:  #C22E0D;
+    --administrator-rgb-t: 242, 77, 40;
+    --administrator-tone:  #F24D28;
+    --administrator-rgb-l: 242, 126, 101;
+    --administrator-light: #F27E65;
 }

@@ -8,9 +8,10 @@
 */
 
 ####################################################
-#                     French                       #
+#                     English                      #
 ####################################################
 
-$lang['theme.searched.text'] = '3 caractères min';
+$lang['theme.searched.text'] = '3 characters min';
+$lang['theme.link.name'] = 'To infinity and beyond! ';
 
 ?>
