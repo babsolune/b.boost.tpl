@@ -11,7 +11,7 @@
 					itemscope="itemscope"
 					itemtype="https://schema.org/Creativework"
 					id="article-forum-{forums_list.cats.CATEGORY_ID}"
-					class="cell"
+					class="cell has-thumbnail"
 					style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF forums_list.cats.C_HAS_THUMBNAIL #, url('{forums_list.cats.U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
 				<header class="cell-header">
 					<h2 class="cell-name">{forums_list.cats.CATEGORY_NAME}</h2>
