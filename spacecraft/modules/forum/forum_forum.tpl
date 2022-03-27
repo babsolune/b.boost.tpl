@@ -10,7 +10,7 @@
 			itemscope="itemscope"
 			itemtype="https://schema.org/Creativework"
 			id="article-forum-subforum"
-			class="cell"
+			class="cell has-thumbnail"
 			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF C_HAS_THUMBNAIL #, url('{U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
 		<header class="cell-header">
 			<h2 class="cell-name align-center">
@@ -20,12 +20,12 @@
 			</h2>
 		</header>
 		<div class="cell-body">
-			<div class="cell-content flex-between">
+			<div class="cell-content flex-between controls">
 				<a class="offload" href="${relative_url(SyndicationUrlBuilder::rss('forum',CATEGORY_ID))}" aria-label="{@common.syndication}"><i class="fa fa-rss warning" aria-hidden="true"></i><span class="sr-only">{@common.syndication}</span></a>
 				# IF C_POST_NEW_TOPIC #
 					<a href="{U_POST_NEW_SUBJECT}" class="button bgc member small offload">{@forum.post.new.topic}</a>
+					# IF CATEGORY_ID #<a class="offload" href="unread.php?cat={CATEGORY_ID}" aria-label="{@forum.unread.messages}"><i class="far fa-file-alt" aria-hidden="true"></i></a># ENDIF #
 				# ENDIF #
-				# IF CATEGORY_ID #<a class="offload" href="unread.php?cat={CATEGORY_ID}" aria-label="{@forum.unread.messages}"><i class="far fa-file-alt" aria-hidden="true"></i></a># ENDIF #
 			</div>
 		</div>
 		<div class="cell-footer">
@@ -34,63 +34,55 @@
 	</article>
 
 # IF C_FORUM_SUB_CATS #
-		<div class="cell-flex cell-columns-2 cell-tile">
-			# START subcats #
-				<article
-						itemscope="itemscope"
-						itemtype="https://schema.org/Creativework"
-						id="article-forum-{subcats.CATEGORY_ID}"
-						class="cell"
-						style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF subcats.C_HAS_THUMBNAIL #, url('{subcats.U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
-					<header class="cell-header">
-						<h5 class="cell-name">
-							<a class="offload" href="# IF subcats.U_LINK #{subcats.U_LINK}# ELSE #forum{subcats.U_CATEGORY}# ENDIF #">{subcats.CATEGORY_NAME}</a>
-							<span class="small d-block">{subcats.DESCRIPTION}</span>
-							# IF subcats.C_SUBFORUMS #<span class="d-block small"><span class="pinned notice">{@forum.sub.forums}</span> : {subcats.SUBFORUMS}</span># ENDIF #
-						</h5>
-						<div class="controls">
-							<a class="offload" href="${relative_url(SyndicationUrlBuilder::rss('forum',subcats.CATEGORY_ID))}" aria-label="{@common.syndication}"><i class="fa fa-rss warning" aria-hidden="true"></i></a>
-							# IF C_DISPLAY_UNREAD_DETAILS #
-								<a class="offload" href="{PATH_TO_ROOT}/forum/unread.php?cat={subcats.CATEGORY_ID}" aria-label="{@forum.unread.messages}"><i class="far fa-file-alt" aria-hidden="true"></i></a>
-							# ENDIF #
-							<span>
-								<span aria-label="{@forum.topics.number}" class="stacked">
-									<i class="far fa-file" aria-hidden="true"></i>
-									<span class="stack-event stack-circle stack-top-right bgc question">{subcats.TOPICS_NUMBER}</span>
-								</span>								
-							</span>
-							<span>
-								<span aria-label="{@forum.messages.number}" class="stacked">
-									<i class="far # IF subcats.C_BLINK #success # ENDIF #fa-comments" aria-hidden="true"></i>
-									<span class="stack-event stack-circle stack-top-right bgc question">{subcats.MESSAGES_NUMBER}</span>
-								</span>								
-							</span>
-						</div>
-					</header>
-					<div class="cell-list">
-						<ul>
-							<li class="li-stretch">
-								<span>{@forum.last.messages}</span>
-								<span>
-									<a class="offload" href="{subcats.U_LAST_MESSAGE}">{subcats.LAST_MESSAGE_DATE_FULL}</a>
-								</span>
-							</li>
-							<li class="li-stretch">
-								<span>
-									<a class="offload" href="{subcats.U_LAST_TOPIC}">{subcats.LAST_TOPIC_TITLE}</a>
-								</span>
-								<span>
-									<i class="far fa-user fa-fw"></i>
-									# IF subcats.C_LAST_MESSAGE_GUEST #
-										<a class="offload" href="{subcats.U_LAST_USER_PROFILE}" class="small {subcats.LAST_USER_LEVEL}"# IF subcats.C_LAST_USER_GROUP_COLOR #  style="color:{subcats.LAST_USER_GROUP_COLOR}"# ENDIF #>{subcats.LAST_USER_LOGIN}</a>
-									# ELSE #
-										<span class="small">{@user.guest}</span>
+		<div class="cell-flex cell-row cell-tile">
+			<article
+					itemscope="itemscope"
+					itemtype="https://schema.org/Creativework"
+					class="cell">
+				<div class="cell-list">
+					<ul>
+						# START subcats #
+							<li id="article-forum-{subcats.CATEGORY_ID}" class="li-stretch li-stretch-large has-thumbnail" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF subcats.C_HAS_THUMBNAIL #, url('{subcats.U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
+								<div class="forum-details">
+									<a class="offload" href="# IF subcats.U_LINK #{subcats.U_LINK}# ELSE #forum{subcats.U_CATEGORY}# ENDIF #"><h5>{subcats.CATEGORY_NAME}</h5></a>
+									<span class="small d-block">{subcats.DESCRIPTION}</span>
+									# IF subcats.C_SUBFORUMS #<span class="d-block small"><span class="pinned notice">{@forum.sub.forums}</span> : {subcats.SUBFORUMS}</span># ENDIF #
+								</div>
+								<div class="forum-details">
+									<div class="forum-detail" aria-label="# IF subcats.C_LAST_TOPIC_MSG #{subcats.LAST_TOPIC_TITLE}# ELSE #{@forum.last.messages}# ENDIF #">
+										<i class="fa fa-fw fa-clock"></i>
+										# IF subcats.C_LAST_TOPIC_MSG #
+											<a class="offload" href="{subcats.U_LAST_TOPIC}">{subcats.LAST_MESSAGE_DATE_AGO}</a>
+										# ELSE #
+											{@common.none}
+										# ENDIF #
+									</div>
+									<div class="forum-detail" aria-label="{@common.syndication}">
+										<a class="offload" href="${relative_url(SyndicationUrlBuilder::rss('forum',subcats.CATEGORY_ID))}"><i class="fa fa-rss warning" aria-hidden="true"></i></a>
+									</div>
+									# IF C_DISPLAY_UNREAD_DETAILS #
+										<div class="forum-detail" aria-label="{@forum.unread.messages}">
+											<a class="offload" href="{PATH_TO_ROOT}/forum/unread.php?cat={subcats.CATEGORY_ID}"><i class="far fa-file-alt" aria-hidden="true"></i></a>
+										</div>
 									# ENDIF #
-								</span>
+									<div class="forum-detail" aria-label="{@forum.topics.number}">
+										<span class="stacked">
+											<i class="far fa-file" aria-hidden="true"></i>
+											<span class="stack-event stack-circle stack-top-right bgc question">{subcats.TOPICS_NUMBER}</span>
+										</span>
+									</div>
+									<div class="forum-detail" aria-label="{@forum.messages.number}">
+										<span class="stacked">
+											<i class="far # IF subcats.C_BLINK #success # ENDIF #fa-comments" aria-hidden="true"></i>
+											<span class="stack-event stack-circle stack-top-right bgc question">{subcats.MESSAGES_NUMBER}</span>
+										</span>
+									</div>
+								</div>
 							</li>
-						</ul>
-				</article>
-			# END subcats #
+						# END subcats #
+					</ul>
+				</div>
+			</article>
 		</div>
 # ENDIF #
 

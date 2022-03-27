@@ -20,6 +20,8 @@
 
 #footer-content { border-radius: var(--radius); }
 
+.colored-category .data-color-surround { border-radius: var(--radius) 0 0 var(--radius); }
+
 .content.prime-item { border-radius: var(--radius); }
 
 .item-thumbnail { border-radius: var(--radius); }

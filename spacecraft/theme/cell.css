@@ -20,9 +20,6 @@
 .cell {
 	display: flex;
 	flex-direction: column;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 	position: relative;
 	margin: 0 0 var(--cell-gap);
 }
@@ -183,6 +180,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.cell-list ul li.li-stretch.li-stretch-large { flex-direction: column;}
+
+@media (min-width: 769px) {
+	.cell-list ul li.li-stretch.li-stretch-large { flex-direction: row;}
 }
 
 .cell-list .button { width: auto; }

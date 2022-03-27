@@ -1,5 +1,5 @@
 <section id="module-media" class="category-{CATEGORY_ID} single-item">
-	<header class="section-header" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF C_POSTER #{POSTER}# ENDIF #')">
+	<header class="section-header has-thumbnail" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF C_HAS_THUMBNAIL #{U_THUMBNAIL}# ENDIF #')">
 		<div class="controls align-right">
 			{@media.module.title}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF # # IF IS_ADMIN #<a class="offload" href="{U_EDIT_CATEGORY}" aria-label="{@common.edit}"><i class="far fa-edit" aria-hidden="true"></i></a># ENDIF #
 		</div>

@@ -78,7 +78,7 @@
 				<article
 						itemscope="itemscope"
 						itemtype="https://schema.org/Event" id="calendar-item-{items.ID}"
-						class="calendar-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF #"
+						class="calendar-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF # has-thumbnail"
 						style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url(# IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF #)">
 					<header class="cell-header">
 						<h2 class="cell-name" itemprop="name">

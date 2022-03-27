@@ -1,7 +1,7 @@
 # START items #
 	<div
 	data-listorder-item
-	class="message-container message-small cell animate fadeInToTop"
+	class="message-container message-small cell animate fadeInToTop has-thumbnail"
 	style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('{PATH_TO_ROOT}/templates/{THEME}/images/messages.webp')"
 	itemscope="itemscope"
 	itemtype="https://schema.org/CreativeWork">

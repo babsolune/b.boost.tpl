@@ -13,6 +13,12 @@
     background-color: var(--bgc-main);
 }
 
+.has-thumbnail {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 /* --- background --- */
 .cookiebar-container {
     position: relative;
@@ -158,9 +164,6 @@ body::before {
     background-color: rgba(var(--bgc-rgb-m), 0.5);
     border-radius: var(--radius);
     padding: var(--pdg-large);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     margin-bottom: var(--pdg-large);
     display: flex;
     flex-direction: column;
@@ -222,6 +225,8 @@ a:not(.cssmenu-title):not(.button):not(.leaflet-control-layers-toggle):not([data
     border-color: var(--bdr-main);
 }
 
+.colored-category .cell-name { padding-left: 0.618em; }
+
 /* --- messages --- */
 .message-user-avatar {
     max-height: 80px;
@@ -235,5 +240,11 @@ a:not(.cssmenu-title):not(.button):not(.leaflet-control-layers-toggle):not([data
 
 #module-homelanding .media-content { display: none; }
 
-.colored-category .cell-name { padding-left: 0.618em; }
-.colored-category .data-color-surround { border-radius: var(--radius) 0 0 var(--radius); }
+
+/* forum */
+.forum-detail {
+    display: inline-block;
+    padding: 0.618em 1.228em;
+}
+
+#module-forum .cell-tile .cell > .cell-list  { padding: var(--pdg-large) 0 !important; }

@@ -60,7 +60,7 @@
 
 
 # IF C_BUGS #
-	<div class="cell-flex cell-columns-3 cell-tile bug-list" data-listorder-group="bugs-items">
+	<div class="cell-flex cell-columns-# IF C_HAS_ALL_VERTICAL_MENUS #2# ELSE ## IF C_HAS_SOME_VERTICAL_MENUS #3# ELSE #4# ENDIF ## ENDIF # cell-tile bug-list" data-listorder-group="bugs-items">
 		# START bug #
 			<div data-listorder-item class="cell"# IF bug.C_LINE_COLOR # style="border-color:{bug.LINE_COLOR};"# ENDIF #>
 				<span class="lo-date hidden">{bug.SUBMIT_DATE_TIMESTAMP}</span>

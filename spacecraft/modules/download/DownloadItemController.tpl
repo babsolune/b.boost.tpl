@@ -1,5 +1,5 @@
 <section id="module-download" class="category-{CATEGORY_ID} single-item">
-	<header class="section-header" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF C_HAS_THUMBNAIL #{U_THUMBNAIL}# ENDIF #')">
+	<header class="section-header has-thumbnail" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF C_HAS_THUMBNAIL #{U_THUMBNAIL}# ENDIF #')">
 		<div class="controls align-right">
 			<a class="offload" href="{U_SYNDICATION}" aria-label="{@common.syndication}"><i class="fa fa-rss warning" aria-hidden="true"></i></a>
 			{@download.module.title}# IF NOT C_ROOT_CATEGORY # - {CATEGORY_NAME}# ENDIF #

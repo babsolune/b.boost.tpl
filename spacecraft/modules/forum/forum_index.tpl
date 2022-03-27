@@ -1,5 +1,5 @@
 # INCLUDE FORUM_TOP #
-<div class="cell-flex cell-columns-# IF C_HAS_ALL_VERTICAL_MENUS #2# ELSE ## IF C_HAS_SOME_VERTICAL_MENUS #3# ELSE #4# ENDIF ## ENDIF # cell-tile">
+<div class="cell-flex cell-row cell-tile">
 	# START forums_list #
 		# START forums_list.endcats #
 					</ul>
@@ -26,30 +26,52 @@
 					<ul>
 		# END forums_list.cats #
 						# START forums_list.subcats #
-							<li class="li-stretch">
-								<div>
+							<li class="li-stretch li-stretch-large">
+								<div class="forum-details">
 									<a
 											class="offload"
 											href="# IF forums_list.subcats.U_LINK #{forums_list.subcats.U_LINK}# ELSE #{forums_list.subcats.U_CATEGORY}# ENDIF #">
 										# IF forums_list.subcats.C_BLINK # <i class="fa fa-comment-dots success blink"></i> # ENDIF #
-										{forums_list.subcats.CATEGORY_NAME}
+										<h5>
+											# IF forums_list.subcats.U_LINK #
+												<i class="fa fa-globe" aria-hidden="true"></i>
+											# ELSE #
+												<i class="fa # IF forums_list.subcats.C_BLINK #blink # ENDIF #{forums_list.subcats.TOPIC_ICON}" aria-hidden="true"></i>
+											# ENDIF #
+											{forums_list.subcats.CATEGORY_NAME}
+										</h5>
 									</a>
 									<span class="small d-block hidden-small-screens">{forums_list.subcats.DESCRIPTION}</span>
 									# IF forums_list.subcats.C_SUBFORUMS #<span class="small d-block hidden-small-screens"><span class="notice">{@forum.sub.forums}:</span> {forums_list.subcats.SUBFORUMS}</span># ENDIF #
 								</div>
-								<div>
+								<div class="forum-details small">
 									# IF forums_list.subcats.U_LINK #
 										<a class="offload" href="{forums_list.subcats.U_LINK}" target="_blanc" rel="noopener noreferrer" aria-label="{@theme.link.name}">
 											<i class="fa fa-share-square" aria-hidden="true"></i>
 										</a>
 									# ELSE #
-										<span aria-label="{@forum.topics.number}" class="stacked">
-											<i class="fa # IF forums_list.subcats.C_BLINK #success # ENDIF #fa-comments" aria-hidden="true"></i>
-											<span class="stack-event stack-circle stack-top-right bgc question">{forums_list.subcats.TOPICS_NUMBER}</span>
-										</span>
+										<div class="forum-detail" aria-label="# IF forums_list.subcats.C_LAST_TOPIC_MSG #{forums_list.subcats.LAST_TOPIC_TITLE}# ELSE #{@forum.last.messages}# ENDIF #">
+											<i class="fa fa-fw fa-clock"></i>
+											# IF forums_list.subcats.C_LAST_TOPIC_MSG #
+												<a class="offload" href="{forums_list.subcats.U_LAST_MESSAGE}">{forums_list.subcats.LAST_MESSAGE_DATE_AGO}</a>
+											# ELSE #
+												{@common.none}
+											# ENDIF #
+										</div>
+										<div class="forum-detail" aria-label="{@forum.topics.number}">
+											<span class="stacked">
+												<i class="far # IF forums_list.subcats.C_BLINK #success # ENDIF #fa-file" aria-hidden="true"></i>
+												<span class="stack-event stack-circle stack-top-right bgc question">{forums_list.subcats.TOPICS_NUMBER}</span>
+											</span>
+										</div>
+										<div class="forum-detail" aria-label="{@forum.messages.number}">
+											<span class="stacked">
+												<i class="fa # IF forums_list.subcats.C_BLINK #success # ENDIF #fa-comments" aria-hidden="true"></i>
+												<span class="stack-event stack-circle stack-top-right bgc question">{forums_list.subcats.MESSAGES_NUMBER}</span>
+											</span>
+										</div>
 									# ENDIF #
 								</div>
-
 							</li>
 						# END forums_list.subcats #
 # END forums_list #

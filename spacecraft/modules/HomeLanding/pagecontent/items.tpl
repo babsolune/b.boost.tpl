@@ -1,7 +1,7 @@
 # START items #
 	<div
 			data-listorder-item
-			class="{MODULE_NAME}-item category-{items.CATEGORY_ID} cell# IF items.C_PRIME_ITEM # prime-item# ENDIF # animate fadeInToTop"
+			class="{MODULE_NAME}-item category-{items.CATEGORY_ID} cell# IF items.C_PRIME_ITEM # prime-item# ENDIF # animate fadeInToTop has-thumbnail"
 			itemscope="itemscope"
 			itemtype="https://schema.org/CreativeWork"
 			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_HAS_PARTNER_THUMBNAIL #{items.U_PARTNER_THUMBNAIL}# ELSE ## IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF ## ENDIF #')">

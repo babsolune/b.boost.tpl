@@ -1,7 +1,7 @@
 # START items #
 	<div
 			data-listorder-item
-			class="cell animate fadeInToTop"
+			class="cell animate fadeInToTop has-thumbnail"
 			itemscope="itemscope"
 			itemtype="https://schema.org/CreativeWork"
 			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_THUMBNAIL #{items.U_THUMBNAIL}# ELSE #{PATH_TO_ROOT}/templates/spacecraft/images/default_item.webp# ENDIF #');">

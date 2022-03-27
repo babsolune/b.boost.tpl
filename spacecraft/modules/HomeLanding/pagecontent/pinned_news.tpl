@@ -1,7 +1,7 @@
 # START items #
 	<div
 			data-listorder-item
-			class="{MODULE_NAME}-item pinned-item category-{items.CATEGORY_ID} cell animate fadeInToTop"
+			class="{MODULE_NAME}-item pinned-item category-{items.CATEGORY_ID} cell animate fadeInToTop has-thumbnail"
 			itemscope="itemscope"
 			itemtype="https://schema.org/CreativeWork"
 			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('{items.U_THUMBNAIL}');">

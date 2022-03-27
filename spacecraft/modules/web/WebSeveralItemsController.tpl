@@ -32,7 +32,9 @@
 			<div class="content-container">
 				<div class="cell-flex cell-tile cell-columns-{CATEGORIES_PER_ROW}">
 					# START sub_categories_list #
-						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID}"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF # itemscope>
+						<div
+								class="cell cell-category category-{sub_categories_list.CATEGORY_ID} has-thumbnail"
+								# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF # itemscope>
 							<div class="cell-header">
 								<h5 class="cell-name" itemprop="about"><a class="offload" href="{sub_categories_list.U_CATEGORY}">{sub_categories_list.CATEGORY_NAME}</a></h5>
 								<span class="small pinned notice" role="contentinfo" aria-label="{sub_categories_list.ITEMS_NUMBER} # IF sub_categories_list.C_SEVERAL_ITEMS #${TextHelper::lcfirst(@items)}# ELSE #${TextHelper::lcfirst(@item)}# ENDIF #">
@@ -127,7 +129,7 @@
 								itemscope="itemscope"
 								itemtype="https://schema.org/CreativeWork"
 								id="web-item-{items.ID}"
-								class="web-item category-{items.CATEGORY_ID} cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF#"
+								class="web-item category-{items.CATEGORY_ID} cell# IF items.C_IS_PARTNER # content-friends# ENDIF ## IF items.C_IS_PRIVILEGED_PARTNER # content-privileged-friends# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF# has-thumbnail"
 								style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_IS_ADORNED ## IF items.C_HAS_PARTNER_THUMBNAIL #{items.U_PARTNER_THUMBNAIL}# ELSE ## IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF ## ENDIF ## ENDIF #')">
 								<header class="cell-header">
 									<h2 class="cell-name"><a class="offload" href="{items.U_ITEM}" itemprop="name">{items.TITLE}</a></h2>

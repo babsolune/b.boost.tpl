@@ -24,7 +24,9 @@
 			<div class="content-container">
 				<div class="cell-flex cell-tile cell-columns-{CATEGORIES_PER_ROW}">
 					# START sub_categories_list #
-						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID}"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF #>
+						<div
+								class="cell cell-category category-{sub_categories_list.CATEGORY_ID} has-thumbnail"
+								# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF #>
 							<div class="cell-header">
 								<h5 class="cell-name" itemprop="about">
 									<a class="offload" href="{sub_categories_list.U_CATEGORY}">{sub_categories_list.CATEGORY_NAME}</a>
@@ -91,12 +93,25 @@
 					# ENDIF #
 					<div class="cell-flex # IF C_GRID_VIEW #cell-columns-{ITEMS_PER_ROW}# ELSE #cell-row# ENDIF #">
 						# START items #
-							<article id="article-media-{items.ID}" class="media-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF #">
-								<header class="cell-header">
+							<article
+									id="article-media-{items.ID}"
+									class="media-item category-{items.CATEGORY_ID} cell# IF items.C_NEW_CONTENT # new-content# ENDIF # has-thumbnail"
+									style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF #')">
+								<div class="cell-content align-center cell-date">
+									<span class="pinned item-creation-date" aria-label="{@common.creation.date}"><i class="far fa-calendar-alt" aria-hidden="true"></i> <time datetime="{items.DATE_ISO8601}" itemprop="datePublished">{items.DATE}</time></span>
+								</div>
+								<header class="cell-header align-center">
 									<h2 class="cell-name">
 										<a class="offload" href="{items.U_ITEM}">{items.TITLE}</a>
 									</h2>
 								</header>
+								<div class="cell-body">
+									# IF items.C_CONTENT #
+										<div itemprop="text" class="cell-content">
+											{items.SUMMARY}
+										</div>
+									# ENDIF #
+								</div>
 								<div class="cell-infos">
 									<div class="more">
 										<span class="pinned item-author" aria-label="{@common.author}">
@@ -123,19 +138,6 @@
 											<a class="offload item-status" href="{items.U_STATUS}" aria-label="{@media.hide.item}"><i class="fa fa-fw fa-eye-slash" aria-hidden="true"></i></a>
 											<a class="offload item-edit" href="{items.U_EDIT}" aria-label="{@common.edit}"><i class="far fa-fw fa-edit" aria-hidden="true"></i></a>
 											<a class="item-delete" href="{items.U_DELETE}" data-confirmation="delete-element" aria-label="{@common.delete}"><i class="far fa-fw fa-trash-alt" aria-hidden="true"></i></a>
-										</div>
-									# ENDIF #
-								</div>
-								# IF items.C_HAS_PICTURE #
-									<div class="cell-thumbnail cell-landscape cell-center">
-										<img itemprop="thumbnailUrl" src="{items.PICTURE}" alt="{items.TITLE}" />
-										<a class="cell-thumbnail-caption offload" href="{items.U_ITEM}" aria-label="{@common.see.details}"><i class="fa fa-2x fa-play-circle" aria-hidden="true"></i></a>
-									</div>
-								# ENDIF #
-								<div class="cell-body">
-									# IF items.C_CONTENT #
-										<div itemprop="text" class="cell-content">
-											{items.SUMMARY}
 										</div>
 									# ENDIF #
 								</div>

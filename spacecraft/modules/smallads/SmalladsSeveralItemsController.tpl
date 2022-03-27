@@ -262,7 +262,7 @@
 									itemscope="itemscope"
 									itemtype="http://schema.org/CreativeWork"
 									data-listorder-item id="smallads-items-{items.ID}"
-									class="smallads-item category-{items.ID_CATEGORY} cell# IF items.C_COMPLETED# completed-smallad bgc error# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF #"
+									class="smallads-item category-{items.ID_CATEGORY} cell# IF items.C_COMPLETED# completed-smallad bgc error# ENDIF ## IF items.C_NEW_CONTENT # new-content# ENDIF # has-thumbnail"
 									style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url(# IF items.C_HAS_THUMBNAIL #{items.U_THUMBNAIL}# ENDIF #)">
 								# IF items.C_COMPLETED #<span class="bigger">{@common.status.finished}</span># ENDIF #
 								<header class="cell-header">

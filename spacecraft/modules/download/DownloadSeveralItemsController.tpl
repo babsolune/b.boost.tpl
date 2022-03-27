@@ -31,7 +31,7 @@
 			<div class="content-container">
 				<div class="cell-flex cell-tile cell-columns-{CATEGORIES_PER_ROW}">
 					# START sub_categories_list #
-						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID}"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF #>
+						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID} has-thumbnail"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF #>
 							<div class="cell-header">
 								<div class="cell-name"><a class="subcat-title offload" itemprop="about" href="{sub_categories_list.U_CATEGORY}">{sub_categories_list.CATEGORY_NAME}</a></div>
 								<span class="small pinned notice" role="contentinfo" aria-label="{sub_categories_list.ITEMS_NUMBER} # IF sub_categories_list.C_SEVERAL_ITEMS #${TextHelper::lcfirst(@items)}# ELSE #${TextHelper::lcfirst(@item)}# ENDIF #">

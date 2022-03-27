@@ -23,12 +23,12 @@
 }
 
 @media (min-width: 769px) {
-	.cell-flex {
+	[class*="cell-columns-"] {
 		flex-direction: row;
 		margin: var(--cell-gap) var(--cell-container-gap) var(--cell-gap) 0;
 	}
 
-	.cell-flex > * { margin: 0 var(--cell-gap) var(--cell-gap) 0; }
+	[class*="cell-columns-"] > * { margin: 0 var(--cell-gap) var(--cell-gap) 0; }
 
 	.cell-columns-2 > * { width: calc(100% / 2 - var(--cell-gap)); }
 	.cell-columns-3 > * { width: calc(100% / 2 - var(--cell-gap)); }

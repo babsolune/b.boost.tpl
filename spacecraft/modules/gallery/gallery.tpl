@@ -308,7 +308,7 @@
 			<div class="content-container">
 				<div class="cell-flex cell-columns-{COLUMNS_NUMBER} cell-tile">
 					# START sub_categories_list #
-						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID}"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF # itemscope>
+						<div class="cell cell-category category-{sub_categories_list.CATEGORY_ID} has-thumbnail"# IF sub_categories_list.C_CATEGORY_THUMBNAIL # style="background-image: url('{sub_categories_list.U_CATEGORY_THUMBNAIL}')"# ENDIF # itemscope>
 							<div class="cell-header">
 								<h5 class="cell-name" itemprop="name"><a class="offload" href="{sub_categories_list.U_CATEGORY}">{sub_categories_list.CATEGORY_NAME}</a></h5>
 								<span class="small pinned notice" role="contentinfo" itemprop="items" aria-label="{sub_categories_list.ITEMS_NUMBER} # IF sub_categories_list.C_SEVERAL_ITEMS #{@gallery.items}# ELSE #{@gallery.item}# ENDIF #">{sub_categories_list.ITEMS_NUMBER}</span>
