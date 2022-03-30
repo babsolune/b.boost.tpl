@@ -1,0 +1,230 @@
+/*
+ * Copy this file into your theme to customize it.
+ * https://www.phpboost.com/wiki/structure-d-un-theme#paragraph-le-repertoire-theme
+ *
+ * Layout
+*/
+
+@font-face {
+    font-family : 'allerregular';
+    src : url('fonts/aller_rg-webfont.eot');
+    src : url('fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/aller_rg-webfont.woff') format('woff'),
+        url('fonts/aller_rg-webfont.ttf') format('truetype'),
+        url('fonts/aller_rg-webfont.svg#allerregular') format('svg');
+    font-weight : normal;
+    font-style : normal;
+}
+
+html {
+	font-size: 100%;
+	font-size: 10px;
+}
+
+body {
+	position: relative;
+	height: auto;
+	min-height: 100%;
+	font-size: 1.456em;
+	font-weight: 300;
+    font-family : 'allerregular',"Trebuchet MS", Verdana, 'Bitstream Vera Sans', Times, serif;
+}
+
+.body-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+.content-preloader { opacity: 0; }
+
+@media (min-width: 769px) {
+	body { font-size: 1.309em; }
+}
+
+.content-wrapper,
+.content-wrapper-large {
+    padding: 0 0.309em;
+    width: 100%;
+}
+
+@media (min-width: 769px)  {
+	#footer { padding: 1.618em 0; }
+
+    .content-wrapper,
+    .content-wrapper-large {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 830px) {
+    .content-wrapper-large { width: 828px; }
+}
+
+@media (min-width: 1025px) {
+    .content-wrapper,
+    .content-wrapper-large { width: 1024px; }
+}
+
+@media (min-width: 1084px) { .content-wrapper-large { width: 1084px; } }
+
+@media (min-width: 1367px) {
+    .content-wrapper,
+    .content-wrapper-large { width: 1280px; }
+}
+
+@media (min-width: 1380px) {
+    .content-wrapper-large { width: 1380px; }
+}
+
+
+/* --- Header --------------------------------------------------------------- */
+#header { position: relative; }
+
+#top-header-content {
+	display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0.309em;
+}
+
+#site-name {
+	font-size : 2em;
+	font-weight : bold;
+	font-style : italic;
+	letter-spacing : 1pt;
+	display : block;
+	text-decoration : none;
+	text-align : center;
+}
+
+#site-slogan {
+	display: block;
+	padding: 0.309em 2.618em 0.309em 0;
+	font-size: 1.228em;
+	letter-spacing: 0.1em;
+    text-align: right;
+}
+
+#sub-header {
+    position: relative;
+    margin : auto;
+    border-radius : 28px 28px 0 0;
+}
+
+@media (min-width: 769px) {
+	#top-header { flex-direction: row; }
+
+    #site-name { font-size : 4em; }
+}
+
+#sub-header-content {
+    padding: 0.618em 0 0;
+    display: table;
+    margin: auto;
+}
+
+#visit-counter {
+    position : absolute;
+    right : 1.618em;
+    bottom: -1.618em;
+    min-width: 100px;
+}
+
+/* --- Global --------------------------------------------------------------- */
+#global { flex: 1 1 auto; }
+
+#global-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#main {
+	width: 100%;
+	order : 1;
+}
+
+#main-content { padding : 0 1.618em; }
+
+.aside-menu { width: 100%; }
+#menu-left  { order : 2; }
+#menu-right { order : 3; }
+
+@media (min-width: 769px) {
+	#global-container {
+        margin: 20px auto 0;
+        flex-direction : row;
+        border-radius : 22px;
+        padding: 10px;
+	}
+
+	.aside-menu { width: 200px; }
+
+	#menu-left  { order : 1; }
+	#menu-right { order : 3; }
+
+	.narrow-menu { width: 200px; }
+
+	#main {
+		padding: 0 0 1.618em;
+		order : 2;
+		flex: 1 0 auto;
+	}
+
+	#main.main-with-left,
+	#main.main-with-right,
+	#main.main-with-left.main-with-right { flex: 1 0 auto; }
+
+	#main.main-with-left,
+	#main.main-with-right { width: calc(100% - 200px); }
+
+	#main.main-with-left.main-with-right { width: calc(100% - 400px); }
+}
+
+section {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 0 0.809em;
+}
+
+@media (min-width: 769px) {
+	section { margin: 0.809em auto; }
+}
+
+/* --- Up and under main content --- */
+#top-content { margin: 0 0 1.618em 0; }
+
+#bottom-content { margin: 1.618em 0 0; }
+
+/* --- Footer --------------------------------------------------------------- */
+#footer {
+	clear: both;
+	margin-top: 1.618em !important;
+}
+
+.footer-infos {
+	margin: auto;
+	padding: 0.809em;
+	min-height: 40px;
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: transparent;
+	text-align: center;
+}
+
+.footer-infos span {
+	font-size: 0.8em;
+	display: block;
+}
+
+.footer-infos span.footer-infos-separator { display: none; }
+
+@media (min-width: 769px) {
+	.footer-infos span,
+	.footer-infos span.footer-infos-separator { display: inline-block; }
+
+	.footer-infos { padding: 0.618em 0 0; }
+}

@@ -1,0 +1,13 @@
+#module-mini-search { align-self: flex-end; }
+
+#search-button {
+    background-color: var(--bgc-h1);
+    border-color: var(--bdr-main);
+    color: rgba(var(--darken), 1);
+}
+
+@media (min-width: 769px) {
+    #search-button {
+        border-radius: 0 50px 50px 0;
+    }
+}

@@ -1,0 +1,103 @@
+/* --- General design ------------------------------------------------------- */
+
+#module-homelanding {
+    display: flex;
+    flex-direction: column;
+}
+
+#module-homelanding h1{
+    margin: 0 0 1em;
+}
+
+#module-homelanding article { margin: 0 0 2.618em; }
+
+#module-homelanding article > header > h2 {
+    position: relative;
+    border-radius: 28px;
+    background-color: var(--bgc-h1);
+    border: 1px solid var(--bdr-main);
+    border-bottom: 2px solid var(--bgc-head);
+    color: var(--main-tone);
+    padding-left: 1.809em;
+    font-size: 2.456em;
+}
+
+#module-homelanding article > header > h2::before {
+    position: absolute;
+    content: url('../../theme/images/as-logo-50.png');
+    background-position: bottom;
+    top: 3px;
+    left: 3px;
+}
+
+#module-homelanding h3.cell-name {
+    background-color:  var(--bgc-h2);
+    color: var(--bgc-sub);
+    padding:  0.228em 0.456em;
+}
+
+#module-homelanding article h3.cell-name a { color: var(--txt-alt); }
+
+/* --- Anchors Menu --------------------------------------------------------- */
+#cssmenu-anchors ul {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#cssmenu-anchors.small-screen ul { flex-direction: column; }
+
+/* --- Edito ---------------------------------------------------------------- */
+
+#edito { margin: 0.618em 0; }
+
+/* --- last comments -------------------------------------------------------- */
+
+/* --- Last articles -------------------------------------------------------- */
+
+/* --- Last articles from categories ---------------------------------------- */
+
+/* --- Last calendar events ------------------------------------------------- */
+
+/* --- Contact -------------------------------------------------------------- */
+
+/* --- Last downloads ------------------------------------------------------- */
+
+/* --- Last downloads from categories --------------------------------------- */
+
+/* --- Last fedd items ---------------------------------------------------- */
+.last-feeds {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feed-title {
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width: 769px) {
+    .feed-title {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* --- Last forum topics ---------------------------------------------------- */
+
+/* --- Last pictures from Gallery ------------------------------------------- */
+
+/* --- Last messages from Guestbook ----------------------------------------- */
+
+/* --- Last media ----------------------------------------------------------- */
+
+/* --- Last news ------------------------------------------------------------ */
+
+/* --- Last news from categories -------------------------------------------- */
+
+/* --- Last partners links -------------------------------------------------- */
+
+/* --- Last partners links from categories ---------------------------------- */
+
+/* --- HomeLanding Module configuration ------------------------------------- */
