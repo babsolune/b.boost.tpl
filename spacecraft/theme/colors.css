@@ -373,9 +373,9 @@ table caption { border-color: var(--bdr-main); }
 
 thead th,
 .formatter-table .formatter-table-head {
-	background-color: var(--bgc-alt);
+	background-color: rgba(var(--bgc-rgb-a), 0.5);
 	color: var(--txt-alt);
-	border-color: var(--bdr-alt);
+	border-color: rgba(var(--bgc-rgb-a), 0.5);
 }
 
 thead th a,

@@ -54,6 +54,8 @@
 
 .cell-body { flex: 1 1 auto; }
 
+.several-items .cell-body { padding: 0 0 1.618em; }
+
 .cell .cell-infos {
 	width: 100%;
 	display: flex;

@@ -21,13 +21,13 @@
 		<header class="cell-header align-center">
 			<h3 class="cell-name"><a class="offload" href="{items.U_ITEM}">{items.TITLE}</a></h3>
 		</header>
-			<div class="cell-body">
-				# IF items.C_SUMMARY #
-					<div class="cell-content align-center">
-						{items.SUMMARY}
-					</div>
-				# ENDIF #
-			</div>
+		<div class="cell-body">
+			# IF items.C_SUMMARY #
+				<div class="cell-content align-center">
+					{items.SUMMARY}
+				</div>
+			# ENDIF #
+		</div>
 		<div class="cell-infos">
 			<div class="more">
 				<span class="pinned item-author"><i class="fa fa-fw fa-user"></i> {items.PSEUDO}</span>

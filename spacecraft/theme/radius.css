@@ -126,7 +126,7 @@ textarea { border-radius: var(--radius); }
 
 .explorer .content { border-radius: var(--radius); }
 
-.pagination ul:not(.light-pagination) a { border-radius: var(--radius); }
+.pagination ul:not(.light-pagination) a { border-radius: var(--radius-small); }
 
 .message-helper { border-radius: var(--radius); }
 .cell-mini .message-helper { border-radius: var(--radius); }

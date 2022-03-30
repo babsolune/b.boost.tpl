@@ -6,6 +6,7 @@
 
 :root {
     /* radius */
+    --radius-small: 0.618em;
     --radius : 1.228em;
     --radius-menu : 2.228rem;
 
