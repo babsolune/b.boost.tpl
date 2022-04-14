@@ -1,6 +1,9 @@
 # IF C_LAST_FEEDS #
 	# START feed_items #
-		<div data-listorder-item class="home-cell cell home-default animate fadeInToTop">
+		<div
+				data-listorder-item
+				class="cell animate fadeInToTop"
+				style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8)), url('# IF feed_items.C_HAS_THUMBNAIL #{feed_items.U_THUMBNAIL}# ENDIF #')">
 			<span class="lo-date hidden">{feed_items.SORT_DATE}</span>
 			<div class="cell-module">
 				<a class="offload" href="{PATH_TO_ROOT}/{MODULE_NAME}">{L_MODULE_TITLE}</a>
