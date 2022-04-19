@@ -55,6 +55,7 @@ body {
 		width: 260px;
 		overflow: hidden;
 		height: 100vh;
+		z-index: 2;
 	}
 
 	#header-overlay {
