@@ -49,6 +49,10 @@ body {
 	padding: 0;
 }
 
+#top-header-content,
+#inner-header-content,
+#sub-header-content { padding: 0 0.309em; }
+
 @media (min-width: 769px)  {
 	#header {
 		position: fixed;
