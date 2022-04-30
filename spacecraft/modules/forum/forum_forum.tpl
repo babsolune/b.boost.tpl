@@ -11,15 +11,16 @@
 			itemtype="https://schema.org/Creativework"
 			id="article-forum-subforum"
 			class="cell has-thumbnail"
-			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF C_HAS_THUMBNAIL #, url('{U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
-		<header class="cell-header">
-			<h2 class="cell-name align-center">
+			style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF C_HAS_THUMBNAIL #, url('{U_CATEGORY_THUMBNAIL}')# ELSE #, url('{PATH_TO_ROOT}/templates/{THEME}/images/messages.webp')# ENDIF ## ENDIF #">
+		<header class="cell-header align-center">
+			<h2 class="cell-name">
 				{CURRENT_SUBCAT_NAME}
-				<span class="smaller controls">
-					</span>
 			</h2>
 		</header>
-		<div class="cell-body">
+		<div class="cell-body align-center">
+			# IF C_HAS_CATEGORY_ICON #
+				<i class="{CATEGORY_ICON}" aria-hidden="true"# IF C_HAS_CATEGORY_COLOR # style="color: {CATEGORY_COLOR}"# ENDIF #></i>
+			# ENDIF #
 			<div class="cell-content flex-between controls">
 				<a class="offload" href="${relative_url(SyndicationUrlBuilder::rss('forum',CATEGORY_ID))}" aria-label="{@common.syndication}"><i class="fa fa-rss warning" aria-hidden="true"></i><span class="sr-only">{@common.syndication}</span></a>
 				# IF C_POST_NEW_TOPIC #
@@ -44,7 +45,12 @@
 						# START subcats #
 							<li id="article-forum-{subcats.CATEGORY_ID}" class="li-stretch li-stretch-large has-thumbnail" style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF subcats.C_HAS_THUMBNAIL #, url('{subcats.U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
 								<div class="forum-details">
-									<a class="offload" href="# IF subcats.U_LINK #{subcats.U_LINK}# ELSE #forum{subcats.U_CATEGORY}# ENDIF #"><h5>{subcats.CATEGORY_NAME}</h5></a>
+									<a class="offload" href="# IF subcats.U_LINK #{subcats.U_LINK}# ELSE #forum{subcats.U_CATEGORY}# ENDIF #">										
+										# IF subcats.C_HAS_CATEGORY_ICON #
+											<i class="{subcats.CATEGORY_ICON}" aria-hidden="true"# IF subcats.C_HAS_CATEGORY_COLOR # style="color: {subcats.CATEGORY_COLOR}"# ENDIF #></i>
+										# ENDIF #
+										<h5>{subcats.CATEGORY_NAME}</h5>
+									</a>
 									<span class="small d-block">{subcats.DESCRIPTION}</span>
 									# IF subcats.C_SUBFORUMS #<span class="d-block small"><span class="pinned notice">{@forum.sub.forums}</span> : {subcats.SUBFORUMS}</span># ENDIF #
 								</div>

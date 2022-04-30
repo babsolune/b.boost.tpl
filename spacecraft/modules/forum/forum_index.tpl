@@ -12,8 +12,11 @@
 					itemtype="https://schema.org/Creativework"
 					id="article-forum-{forums_list.cats.CATEGORY_ID}"
 					class="cell has-thumbnail"
-					style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF forums_list.cats.C_HAS_THUMBNAIL #, url('{forums_list.cats.U_CATEGORY_THUMBNAIL}')# ENDIF ## ENDIF #">
+					style="background-image: linear-gradient(to bottom, rgba(var(--bgc-rgb-m), 0.8), rgba(var(--bgc-rgb-m), 0.8))# IF C_THUMBNAILS_DISPLAYED ## IF forums_list.cats.C_HAS_THUMBNAIL #, url('{forums_list.cats.U_CATEGORY_THUMBNAIL}')# ELSE #, url('{PATH_TO_ROOT}/templates/{THEME}/images/messages.webp')# ENDIF ## ENDIF #">
 				<header class="cell-header">
+					# IF forums_list.cats.C_HAS_CATEGORY_ICON #
+						<i class="{forums_list.cats.CATEGORY_ICON}" aria-hidden="true"# IF forums_list.cats.C_HAS_CATEGORY_COLOR # style="color: {forums_list.cats.CATEGORY_COLOR}"# ENDIF #></i>
+					# ENDIF #
 					<h2 class="cell-name">{forums_list.cats.CATEGORY_NAME}</h2>
 					<div class="controls">
 						<a class="offload" href="${relative_url(SyndicationUrlBuilder::rss('forum',forums_list.cats.CATEGORY_ID))}" aria-label="{@common.syndication}"><i class="fa fa-rss warning" aria-hidden="true"></i></a>
@@ -31,13 +34,16 @@
 									<a
 											class="offload"
 											href="# IF forums_list.subcats.U_LINK #{forums_list.subcats.U_LINK}# ELSE #{forums_list.subcats.U_CATEGORY}# ENDIF #">
-										# IF forums_list.subcats.C_BLINK # <i class="fa fa-comment-dots success blink"></i> # ENDIF #
-										<h5>
-											# IF forums_list.subcats.U_LINK #
-												<i class="fa fa-globe" aria-hidden="true"></i>
+										# IF forums_list.subcats.U_LINK #
+											<i class="fa fa-globe" aria-hidden="true"></i>
+										# ELSE #
+											# IF forums_list.subcats.C_HAS_CATEGORY_ICON #
+												<i class="{forums_list.subcats.CATEGORY_ICON}# IF forums_list.subcats.C_BLINK # blink# ENDIF #" aria-hidden="true"# IF forums_list.subcats.C_HAS_CATEGORY_COLOR # style="color: {forums_list.subcats.CATEGORY_COLOR}"# ENDIF #></i>
 											# ELSE #
 												<i class="fa # IF forums_list.subcats.C_BLINK #blink # ENDIF #{forums_list.subcats.TOPIC_ICON}" aria-hidden="true"></i>
 											# ENDIF #
+										# ENDIF #
+										<h5>
 											{forums_list.subcats.CATEGORY_NAME}
 										</h5>
 									</a>

@@ -236,6 +236,8 @@ a:not(.cssmenu-title):not(.button):not(.leaflet-control-layers-toggle):not([data
 /* --- module --- */
 #calendar .mini-calendar {margin-top: var(--pdg-thin);}
 
+#module-forum .forum-details h5 { display: inline-block; }
+
 #footer #module-mini-newsletter .grouped-auto input { width: 100% !important; }
 
 #module-homelanding .media-content { display: none; }
